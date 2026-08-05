@@ -146,7 +146,7 @@ export function ContactForm() {
           })}
           className={`input h-auto ${errors.message ? 'input-error' : ''}`}
           rows={5}
-          placeholder="Describe your enquiry — the more specific you are, the more useful our response will be."
+          placeholder="Describe your enquiry -- the more specific you are, the more useful our response will be."
         />
       </Field>
 

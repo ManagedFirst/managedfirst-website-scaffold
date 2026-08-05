@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ManagedFirst Technologies — Programmatic SEO: Product × Industry
+// ManagedFirst Technologies -- Programmatic SEO: Product × Industry
 // 36 records (6 products × 6 industries).
 // Each record generates one static page at /solutions/[productSlug]/[industrySlug]
 // ─────────────────────────────────────────────────────────────────────────────
@@ -80,7 +80,7 @@ const productIndustryTemplates: Record<string, {
     intro: (industry, context) =>
       `ManagedFirst Technologies implements ManageEngine ServiceDesk Plus for ${context} across India. We configure incident management, change workflows, and service delivery for the specific operational requirements of ${industry} IT environments.`,
     useCase: (industry, context, compliance) =>
-      `${industry} IT teams manage support across distinct operational areas with different SLA requirements. We configure ServiceDesk Plus with service categories and escalation paths that reflect ${industry} operational priorities — ensuring critical system incidents are separated from routine IT requests.`,
+      `${industry} IT teams manage support across distinct operational areas with different SLA requirements. We configure ServiceDesk Plus with service categories and escalation paths that reflect ${industry} operational priorities -- ensuring critical system incidents are separated from routine IT requests.`,
     compliance: (compliance) =>
       `ServiceDesk Plus change management with documented approval chains and audit trails supports ${compliance}.`,
   },
@@ -122,7 +122,7 @@ const productIndustryTemplates: Record<string, {
     intro: (industry, context) =>
       `ManagedFirst Technologies implements ManageEngine AD360 for ${context} across India. We configure user lifecycle management, role-based access controls, and identity governance for the specific workforce structure and compliance requirements of ${industry} organisations.`,
     useCase: (industry, context, compliance) =>
-      `${industry} organisations manage access across diverse user populations — each requiring role-appropriate access to specific systems. AD360's provisioning templates and access governance workflows ensure that access is granted based on current role and removed promptly when roles change.`,
+      `${industry} organisations manage access across diverse user populations -- each requiring role-appropriate access to specific systems. AD360's provisioning templates and access governance workflows ensure that access is granted based on current role and removed promptly when roles change.`,
     compliance: (compliance) =>
       `AD360's access certification reviews, deprovisioning audit trails, and compliance reports support ${compliance}.`,
   },
@@ -150,7 +150,7 @@ const productIndustryTemplates: Record<string, {
     intro: (industry, context) =>
       `ManagedFirst Technologies implements ManageEngine OpManager Plus for ${context} across India. We configure network monitoring, server monitoring, and operational dashboards for the specific infrastructure characteristics and monitoring requirements of ${industry} IT environments.`,
     useCase: (industry, context, compliance) =>
-      `${industry} IT environments have infrastructure characteristics — network topology, critical system dependencies, monitoring priority levels — that require configuration specific to the sector. We configure OpManager Plus thresholds, alert escalation policies, and dashboards based on ${industry} operational priorities.`,
+      `${industry} IT environments have infrastructure characteristics -- network topology, critical system dependencies, monitoring priority levels -- that require configuration specific to the sector. We configure OpManager Plus thresholds, alert escalation policies, and dashboards based on ${industry} operational priorities.`,
     compliance: (compliance) =>
       `OpManager Plus's configuration change management and audit trails support ${compliance}.`,
   },

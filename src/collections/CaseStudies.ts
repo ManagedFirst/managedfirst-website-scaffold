@@ -125,7 +125,7 @@ export const CaseStudies: CollectionConfig = {
       required: true,
       label: 'What We Deployed',
       admin: {
-        description: 'Describe each ManageEngine product deployed — specific configuration scope and timeline.',
+        description: 'Describe each ManageEngine product deployed -- specific configuration scope and timeline.',
       },
     },
     {

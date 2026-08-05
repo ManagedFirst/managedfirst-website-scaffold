@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ManagedFirst Technologies — Custom Icon System
+// ManagedFirst Technologies -- Custom Icon System
 // All icons: outline style, 2px stroke, currentColor, 24×24 viewBox
 // Usage: <IconAD360 size={32} className="text-teal" />
 // ─────────────────────────────────────────────────────────────────────────────

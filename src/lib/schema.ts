@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ManagedFirst Technologies — JSON-LD Schema Utilities
+// ManagedFirst Technologies -- JSON-LD Schema Utilities
 // Import and call the relevant function in each page's head.
 // All functions return a plain object ready for JSON.stringify.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -57,7 +57,7 @@ export function localBusinessSchema() {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 12.9164,     // Approximate — update with exact coordinates
+      latitude: 12.9164,     // Approximate -- update with exact coordinates
       longitude: 80.1986,
     },
     openingHoursSpecification: {

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ManagedFirst Technologies — Programmatic SEO: Product × Location
+// ManagedFirst Technologies -- Programmatic SEO: Product × Location
 // 72 records (6 products × 12 cities).
 // Each record generates one static page at /solutions/[productSlug]/[citySlug]
 // ─────────────────────────────────────────────────────────────────────────────
@@ -61,7 +61,7 @@ const productTemplates: Record<string, {
     intro: (city, state, mix) =>
       `ManagedFirst Technologies implements ManageEngine Endpoint Central for enterprises in ${city}, ${state}. We configure patch management, endpoint security policies, and software deployment for organisations managing device fleets across ${city}'s ${mix} sectors.`,
     localContext: (city, state) =>
-      `ManagedFirst delivers Endpoint Central implementations for ${city}-based IT teams — covering device fleet assessment, agent deployment, patch policy configuration, and endpoint security setup for ${state} enterprises.`,
+      `ManagedFirst delivers Endpoint Central implementations for ${city}-based IT teams -- covering device fleet assessment, agent deployment, patch policy configuration, and endpoint security setup for ${state} enterprises.`,
   },
   'log360': {
     metaTitle: (city, state) =>
@@ -109,7 +109,7 @@ const productTemplates: Record<string, {
     intro: (city, state, mix) =>
       `ManagedFirst Technologies implements ManageEngine OpManager Plus for enterprises in ${city}, ${state}. We configure network monitoring, server monitoring, alert thresholds, and operational dashboards for organisations managing IT infrastructure across ${city}'s ${mix} sectors.`,
     localContext: (city, state) =>
-      `ManagedFirst delivers OpManager Plus implementations for ${city}-based IT teams — covering infrastructure scoping, monitoring template configuration, threshold calibration, and dashboard build for multi-site ${state} enterprises.`,
+      `ManagedFirst delivers OpManager Plus implementations for ${city}-based IT teams -- covering infrastructure scoping, monitoring template configuration, threshold calibration, and dashboard build for multi-site ${state} enterprises.`,
   },
 }
 

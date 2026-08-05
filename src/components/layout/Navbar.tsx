@@ -26,7 +26,7 @@ function DropdownItem({ item }: { item: typeof navigation[0] }) {
     )
   }
 
-  // Products — mega-menu (columns)
+  // Products -- mega-menu (columns)
   if (item.columns) {
     return (
       <div ref={ref} className="relative">

@@ -1,4 +1,4 @@
-// ManagedFirst Technologies — Hero Dashboard Illustration
+// ManagedFirst Technologies -- Hero Dashboard Illustration
 // Inline SVG representing a ManageEngine-style IT management dashboard
 // Animated with CSS: float, drawPath on chart line, pulsing status dots
 
@@ -19,11 +19,11 @@ export function DashboardIllustration({ className = '' }: { className?: string }
         <rect x="0" y="0" width="620" height="44" rx="12" fill="#0B2D78" />
         <rect x="0" y="32" width="620" height="12" fill="#0B2D78" />
         
-        {/* Top nav — logo area */}
+        {/* Top nav -- logo area */}
         <rect x="16" y="12" width="28" height="20" rx="4" fill="#0099A8" opacity="0.9" />
         <text x="50" y="27" fontFamily="Inter,sans-serif" fontSize="11" fontWeight="600" fill="white" opacity="0.9">ManagedFirst</text>
         
-        {/* Top nav — links */}
+        {/* Top nav -- links */}
         {['Dashboard', 'Devices', 'Patches', 'Reports', 'Settings'].map((label, i) => (
           <text key={label} x={160 + i * 72} y="27" fontFamily="Inter,sans-serif" fontSize="10"
             fill={i === 0 ? '#0099A8' : 'rgba(255,255,255,0.55)'} fontWeight={i === 0 ? '600' : '400'}>
@@ -31,7 +31,7 @@ export function DashboardIllustration({ className = '' }: { className?: string }
           </text>
         ))}
 
-        {/* Top nav — right icons */}
+        {/* Top nav -- right icons */}
         <circle cx="580" cy="22" r="10" fill="rgba(255,255,255,0.08)" />
         <circle cx="600" cy="22" r="10" fill="rgba(255,255,255,0.08)" />
         <circle cx="580" cy="22" r="3" fill="rgba(255,255,255,0.4)" />
@@ -73,7 +73,7 @@ export function DashboardIllustration({ className = '' }: { className?: string }
 
         {/* ── Metric Cards Row ─────────────────────────────────────────── */}
         
-        {/* Card 1 — Uptime */}
+        {/* Card 1 -- Uptime */}
         <rect x="68" y="102" width="156" height="82" rx="8" fill="#0d2550" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
         <text x="82" y="122" fontFamily="Inter,sans-serif" fontSize="10" fill="rgba(255,255,255,0.5)">SYSTEM UPTIME</text>
         <text x="82" y="148" fontFamily="Inter,sans-serif" fontSize="22" fontWeight="700" fill="white">99.8%</text>
@@ -81,14 +81,14 @@ export function DashboardIllustration({ className = '' }: { className?: string }
         <rect x="82" y="158" width="55" height="3" rx="1.5" fill="#0099A8" />
         <text x="82" y="175" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(0,153,168,0.8)">↑ 0.2% from last week</text>
 
-        {/* Card 2 — Tickets */}
+        {/* Card 2 -- Tickets */}
         <rect x="236" y="102" width="156" height="82" rx="8" fill="#0d2550" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
         <text x="250" y="122" fontFamily="Inter,sans-serif" fontSize="10" fill="rgba(255,255,255,0.5)">OPEN TICKETS</text>
         <text x="250" y="148" fontFamily="Inter,sans-serif" fontSize="22" fontWeight="700" fill="white">24</text>
         <text x="288" y="148" fontFamily="Inter,sans-serif" fontSize="11" fill="rgba(255,255,255,0.35)" alignmentBaseline="middle">/172</text>
         <text x="250" y="175" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(245,166,35,0.9)">● 3 critical · 8 high</text>
 
-        {/* Card 3 — Endpoints */}
+        {/* Card 3 -- Endpoints */}
         <rect x="404" y="102" width="156" height="82" rx="8" fill="#0d2550" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
         <text x="418" y="122" fontFamily="Inter,sans-serif" fontSize="10" fill="rgba(255,255,255,0.5)">ENDPOINTS</text>
         <text x="418" y="148" fontFamily="Inter,sans-serif" fontSize="22" fontWeight="700" fill="white">847</text>
@@ -99,7 +99,7 @@ export function DashboardIllustration({ className = '' }: { className?: string }
         {/* ── Performance Chart ─────────────────────────────────────────── */}
         <rect x="68" y="196" width="324" height="148" rx="8" fill="#0d2550" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
         <text x="82" y="216" fontFamily="Inter,sans-serif" fontSize="11" fontWeight="600" fill="white" opacity="0.8">Network Performance</text>
-        <text x="82" y="230" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.35)">Last 7 days — Avg response time (ms)</text>
+        <text x="82" y="230" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.35)">Last 7 days -- Avg response time (ms)</text>
 
         {/* Chart grid lines */}
         {[0,1,2,3].map((i) => (
@@ -131,7 +131,7 @@ export function DashboardIllustration({ className = '' }: { className?: string }
           </linearGradient>
         </defs>
 
-        {/* Chart line — animated drawPath */}
+        {/* Chart line -- animated drawPath */}
         <path
           d="M108,289 L152,276 L196,268 L240,282 L284,261 L328,272 L372,258"
           fill="none"
@@ -153,8 +153,8 @@ export function DashboardIllustration({ className = '' }: { className?: string }
         <text x="418" y="216" fontFamily="Inter,sans-serif" fontSize="11" fontWeight="600" fill="white" opacity="0.8">Recent Alerts</text>
 
         {[
-          { label: 'CPU spike — SRV-04', time: '2m ago', color: '#E8192C', status: 'critical' },
-          { label: 'Patch deployed — 47 devices', time: '14m ago', color: '#0099A8', status: 'info' },
+          { label: 'CPU spike -- SRV-04', time: '2m ago', color: '#E8192C', status: 'critical' },
+          { label: 'Patch deployed -- 47 devices', time: '14m ago', color: '#0099A8', status: 'info' },
           { label: 'Login anomaly detected', time: '31m ago', color: '#F5A623', status: 'warn' },
           { label: 'Backup completed', time: '1h ago', color: '#0099A8', status: 'info' },
         ].map((alert, i) => (
@@ -176,14 +176,14 @@ export function DashboardIllustration({ className = '' }: { className?: string }
         <rect x="68" y="356" width="492" height="52" rx="8" fill="#0d2550" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
         <text x="82" y="375" fontFamily="Inter,sans-serif" fontSize="10" fontWeight="600" fill="white" opacity="0.7">Patch Compliance</text>
         <text x="82" y="388" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.35)">
-          831 of 847 endpoints patched — 98.1% compliant
+          831 of 847 endpoints patched -- 98.1% compliant
         </text>
         {/* Progress bar */}
         <rect x="82" y="395" width="462" height="5" rx="2.5" fill="rgba(255,255,255,0.08)" />
         <rect x="82" y="395" width="453" height="5" rx="2.5" fill="#0099A8" opacity="0.85" />
         <circle cx="535" cy="397.5" r="5" fill="#0099A8" />
 
-        {/* Status indicators — bottom right */}
+        {/* Status indicators -- bottom right */}
         <circle cx="570" cy="397" r="4" fill="#22c55e" style={{ animation: 'pulseTeal 2s ease-in-out infinite' }} />
         <text x="578" y="400" fontFamily="Inter,sans-serif" fontSize="8" fill="rgba(255,255,255,0.4)">Live</text>
       </svg>

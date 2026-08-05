@@ -7,7 +7,7 @@ interface BuildMetadataOptions {
   title: string
   description: string
   canonicalPath: string       // e.g. '/solutions/iam'
-  ogImage?: string            // Absolute URL — defaults to /og-default.png
+  ogImage?: string            // Absolute URL -- defaults to /og-default.png
   noIndex?: boolean           // Set true for admin/staging pages
 }
 

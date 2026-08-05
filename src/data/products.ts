@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ManagedFirst Technologies — ManageEngine Product Data
+// ManagedFirst Technologies -- ManageEngine Product Data
 // Used by programmatic SEO pages, solution hubs, and schema markup.
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -84,7 +84,7 @@ export const products: Product[] = [
     categoryLabel: 'Unified Endpoint Management',
     tagline: 'Unified endpoint management and security',
     href: '/solutions/uems/endpoint-central',
-    description: 'ManageEngine Endpoint Central manages Windows, macOS, Linux, iOS, and Android devices from one console — patch management, software deployment, and endpoint security.',
+    description: 'ManageEngine Endpoint Central manages Windows, macOS, Linux, iOS, and Android devices from one console -- patch management, software deployment, and endpoint security.',
   },
   {
     slug: 'mobile-device-manager-plus',
@@ -151,7 +151,7 @@ export const products: Product[] = [
   },
 ]
 
-// pSEO products — the 6 products used for programmatic SEO pages
+// pSEO products -- the 6 products used for programmatic SEO pages
 export const pseoProducts = [
   { slug: 'servicedesk-plus',  name: 'ServiceDesk Plus',  short: 'ITSM' },
   { slug: 'endpoint-central',  name: 'Endpoint Central',  short: 'Endpoint Management' },

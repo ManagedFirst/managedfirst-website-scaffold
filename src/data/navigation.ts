@@ -1,8 +1,8 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ManagedFirst Technologies — Navigation Data
+// ManagedFirst Technologies -- Navigation Data
 // Source: Complete Website Content v1.0, August 2026
 // Navigation structure updated to reflect the v1.0 content document.
-// Update this file to change menu structure — no component changes needed.
+// Update this file to change menu structure -- no component changes needed.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export interface NavSubItem {
@@ -203,7 +203,7 @@ export const footerColumns = [
     ],
   },
   {
-    // Knowledge column — new in v1.0
+    // Knowledge column -- new in v1.0
     heading: 'Knowledge',
     items: [
       { label: 'Blog',                            href: '/blog' },

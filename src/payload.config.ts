@@ -17,7 +17,7 @@ export default buildConfig({
   admin: {
     user: 'users',
     meta: {
-      titleSuffix: '— ManagedFirst CMS',
+      titleSuffix: '-- ManagedFirst CMS',
     },
   },
 
@@ -66,7 +66,7 @@ export default buildConfig({
   //
   // See: https://payloadcms.com/docs/upload/storage-adapters for setup guides.
   //
-  // No plugins array needed for local storage — Payload handles it by default.
+  // No plugins array needed for local storage -- Payload handles it by default.
 
   // ── Secret ────────────────────────────────────────────────────────────────
   secret: process.env.PAYLOAD_SECRET as string,

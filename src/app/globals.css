@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ─────────────────────────────────────────────────────────────────────────────
- * ManagedFirst Technologies — Global Styles
+ * ManagedFirst Technologies -- Global Styles
  * Source: Brand Guidelines v1.0 · August 2026
  * All values confirmed from brand guidelines. Do not modify without sign-off.
  * ──────────────────────────────────────────────────────────────────────────── */
@@ -11,18 +11,18 @@
 /* ── CSS Custom Properties ─────────────────────────────────────────────────── */
 :root {
   /* ── Core brand colours ───────────────────────────────────────────────── */
-  --color-navy:        #0B2D78;   /* Deep Navy — hero, nav, H1, footer */
-  --color-blue:        #005A8E;   /* Primary Blue — links, borders, H2 */
-  --color-teal:        #0099A8;   /* Teal Accent — icons, tags, highlights */
-  --color-charcoal:    #1A1A2E;   /* Charcoal — body text */
-  --color-offwhite:    #F4F8FB;   /* Off-white — page/card/input backgrounds */
-  --color-red:         #E8192C;   /* Action Red — CTA on light bg */
-  --color-amber:       #F5A623;   /* Amber — CTA on dark/navy bg */
+  --color-navy:        #0B2D78;   /* Deep Navy -- hero, nav, H1, footer */
+  --color-blue:        #005A8E;   /* Primary Blue -- links, borders, H2 */
+  --color-teal:        #0099A8;   /* Teal Accent -- icons, tags, highlights */
+  --color-charcoal:    #1A1A2E;   /* Charcoal -- body text */
+  --color-offwhite:    #F4F8FB;   /* Off-white -- page/card/input backgrounds */
+  --color-red:         #E8192C;   /* Action Red -- CTA on light bg */
+  --color-amber:       #F5A623;   /* Amber -- CTA on dark/navy bg */
   --color-white:       #FFFFFF;
 
   /* ── Tints ────────────────────────────────────────────────────────────── */
-  --color-teal-light:  #E5F6F8;   /* Teal ~8% on white — callout washes */
-  --color-navy-light:  #F0F2F7;   /* Navy ~6% on white — subtle tints */
+  --color-teal-light:  #E5F6F8;   /* Teal ~8% on white -- callout washes */
+  --color-navy-light:  #F0F2F7;   /* Navy ~6% on white -- subtle tints */
 
   /* ── Component colours ────────────────────────────────────────────────── */
   --color-border:      #D0DAE4;   /* Default card and input borders */
@@ -89,7 +89,7 @@ body {
   outline: none;
 }
 
-/* ── Type scale — heading classes ──────────────────────────────────────────── */
+/* ── Type scale -- heading classes ──────────────────────────────────────────── */
 /* Use these in components: <h1 className="text-display"> or <p className="body"> */
 
 .text-display {
@@ -157,7 +157,7 @@ h6, .text-h6 {
 /* Body text scale */
 .body-lg {
   font-family: var(--font-body);
-  font-size: 1.125rem;      /* 18px — hero intro */
+  font-size: 1.125rem;      /* 18px -- hero intro */
   font-weight: 400;
   line-height: 1.75;
   color: var(--color-charcoal);
@@ -189,7 +189,7 @@ h6, .text-h6 {
 
 .label {
   font-family: var(--font-body);
-  font-size: 0.75rem;       /* 12px — form labels, metadata */
+  font-size: 0.75rem;       /* 12px -- form labels, metadata */
   font-weight: 500;
   line-height: 1.50;
   color: var(--color-muted);
@@ -197,7 +197,7 @@ h6, .text-h6 {
 
 .overline {
   font-family: var(--font-body);
-  font-size: 0.6875rem;     /* 11px — section eyebrow text */
+  font-size: 0.6875rem;     /* 11px -- section eyebrow text */
   font-weight: 500;
   line-height: 1.40;
   color: var(--color-teal);
@@ -205,10 +205,10 @@ h6, .text-h6 {
   letter-spacing: 0.08em;
 }
 
-/* ── Component layer — Buttons ─────────────────────────────────────────────── */
+/* ── Component layer -- Buttons ─────────────────────────────────────────────── */
 @layer components {
 
-  /* Primary button on dark/navy backgrounds — amber CTA */
+  /* Primary button on dark/navy backgrounds -- amber CTA */
   .btn-primary-dark {
     display: inline-flex;
     align-items: center;
@@ -230,7 +230,7 @@ h6, .text-h6 {
   .btn-primary-dark:hover  { background-color: #E8941A; }
   .btn-primary-dark:active { transform: translateY(1px); }
 
-  /* Primary button on white/light backgrounds — red CTA */
+  /* Primary button on white/light backgrounds -- red CTA */
   .btn-primary-light {
     display: inline-flex;
     align-items: center;
@@ -252,7 +252,7 @@ h6, .text-h6 {
   .btn-primary-light:hover  { background-color: #CC1526; }
   .btn-primary-light:active { transform: translateY(1px); }
 
-  /* Secondary button — outline style */
+  /* Secondary button -- outline style */
   .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -276,7 +276,7 @@ h6, .text-h6 {
     color: var(--color-white);
   }
 
-  /* Ghost button — for dark backgrounds */
+  /* Ghost button -- for dark backgrounds */
   .btn-ghost {
     display: inline-flex;
     align-items: center;
@@ -297,7 +297,7 @@ h6, .text-h6 {
   }
   .btn-ghost:hover { background-color: rgba(255, 255, 255, 0.18); }
 
-  /* Disabled state — applied to any button */
+  /* Disabled state -- applied to any button */
   .btn-disabled,
   button:disabled,
   [type='submit']:disabled {
@@ -438,9 +438,9 @@ h6, .text-h6 {
 .nav-link:hover { color: var(--color-navy); }
 
 /* ─────────────────────────────────────────────────────────────────────────────
- * ANIMATION SYSTEM — Added August 2026
+ * ANIMATION SYSTEM -- Added August 2026
  * CSS-only animations. No external library.
- * Reference: ManageEngine.com homepage feel — professional, purposeful, alive.
+ * Reference: ManageEngine.com homepage feel -- professional, purposeful, alive.
  * ──────────────────────────────────────────────────────────────────────────── */
 
 /* ── Keyframes ─────────────────────────────────────────────────────────────── */
