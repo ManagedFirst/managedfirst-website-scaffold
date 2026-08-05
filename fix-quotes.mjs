@@ -15,15 +15,17 @@ function getAllFiles(dir) {
 }
 
 for (const file of getAllFiles('./src')) {
-  const original = readFileSync(file, 'utf8')
-  const fixed = original
-    .replace(/\u201c/g, '\\"')
-    .replace(/\u201d/g, '\\"')
-    .replace(/\u2018/g, "'")
-    .replace(/\u2019/g, "'")
+  const buf = readFileSync(file)
+  const original = buf.toString('utf8')
+
+  let fixed = original
+  // curly double quotes
+  fixed = fixed.replace(/[\u201c\u201d\u201e\u201f\u275d\u275e]/g, '\\"')
+  // curly single quotes / apostrophes
+  fixed = fixed.replace(/[\u2018\u2019\u201a\u201b\u275b\u275c]/g, "'")
 
   if (original !== fixed) {
-    writeFileSync(file, fixed)
+    writeFileSync(file, fixed, 'utf8')
     console.log('Fixed:', file)
   }
 }
