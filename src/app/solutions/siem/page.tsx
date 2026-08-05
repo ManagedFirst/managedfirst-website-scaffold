@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Solutions', href: '/solutions/siem' }, { name: 'SIEM', href: '/solutions/siem' }]
 
-const successItems = ["Log sources are mapped and all systems processing personal data are monitored -- no blind spots.", "Correlation rules are tuned to your threat profile. Alerts represent real events, not defaults.", "UEBA baselines reflect your users" actual behaviour. Anomalies surface against a relevant baseline.", "Alert workflows route incidents to the right team member with the right context.", "Compliance reports for DPDPA, ISO 27001, and applicable sector frameworks are generated automatically on schedule.", "False positives have been systematically eliminated. The security team reads the alert queue because it is meaningful."]
+const successItems = ["Log sources are mapped and all systems processing personal data are monitored -- no blind spots.", "Correlation rules are tuned to your threat profile. Alerts represent real events, not defaults.", "UEBA baselines reflect your users actual behaviour. Anomalies surface against a relevant baseline.", "Alert workflows route incidents to the right team member with the right context.", "Compliance reports for DPDPA, ISO 27001, and applicable sector frameworks are generated automatically on schedule.", "False positives have been systematically eliminated. The security team reads the alert queue because it is meaningful."]
 
 export default function SiemHubPage() {
   return (
