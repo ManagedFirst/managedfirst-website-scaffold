@@ -13,10 +13,10 @@ export const CaseStudies: CollectionConfig = {
       // Public can only read published AND client-approved case studies
       return {
         and: [
-          { status: { equals: 'published' } },
-          { clientApproved: { equals: true } },
+          { status: { equals: 'published' } as const },
+          { clientApproved: { equals: true } as const },
         ],
-      }
+      } as const
     },
   },
   fields: [

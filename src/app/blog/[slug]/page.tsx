@@ -88,16 +88,17 @@ const articles: Record<string, {
 }
 
 interface BlogSlugPageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: BlogSlugPageProps): Promise<Metadata> {
-  const article = articles[params.slug]
+  const { slug } = await params
+  const article = articles[slug]
   if (!article) return {}
   return buildMetadata({
     title: `${article.title} | ManagedFirst Blog`,
     description: article.excerpt,
-    canonicalPath: `/blog/${params.slug}`,
+    canonicalPath: `/blog/${slug}`,
   })
 }
 
@@ -105,11 +106,12 @@ export async function generateStaticParams() {
   return Object.keys(articles).map(slug => ({ slug }))
 }
 
-export default function BlogSlugPage({ params }: BlogSlugPageProps) {
-  const article = articles[params.slug]
+export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
+  const { slug } = await params
+  const article = articles[slug]
   if (!article) notFound()
 
-  const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog' }, { name: article.title, href: `/blog/${params.slug}` }]
+  const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog' }, { name: article.title, href: `/blog/${slug}` }]
 
   return (
     <>

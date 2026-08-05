@@ -7,7 +7,7 @@ export const Media: CollectionConfig = {
     // PRODUCTION:  Add a cloud storage adapter in payload.config.ts
     //              See the comments in payload.config.ts for options.
     staticDir: 'public/media',
-    staticURL: '/media',
+    // staticURL is not a valid property of UploadConfig and has been removed
     mimeTypes: [
       'image/png',
       'image/jpeg',

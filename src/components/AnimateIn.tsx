@@ -1,13 +1,14 @@
 'use client'
 import { useInView } from '@/hooks/useInView'
 import { CSSProperties } from 'react'
+import { JSX } from 'react/jsx-runtime'
 
 interface AnimateInProps {
   children: React.ReactNode
   delay?: number
   direction?: 'up' | 'left' | 'right' | 'fade'
   className?: string
-  as?: keyof JSX.IntrinsicElements
+  as?: React.ElementType
 }
 
 const directionClass: Record<NonNullable<AnimateInProps['direction']>, string> = {
@@ -33,7 +34,7 @@ export function AnimateIn({
 
   return (
     <Tag
-      ref={ref as React.Ref<HTMLDivElement>}
+      ref={ref}
       className={`${isInView ? directionClass[direction] : 'opacity-0'} ${className}`}
       style={isInView ? style : undefined}
     >
