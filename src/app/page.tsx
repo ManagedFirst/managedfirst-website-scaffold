@@ -3,16 +3,11 @@ import Link from 'next/link'
 import { buildMetadata } from '@/lib/metadata'
 import { orgSchema, schemaToString } from '@/lib/schema'
 import { AnimateIn } from '@/components/AnimateIn'
-import { Hero } from '@/components/sections/Hero'
-import { CTABand } from '@/components/sections/Sections'
 import { DashboardIllustration } from '@/components/illustrations/DashboardIllustration'
 import { Button } from '@/components/ui/Button'
-import { Badge, SectionHeader } from '@/components/ui/Elements'
 import {
   IconAD360, IconServiceDesk, IconEndpointCentral, IconLog360,
   IconOpManager, IconAnalyticsPlus,
-  IconConsulting, IconEvaluation, IconImplementation,
-  IconTraining, IconManagedServices, IconSupportAMC,
   IconBFSI, IconManufacturing, IconHealthcare,
   IconITITES, IconGovernment, IconEducation,
   IconCheck, IconArrowRight,
@@ -24,58 +19,45 @@ export const metadata: Metadata = buildMetadata({
   canonicalPath: '/',
 })
 
-const solutionHubs = [
-  { title: 'Identity and Access Management', href: '/solutions/iam', icon: <IconAD360 size={40} />,
-    body: 'Identity lifecycle management across a distributed workforce is not a tooling problem -- it is a configuration and architecture problem. We implement the full ManageEngine IAM suite: provisioning, governance, privileged access, and audit trails.', products: ['AD360','ADManager Plus','ADAudit Plus','PAM360'] },
-  { title: 'ITSM / ESM', href: '/solutions/itsm-esm', icon: <IconServiceDesk size={40} />,
-    body: 'A service desk that routes tickets manually, misses SLAs, and lacks change management is a ticketing system -- not an ITSM platform. We configure ServiceDesk Plus to the full ITSM scope: incident, change, problem, asset, and enterprise service management.', products: ['ServiceDesk Plus','ServiceDesk Plus MSP'] },
-  { title: 'Unified Endpoint Management', href: '/solutions/uems', icon: <IconEndpointCentral size={40} />,
-    body: 'Unpatched devices, unapproved software, open USB ports, and unmanaged mobile devices are not edge cases -- they are the default state of growing IT environments. We implement Endpoint Central and MDM with policies calibrated for your device mix and security requirements.', products: ['Endpoint Central','Mobile Device Manager Plus'] },
-  { title: 'IT Operations Management', href: '/solutions/itom', icon: <IconOpManager size={40} />,
-    body: 'Monitoring tools that generate more alerts than anyone reads provide coverage without visibility. We implement OpManager Plus, Site24x7, and Applications Manager with thresholds, dashboards, and escalation paths configured for your infrastructure.', products: ['OpManager Plus','Site24x7','Applications Manager'] },
-  { title: 'SIEM', href: '/solutions/siem', icon: <IconLog360 size={40} />,
-    body: 'A SIEM that surfaces every event equally is indistinguishable from no SIEM. We implement Log360 with correlation rules tuned for your threat profile, alert thresholds below noise level, and compliance reports for your regulatory obligations.', products: ['Log360','ADAudit Plus','Firewall Analyzer'] },
-  { title: 'IT Analytics', href: '/solutions/it-analytics', icon: <IconAnalyticsPlus size={40} />,
-    body: 'IT performance data locked inside individual tool dashboards never reaches the leadership that needs it. We implement Analytics Plus connecting data from across your ManageEngine environment into dashboards your IT leadership can act on.', products: ['Analytics Plus'] },
-]
-
-const services = [
-  { title: 'Consulting', href: '/services/consulting', icon: <IconConsulting size={28} />,
-    desc: 'A written assessment of your environment, a specific product recommendation with rationale, and a phased implementation roadmap -- before any deployment begins or licence is purchased.' },
-  { title: 'Evaluation Assistance', href: '/services/evaluation-assistance', icon: <IconEvaluation size={28} />,
-    desc: 'ManageEngine configured and running in your environment for a structured trial. Real performance on your data -- not a vendor demonstration.' },
-  { title: 'Implementation', href: '/services/implementation', icon: <IconImplementation size={28} />,
-    desc: 'Architecture, configuration, integration, testing, and go-live -- built around your environment and processes. Delivered with a configuration runbook your team keeps.' },
-  { title: 'Training and Enablement', href: '/services/training', icon: <IconTraining size={28} />,
-    desc: 'Role-specific training for administrators, IT technicians, and end users -- delivered against your specific configuration, not a generic product walkthrough.' },
-  { title: 'Managed Services', href: '/services/managed-services', icon: <IconManagedServices size={28} />,
-    desc: 'Ongoing management of your ManageEngine environment: configuration upkeep, version upgrades, monitoring, and regular operational reporting -- without allocating internal IT capacity.' },
-  { title: 'Support and AMC', href: '/services/support-amc', icon: <IconSupportAMC size={28} />,
-    desc: 'Responsive technical support, licence renewals managed before they lapse, and version upgrade assistance for deployed ManageEngine environments.' },
+const solutions = [
+  { title: 'Identity and Access Management', href: '/solutions/iam', icon: <IconAD360 size={26} />, desc: 'Provisioning, governance, privileged access, and audit trails.', count: 5 },
+  { title: 'ITSM / ESM', href: '/solutions/itsm-esm', icon: <IconServiceDesk size={26} />, desc: 'Service desk, change control, asset management, ESM.', count: 2 },
+  { title: 'Unified Endpoint Management', href: '/solutions/uems', icon: <IconEndpointCentral size={26} />, desc: 'Patch management, endpoint security, and MDM.', count: 2 },
+  { title: 'IT Operations Management', href: '/solutions/itom', icon: <IconOpManager size={26} />, desc: 'Network monitoring, server monitoring, and APM.', count: 3 },
+  { title: 'SIEM', href: '/solutions/siem', icon: <IconLog360 size={26} />, desc: 'Log management, threat detection, and compliance reporting.', count: 3 },
+  { title: 'IT Analytics', href: '/solutions/it-analytics', icon: <IconAnalyticsPlus size={26} />, desc: 'Unified dashboards across your ManageEngine environment.', count: 1 },
 ]
 
 const whyUs = [
-  { title: 'ManageEngine is the only thing we do.', body: 'Our practice is built entirely around ManageEngine\'s product suite. Every certification, every methodology, every support process covers ManageEngine exclusively. When a complex implementation question arises -- cross-product integration, compliance configuration, governance architecture -- it is not a new problem for our team.' },
-  { title: 'We implement to the full scope, not the minimum viable deployment.', body: 'Most ManageEngine deployments configure incident management, basic monitoring, or fundamental access controls. We implement the automation, the integrations, the governance workflows, and the advanced configuration that make the platform an operational asset. The difference is visible in how your team works after go-live.' },
-  { title: 'Every engagement produces documentation your team keeps.', body: 'Implementation is complete when your team can operate the platform independently. Every engagement includes a configuration runbook -- specific to your deployment -- covering every setting applied, every integration configured, and every workflow built. You are not dependent on us to explain your own environment.' },
-  { title: 'Indian regulatory requirements are built into every engagement.', body: 'DPDPA compliance, RBI IT framework obligations, ISO 27001 control mapping -- these are not add-ons. We configure ManageEngine for the regulatory environment Indian enterprises operate in. Compliance documentation is produced as part of implementation, not separately after.' },
+  { n: '01', title: 'ManageEngine is the only thing we do.', body: 'Our practice covers ManageEngine exclusively -- all 15 products, all six solution categories, every configuration scenario. When a complex question arises, it is not new to us.' },
+  { n: '02', title: 'We implement to the full scope, not the minimum viable deployment.', body: 'Most deployments configure the basics. We implement the automation, integrations, governance workflows, and advanced configuration that make the platform an operational asset.' },
+  { n: '03', title: 'Every engagement produces documentation your team keeps.', body: 'Implementation is complete when your team can operate independently. Every engagement delivers a configuration runbook covering every setting applied and every workflow built.' },
+  { n: '04', title: 'Indian regulatory requirements are built into every engagement.', body: 'DPDPA, RBI IT framework, ISO 27001 -- these are not add-ons. We configure ManageEngine for the regulatory environment Indian enterprises operate in.' },
+]
+
+const services = [
+  { title: 'Consulting',              href: '/services/consulting',              desc: 'Written assessment, product recommendation, and implementation roadmap before any deployment begins.' },
+  { title: 'Evaluation Assistance',   href: '/services/evaluation-assistance',   desc: 'ManageEngine configured in your environment for a structured trial against your actual use cases.' },
+  { title: 'Implementation',          href: '/services/implementation',          desc: 'Architecture, configuration, integration, testing, and documented handover. Built around your processes.' },
+  { title: 'Training and Enablement', href: '/services/training',                desc: 'Role-specific training against your specific deployment -- not a generic product walkthrough.' },
+  { title: 'Managed Services',        href: '/services/managed-services',        desc: 'Ongoing configuration management, version upgrades, and operational reporting.' },
+  { title: 'Support and AMC',         href: '/services/support-amc',             desc: 'Responsive technical support and licence renewals managed before they lapse.' },
 ]
 
 const industries = [
-  { title: 'Banking and Financial Services', href: '/industries/bfsi', icon: <IconBFSI size={32} /> },
-  { title: 'Manufacturing', href: '/industries/manufacturing', icon: <IconManufacturing size={32} /> },
-  { title: 'Healthcare', href: '/industries/healthcare', icon: <IconHealthcare size={32} /> },
-  { title: 'IT and ITES', href: '/industries/it-ites', icon: <IconITITES size={32} /> },
-  { title: 'Government and PSU', href: '/industries/government-psu', icon: <IconGovernment size={32} /> },
-  { title: 'Education', href: '/industries/education', icon: <IconEducation size={32} /> },
+  { title: 'Banking and Financial Services', href: '/industries/bfsi',           icon: <IconBFSI size={26} /> },
+  { title: 'Manufacturing',                  href: '/industries/manufacturing',   icon: <IconManufacturing size={26} /> },
+  { title: 'Healthcare',                     href: '/industries/healthcare',      icon: <IconHealthcare size={26} /> },
+  { title: 'IT and ITES',                    href: '/industries/it-ites',         icon: <IconITITES size={26} /> },
+  { title: 'Government and PSU',             href: '/industries/government-psu',  icon: <IconGovernment size={26} /> },
+  { title: 'Education',                      href: '/industries/education',       icon: <IconEducation size={26} /> },
 ]
 
-const trustSignals = [
-  'Authorized ManageEngine Partner',
-  'Chennai-based. Pan-India delivery.',
-  'All six ManageEngine solution categories',
-  'Implementation methodology, not just deployment',
-  'Documented configuration handover on every engagement',
+const stats = [
+  { number: '15', label: 'ManageEngine products' },
+  { number: '6',  label: 'Solution categories' },
+  { number: '6',  label: 'Industry verticals' },
+  { number: '1',  label: 'Authorised partner' },
 ]
 
 export default function HomePage() {
@@ -83,75 +65,145 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(orgSchema()) }} />
 
-      {/* ── Hero ────────────────────────────────────────────────────── */}
-      <Hero
-        variant="dark"
-        eyebrow="Authorized ManageEngine Partner"
-        heading="ManageEngine installed is not ManageEngine working."
-        subheading="Enterprise organisations purchase ManageEngine expecting operational transformation. Most receive a deployment that covers the basics and leaves the automation, governance, integration, and advanced configuration untouched. ManagedFirst closes that gap. Architecture, implementation, and operational maturity across all six ManageEngine solution categories -- for enterprises across India."
-        primaryCta={{ label: 'See Where the Gap Is', href: '#solutions' }}
-        secondaryCta={{ label: 'Book an Assessment', href: '/free-consultation' }}
-        visual={<DashboardIllustration />}
-      />
+      {/* ── HERO -- text always visible, no animation opacity dependency ── */}
+      <section className="relative min-h-screen bg-navy flex items-center overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]"
+          style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px)', backgroundSize: '48px 48px' }}
+          aria-hidden="true" />
 
-      {/* ── Trust Bar ───────────────────────────────────────────────── */}
-      <section className="bg-offwhite border-b border-border-default py-4">
+        <div className="site-container relative w-full py-24 lg:py-0">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center min-h-[88vh]">
+
+            {/* Text -- rendered at full opacity immediately, no animate class */}
+            <div className="flex flex-col justify-center">
+              <span className="inline-flex items-center gap-2 mb-8">
+                <span className="w-2 h-2 rounded-full bg-teal" style={{ animation: 'pulseTeal 2s ease-in-out infinite' }} />
+                <span className="text-teal font-medium text-sm tracking-wide">
+                  Authorized ManageEngine Partner · Chennai, India
+                </span>
+              </span>
+
+              <h1 className="font-display font-black text-white leading-[1.08] tracking-tight mb-6"
+                style={{ fontSize: 'clamp(38px, 5vw, 68px)' }}>
+                ManageEngine installed is not ManageEngine working.
+              </h1>
+
+              <p className="text-white/70 leading-relaxed mb-10 max-w-[520px]"
+                style={{ fontSize: 'clamp(16px, 1.2vw, 18px)' }}>
+                Enterprise organisations purchase ManageEngine and receive a deployment that covers the basics. The automation, governance, integrations, and compliance configuration remain untouched. ManagedFirst closes that gap -- across all six solution categories, for enterprises across India.
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+                <Button variant="primary-dark" href="/free-consultation" icon={<IconArrowRight size={15} />}>
+                  Book a Free Assessment
+                </Button>
+                <Button variant="ghost" href="#solutions">
+                  See the Solutions
+                </Button>
+              </div>
+
+              {/* Trust signals grid -- always visible */}
+              <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {[
+                  'Authorised ManageEngine Partner',
+                  'Pan-India delivery from Chennai',
+                  'All six solution categories',
+                  'Documented handover on every engagement',
+                ].map(s => (
+                  <div key={s} className="flex items-start gap-2">
+                    <IconCheck size={13} className="text-teal flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-white/55 text-sm">{s}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Dashboard illustration */}
+            <div className="hidden lg:flex items-center justify-end">
+              <div className="w-full max-w-[560px] animate-float">
+                <DashboardIllustration />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── STATS -- large numbers on white ── */}
+      <section className="bg-white border-b border-border-default">
         <div className="site-container">
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-            {trustSignals.map((s, i) => (
-              <AnimateIn key={s} delay={i * 60} className="flex items-center gap-2">
-                <IconCheck size={14} className="text-teal flex-shrink-0" strokeWidth={2.5} />
-                <span className="text-body-sm text-charcoal font-medium">{s}</span>
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-border-default">
+            {stats.map((s, i) => (
+              <AnimateIn key={s.label} delay={i * 80} className="py-10 px-6 text-center">
+                <p className="font-display font-black text-navy leading-none mb-2"
+                  style={{ fontSize: 'clamp(42px, 4vw, 58px)' }}>
+                  {s.number}
+                </p>
+                <p className="text-muted text-sm font-medium">{s.label}</p>
               </AnimateIn>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Problem Statement ───────────────────────────────────────── */}
-      <section className="bg-white section-py">
+      {/* ── PROBLEM STATEMENT -- editorial two-column ── */}
+      <section className="bg-[#F8FAFB] section-py">
         <div className="site-container">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
             <AnimateIn direction="left">
-              <p className="text-overline uppercase tracking-widest text-teal mb-3">The Implementation Gap</p>
-              <h2 className="font-display text-h2 font-bold text-navy leading-tight mb-6">
-                Most ManageEngine deployments use less than half the platform.
-              </h2>
+              <p className="text-overline uppercase tracking-widest text-teal mb-4">The Implementation Gap</p>
+              <blockquote className="font-display font-bold text-navy leading-tight"
+                style={{ fontSize: 'clamp(26px, 2.8vw, 40px)' }}>
+                "Most ManageEngine deployments use less than half the platform."
+              </blockquote>
             </AnimateIn>
-            <AnimateIn direction="right" className="space-y-4">
+            <AnimateIn direction="right" className="space-y-5">
               {[
-                'IT teams purchase ManageEngine, configure the basics, and move on. Ticketing works. Monitoring runs. Endpoints are being patched. The software is live.',
-                'But most of what ManageEngine can do -- the workflow automation, the cross-tool integrations, the advanced governance, the compliance reporting -- remains at default settings or untouched entirely.',
-                'This is not a product problem. ManageEngine is capable. The gap is in how implementations are scoped, architected, and configured.',
-                'ManagedFirst implements ManageEngine to its full operational scope: environment-specific architecture, configuration mapped to your business processes, integrations with your existing systems, governance frameworks, and the runbook documentation that allows your team to operate independently. When we complete an engagement, the platform is working -- not just installed.',
-              ].map((p, i) => <p key={i} className="text-body text-charcoal leading-relaxed">{p}</p>)}
+                'IT teams install ManageEngine, configure incident management and basic monitoring, and move on. The software is live. The project is complete.',
+                'But the workflow automation, cross-tool integrations, access governance, and compliance reporting remain untouched -- the configuration that turns an installed tool into an operational asset.',
+                'This is not a product problem. The platform is capable. The gap is in how implementations are scoped, architected, and configured for the organisation\'s actual environment.',
+                'ManagedFirst implements ManageEngine to its full operational scope: architecture, configuration mapped to your processes, integration with your existing systems, and documentation your team uses independently.',
+              ].map((p, i) => (
+                <p key={i} className="text-charcoal/80 leading-relaxed text-[15px]">{p}</p>
+              ))}
+              <div className="pt-2">
+                <Button variant="secondary" href="/services/implementation">
+                  See our implementation approach
+                </Button>
+              </div>
             </AnimateIn>
           </div>
         </div>
       </section>
 
-      {/* ── Solutions Grid ──────────────────────────────────────────── */}
-      <section id="solutions" className="bg-offwhite section-py">
+      {/* ── SOLUTIONS -- card grid with left accent ── */}
+      <section id="solutions" className="bg-white section-py">
         <div className="site-container">
-          <AnimateIn className="mb-10">
-            <SectionHeader
-              eyebrow="ManageEngine Solutions"
-              heading="Six solution categories. Each addressing a specific gap in your IT environment."
-              subheading="We implement ManageEngine's complete product portfolio. The deployment approach is identical across all six categories -- documented, configured, integrated, and operational."
-            />
-          </AnimateIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-5">
-            {solutionHubs.map((hub, i) => (
-              <AnimateIn key={hub.title} delay={i * 80}>
-                <Link href={hub.href} className="group flex flex-col bg-white border-l-[3px] border-teal rounded-r-brand rounded-tl-none shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-space-5 hover-lift hover:shadow-card-hover h-full">
-                  <div className="text-teal mb-4 group-hover:scale-110 transition-transform duration-200">{hub.icon}</div>
-                  <p className="text-overline uppercase tracking-wider text-teal mb-2">{hub.title}</p>
-                  <p className="text-body text-charcoal leading-relaxed mb-4 flex-1">{hub.body}</p>
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {hub.products.map(p => <Badge key={p} variant="teal" className="text-xs">{p}</Badge>)}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+            <AnimateIn>
+              <p className="text-overline uppercase tracking-widest text-teal mb-3">ManageEngine Solutions</p>
+              <h2 className="font-display font-bold text-navy leading-tight"
+                style={{ fontSize: 'clamp(24px, 2.8vw, 38px)' }}>
+                Six solution categories.<br className="hidden lg:block" />One authorised partner.
+              </h2>
+            </AnimateIn>
+            <AnimateIn delay={100} className="flex-shrink-0">
+              <Button variant="secondary" href="/solutions/iam">Explore all solutions</Button>
+            </AnimateIn>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border-default rounded-brand overflow-hidden border border-border-default">
+            {solutions.map((s, i) => (
+              <AnimateIn key={s.title} delay={i * 55}>
+                <Link href={s.href}
+                  className="group flex flex-col bg-white p-6 h-full min-h-[180px] hover:bg-[#F8FAFB] transition-colors duration-200 border-l-[3px] border-transparent hover:border-l-teal">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-teal group-hover:scale-110 transition-transform duration-200">{s.icon}</span>
+                    <span className="text-xs text-muted font-medium">{s.count} {s.count === 1 ? 'product' : 'products'}</span>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 text-teal font-semibold text-body-sm group-hover:gap-2.5 transition-all">
-                    Explore implementation <IconArrowRight size={14} />
+                  <h3 className="font-display font-bold text-navy text-[16px] mb-2 group-hover:text-blue transition-colors leading-snug">{s.title}</h3>
+                  <p className="text-[13px] text-charcoal/65 leading-relaxed flex-1">{s.desc}</p>
+                  <span className="inline-flex items-center gap-1.5 text-teal text-xs font-semibold mt-4 group-hover:gap-2.5 transition-all duration-200">
+                    Implementation detail <IconArrowRight size={12} />
                   </span>
                 </Link>
               </AnimateIn>
@@ -160,73 +212,103 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Services Strip ──────────────────────────────────────────── */}
+      {/* ── WHY MANAGEDFIRST -- numbered editorial list ── */}
+      <section className="bg-[#F8FAFB] section-py">
+        <div className="site-container">
+          <AnimateIn className="mb-12">
+            <p className="text-overline uppercase tracking-widest text-teal mb-3">Why ManagedFirst</p>
+            <h2 className="font-display font-bold text-navy max-w-xl leading-tight"
+              style={{ fontSize: 'clamp(22px, 2.6vw, 36px)' }}>
+              What separates an implementation from an installation.
+            </h2>
+          </AnimateIn>
+
+          <div className="divide-y divide-border-default border-y border-border-default">
+            {whyUs.map((item, i) => (
+              <AnimateIn key={item.n} delay={i * 80}>
+                <div className="grid lg:grid-cols-12 gap-4 lg:gap-10 py-7">
+                  <div className="lg:col-span-1">
+                    <span className="font-display font-black text-teal/20 text-2xl select-none">{item.n}</span>
+                  </div>
+                  <div className="lg:col-span-5">
+                    <h3 className="font-display font-semibold text-navy text-[16px] leading-snug">{item.title}</h3>
+                  </div>
+                  <div className="lg:col-span-6">
+                    <p className="text-charcoal/70 leading-relaxed text-[14px]">{item.body}</p>
+                  </div>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+
+          <AnimateIn delay={200} className="mt-8">
+            <Button variant="secondary" href="/about">About ManagedFirst</Button>
+          </AnimateIn>
+        </div>
+      </section>
+
+      {/* ── SERVICES -- list hybrid ── */}
       <section className="bg-white section-py">
         <div className="site-container">
-          <AnimateIn className="mb-10">
-            <SectionHeader
-              eyebrow="Services"
-              heading="From first assessment to long-term operational governance."
-              subheading="ManagedFirst covers the complete ManageEngine engagement lifecycle. Each service has defined deliverables, a documented process, and a specific role in reducing implementation risk."
-            />
-          </AnimateIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-5">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+            <AnimateIn>
+              <p className="text-overline uppercase tracking-widest text-teal mb-3">Services</p>
+              <h2 className="font-display font-bold text-navy leading-tight"
+                style={{ fontSize: 'clamp(22px, 2.6vw, 36px)' }}>
+                From first assessment to long-term governance.
+              </h2>
+            </AnimateIn>
+          </div>
+
+          <div className="border-y border-border-default divide-y divide-border-default">
             {services.map((s, i) => (
-              <AnimateIn key={s.title} delay={i * 70}>
-                <Link href={s.href} className="group flex gap-4 p-space-5 rounded-brand border border-border-default bg-white hover-lift hover:border-teal">
-                  <div className="text-teal flex-shrink-0 group-hover:scale-110 transition-transform duration-200 mt-0.5">{s.icon}</div>
-                  <div>
-                    <h3 className="font-display text-h5 font-semibold text-navy mb-1 group-hover:text-blue transition-colors">{s.title}</h3>
-                    <p className="text-body-sm text-charcoal/70 leading-relaxed">{s.desc}</p>
+              <AnimateIn key={s.title} delay={i * 55}>
+                <Link href={s.href}
+                  className="group grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-8 items-center py-5 hover:bg-[#F8FAFB] transition-colors duration-200 px-3 -mx-3 rounded-sm">
+                  <div className="lg:col-span-3">
+                    <h3 className="font-display font-semibold text-navy text-[15px] group-hover:text-blue transition-colors">{s.title}</h3>
+                  </div>
+                  <div className="lg:col-span-8">
+                    <p className="text-[13px] text-charcoal/65 leading-relaxed">{s.desc}</p>
+                  </div>
+                  <div className="lg:col-span-1 flex justify-end">
+                    <IconArrowRight size={15} className="text-muted group-hover:text-teal group-hover:translate-x-1 transition-all duration-200" />
                   </div>
                 </Link>
               </AnimateIn>
             ))}
           </div>
+
           <AnimateIn delay={200} className="mt-8">
-            <Button variant="secondary" href="/services">See all services</Button>
+            <Button variant="secondary" href="/services">All services</Button>
           </AnimateIn>
         </div>
       </section>
 
-      {/* ── Why ManagedFirst ────────────────────────────────────────── */}
-      <section className="bg-offwhite section-py">
+      {/* ── INDUSTRIES -- uniform fixed-height tiles ── */}
+      <section className="bg-[#F8FAFB] section-py">
         <div className="site-container">
-          <AnimateIn className="mb-10">
-            <SectionHeader
-              eyebrow="Why ManagedFirst"
-              heading="Implementation expertise is built through consistent, documented delivery. Here is what that means in practice."
-            />
-          </AnimateIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-space-5">
-            {whyUs.map((d, i) => (
-              <AnimateIn key={d.title} delay={i * 80}>
-                <div className="bg-white border-l-[2px] border-teal p-space-5 rounded-r-brand">
-                  <h3 className="font-display text-h4 font-bold text-navy mb-3">{d.title}</h3>
-                  <p className="text-body text-charcoal leading-relaxed">{d.body}</p>
-                </div>
-              </AnimateIn>
-            ))}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+            <AnimateIn>
+              <p className="text-overline uppercase tracking-widest text-teal mb-3">Industries</p>
+              <h2 className="font-display font-bold text-navy leading-tight"
+                style={{ fontSize: 'clamp(22px, 2.6vw, 36px)' }}>
+                Every sector has specific IT obligations.<br className="hidden lg:block" />We configure ManageEngine for yours.
+              </h2>
+            </AnimateIn>
           </div>
-        </div>
-      </section>
 
-      {/* ── Industries ───────────────────────────────────────────────── */}
-      <section className="bg-white section-py">
-        <div className="site-container">
-          <AnimateIn className="mb-10">
-            <SectionHeader
-              eyebrow="Industries"
-              heading="Every sector has specific IT obligations. We configure ManageEngine for yours."
-              subheading="The underlying IT challenges vary by sector -- so do the compliance frameworks, audit requirements, and operational constraints. Our implementations account for the environment you operate in."
-            />
-          </AnimateIn>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {industries.map((ind, i) => (
-              <AnimateIn key={ind.title} delay={i * 60}>
-                <Link href={ind.href} className="group flex flex-col items-center text-center p-5 rounded-brand border border-border-default hover-lift hover:border-teal bg-white">
-                  <div className="text-teal mb-3 group-hover:scale-110 transition-transform duration-200">{ind.icon}</div>
-                  <p className="text-body-sm font-semibold text-navy group-hover:text-blue transition-colors leading-tight">{ind.title}</p>
+              <AnimateIn key={ind.title} delay={i * 45}>
+                <Link href={ind.href}
+                  className="group flex flex-col items-center justify-center text-center
+                             bg-white border border-border-default rounded-brand
+                             h-[144px] p-4
+                             hover:border-teal hover:-translate-y-1 hover:shadow-md
+                             transition-all duration-200">
+                  <span className="text-teal mb-3 group-hover:scale-110 transition-transform duration-200">{ind.icon}</span>
+                  <span className="text-navy font-semibold text-[12px] leading-tight group-hover:text-blue transition-colors">{ind.title}</span>
                 </Link>
               </AnimateIn>
             ))}
@@ -234,28 +316,58 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── DPDPA Banner ─────────────────────────────────────────────── */}
-      <section className="bg-teal py-12">
-        <div className="site-container flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <p className="text-overline uppercase tracking-widest text-white/70 mb-2">Compliance</p>
-            <h2 className="font-display text-h2 font-bold text-white leading-tight">
-              The DPDPA is in enforcement.<br className="hidden sm:block" />Is your IT environment ready?
-            </h2>
+      {/* ── DPDPA COMPLIANCE BANNER ── */}
+      <section className="bg-navy section-py">
+        <div className="site-container">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <AnimateIn direction="left">
+              <p className="text-overline uppercase tracking-widest text-teal mb-4">Compliance</p>
+              <h2 className="font-display font-bold text-white leading-tight mb-4"
+                style={{ fontSize: 'clamp(26px, 2.8vw, 40px)' }}>
+                The DPDPA is in enforcement.<br />Is your IT environment ready?
+              </h2>
+              <p className="text-white/60 leading-relaxed text-[15px] max-w-lg">
+                Five specific technical obligations. ManageEngine addresses each one -- when configured correctly.
+              </p>
+            </AnimateIn>
+            <AnimateIn direction="right" className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:justify-end">
+              <Button variant="primary-dark" href="/dpdpa-compliance">
+                Get a Free DPDPA Assessment
+              </Button>
+              <Button variant="ghost" href="/resources/guides">
+                Download the Checklist
+              </Button>
+            </AnimateIn>
           </div>
-          <Button variant="primary-dark" href="/dpdpa-compliance" className="flex-shrink-0">
-            Get a Free DPDPA Assessment
-          </Button>
         </div>
       </section>
 
-      {/* ── Footer CTA ───────────────────────────────────────────────── */}
-      <CTABand
-        heading="Your ManageEngine environment should be running its full capability."
-        body="If it is not -- if automation is manual, if governance is incomplete, if compliance reporting requires extraction -- book a free assessment. We will review your current deployment, identify the configuration gaps, and tell you specifically what a complete implementation would change."
-        primaryCta={{ label: 'Book a Free Assessment', href: '/free-consultation' }}
-        secondaryCta={{ label: 'Write to us', href: '/contact' }}
-      />
+      {/* ── FINAL CTA ── */}
+      <section className="bg-[#F8FAFB] border-t border-border-default section-py">
+        <div className="site-container">
+          <div className="max-w-3xl mx-auto text-center">
+            <AnimateIn>
+              <h2 className="font-display font-bold text-navy leading-tight mb-5"
+                style={{ fontSize: 'clamp(26px, 2.8vw, 40px)' }}>
+                Your ManageEngine environment should be running its full capability.
+              </h2>
+            </AnimateIn>
+            <AnimateIn delay={100}>
+              <p className="text-charcoal/65 leading-relaxed mb-8 text-[16px]">
+                If it is not -- book a free assessment. We will review your current deployment, identify the configuration gaps, and tell you specifically what a complete implementation would change.
+              </p>
+            </AnimateIn>
+            <AnimateIn delay={200} className="flex flex-wrap justify-center gap-3">
+              <Button variant="primary-light" href="/free-consultation" icon={<IconArrowRight size={15} />}>
+                Book a Free Assessment
+              </Button>
+              <Button variant="secondary" href="/contact">
+                Write to us
+              </Button>
+            </AnimateIn>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

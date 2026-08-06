@@ -44,6 +44,7 @@ export function ProductCard({ name, category, tagline, href, icon }: ProductCard
 const categoryLabels: Record<string, string> = {
   'manageengine-implementation': 'ManageEngine Implementation',
   'it-operations-itsm':          'IT Operations and ITSM',
+  'it-operations-and-itsm':     'IT Operations and ITSM',
   'security-siem':               'Security and SIEM',
   'compliance':                  'Compliance',
   'industry-use-cases':          'Industry Use Cases',
