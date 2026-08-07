@@ -2,8 +2,8 @@ import type { Config } from 'tailwindcss'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ManagedFirst Technologies — Tailwind Design Tokens
-// Source: Brand Guidelines v1.0 · August 2026
-// All values are confirmed from the brand guidelines document.
+// Visual Redesign v2.0 · August 2026
+// Option B palette applied per UI/UX Visual Redesign Guidelines
 // ─────────────────────────────────────────────────────────────────────────────
 
 const config: Config = {
@@ -14,7 +14,6 @@ const config: Config = {
   ],
 
   theme: {
-    // ── Breakpoints (brand guidelines, page 6) ──────────────────────────────
     screens: {
       xs:  '480px',
       sm:  '480px',
@@ -24,119 +23,130 @@ const config: Config = {
     },
 
     extend: {
-      // ── Colours (brand guidelines, page 2) ─────────────────────────────────
+      // ── Colour system — Option B (UI/UX Redesign Guidelines) ───────────────
       colors: {
-        // ── Core palette ────────────────────────────────────────────────────
-        navy:     '#0B2D78',   // Deep Navy  — hero, nav, H1, footer
-        blue:     '#005A8E',   // Primary Blue — links, borders, H2, UI elements
-        teal:     '#0099A8',   // Teal Accent — icons, tags, badges, highlights
-        charcoal: '#1A1A2E',   // Charcoal — body text, dark UI
-        offwhite: '#F4F8FB',   // Off-white — page bg, card bg, input bg
-        red:      '#E8192C',   // Action Red — CTA on light backgrounds ONLY
-        amber:    '#F5A623',   // Amber — CTA on dark/navy backgrounds ONLY
+        // Core palette (new values)
+        navy:     '#0F172A',   // Dark — hero, nav, headings, footer
+        blue:     '#2563EB',   // Primary — links, CTAs, interactive UI
+        teal:     '#06B6D4',   // Highlight/Cyan — icons, accents, highlights
+        accent:   '#7C3AED',   // Purple — badges, eyebrows, gradients
+        charcoal: '#1E293B',   // Dark body text
+        offwhite: '#F8FAFC',   // Light section background
+        red:      '#E8192C',   // CTA on light backgrounds ONLY (unchanged)
+        amber:    '#F5A623',   // CTA on dark backgrounds ONLY (unchanged)
 
-        // ── Tints (derived from core palette) ──────────────────────────────
-        'teal-light':  '#E5F6F8',   // Teal at ~8% on white — callout backgrounds
-        'navy-light':  '#F0F2F7',   // Navy at ~6% on white — subtle section tints
-        'navy-dark':   '#081E52',   // Navy darkened — hover states on navy elements
+        // Tints
+        'teal-light':   '#ECFEFF',   // Cyan light for callout backgrounds
+        'navy-light':   '#F1F5F9',   // Light section tint
+        'navy-dark':    '#020617',   // Deeper dark for hover states
+        'accent-light': '#EDE9FE',   // Purple light for badges
+        'blue-light':   '#EFF6FF',   // Blue light for callouts
 
-        // ── Component colours ───────────────────────────────────────────────
-        'border-default': '#D0DAE4',  // Default input and card borders
-        'muted':          '#8899AA',  // Placeholders, captions, labels, H6
-        'error-bg':       '#FFF5F5',  // Input error state background
-        'disabled-bg':    '#E8EDF2',  // Disabled button / input background
+        // Component
+        'border-default': '#E2E8F0',  // Card and input borders
+        'muted':          '#94A3B8',  // Placeholders, captions, meta
+        'error-bg':       '#FFF5F5',
+        'disabled-bg':    '#F1F5F9',
 
-        // ── Semantic aliases — use these in components ──────────────────────
-        // Primary action colours
-        'cta-light':  '#E8192C',  // CTA button on white/light bg
-        'cta-dark':   '#F5A623',  // CTA button on navy/dark bg
-        // Text colours
-        'text-body':     '#1A1A2E',
-        'text-muted':    '#8899AA',
+        // Semantic aliases
+        'cta-light':     '#2563EB',
+        'cta-dark':      '#F5A623',
+        'text-body':     '#1E293B',
+        'text-muted':    '#94A3B8',
         'text-on-dark':  '#FFFFFF',
-        'text-heading':  '#0B2D78',
-        'text-link':     '#005A8E',
+        'text-heading':  '#0F172A',
+        'text-link':     '#2563EB',
       },
 
-      // ── Typography (brand guidelines, page 3) ──────────────────────────────
+      // ── Typography — Plus Jakarta Sans headings, Inter body ────────────────
       fontFamily: {
-        // Headings, CTAs, labels, nav links
-        display: ['Nunito', 'system-ui', 'sans-serif'],
-        // Body text, captions, data
+        display: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
         sans:    ['Inter', 'system-ui', 'sans-serif'],
       },
 
-      // Font sizes matching the brand type scale exactly
+      // ── Type scale — increased per redesign guidelines ──────────────────────
+      // H1: 64-72px · H2: 48-56px · H3: 32-40px · body: 18px
       fontSize: {
-        // Heading scale (Nunito)
-        'display': ['3rem',       { lineHeight: '1.10', letterSpacing: '-0.5px' }],  // 48px
-        'h1':      ['2.25rem',    { lineHeight: '1.15', letterSpacing: '-0.3px' }],  // 36px
-        'h2':      ['1.75rem',    { lineHeight: '1.20', letterSpacing: '-0.2px' }],  // 28px
-        'h3':      ['1.375rem',   { lineHeight: '1.25', letterSpacing: '0px'   }],  // 22px
-        'h4':      ['1.125rem',   { lineHeight: '1.30', letterSpacing: '0px'   }],  // 18px
-        'h5':      ['1rem',       { lineHeight: '1.35', letterSpacing: '0px'   }],  // 16px
-        'h6':      ['0.875rem',   { lineHeight: '1.40', letterSpacing: '0.2px' }],  // 14px
-        // Body scale (Inter)
-        'body-lg': ['1.125rem',   { lineHeight: '1.75' }],  // 18px — hero intro
-        'body':    ['1rem',       { lineHeight: '1.75' }],  // 16px — all body
-        'body-sm': ['0.875rem',   { lineHeight: '1.70' }],  // 14px — secondary copy
-        'caption': ['0.8125rem',  { lineHeight: '1.60' }],  // 13px
-        'label':   ['0.75rem',    { lineHeight: '1.50' }],  // 12px — form labels, metadata
-        'overline':['0.6875rem',  { lineHeight: '1.40' }],  // 11px — eyebrow text
-        'cta':     ['0.875rem',   { lineHeight: '1.0'  }],  // 14px — button text
-        'nav':     ['0.875rem',   { lineHeight: '1.0'  }],  // 14px — nav links
+        'display': ['4.5rem',    { lineHeight: '1.08', letterSpacing: '-1px'  }],  // 72px
+        'h1':      ['4rem',      { lineHeight: '1.10', letterSpacing: '-0.8px'}],  // 64px
+        'h2':      ['3rem',      { lineHeight: '1.12', letterSpacing: '-0.5px'}],  // 48px
+        'h3':      ['2.25rem',   { lineHeight: '1.18', letterSpacing: '-0.3px'}],  // 36px
+        'h4':      ['1.5rem',    { lineHeight: '1.30', letterSpacing: '-0.1px'}],  // 24px
+        'h5':      ['1.25rem',   { lineHeight: '1.35', letterSpacing: '0px'  }],  // 20px
+        'h6':      ['1rem',      { lineHeight: '1.40', letterSpacing: '0.1px'}],  // 16px
+        'body-lg': ['1.125rem',  { lineHeight: '1.70' }],  // 18px
+        'body':    ['1.125rem',  { lineHeight: '1.70' }],  // 18px
+        'body-sm': ['0.9375rem', { lineHeight: '1.65' }],  // 15px
+        'caption': ['0.875rem',  { lineHeight: '1.60' }],  // 14px
+        'label':   ['0.8125rem', { lineHeight: '1.50' }],  // 13px
+        'overline':['0.75rem',   { lineHeight: '1.40' }],  // 12px
+        'cta':     ['0.9375rem', { lineHeight: '1.0'  }],  // 15px
+        'nav':     ['0.9375rem', { lineHeight: '1.0'  }],  // 15px
       },
 
-      // Font weights used in type scale
       fontWeight: {
-        'black':     '900',  // Display
-        'extrabold': '800',  // H1
-        'bold':      '700',  // H2, H3, H4, CTA button
-        'semibold':  '600',  // H5, H6, nav links
-        'medium':    '500',  // Label, Overline
-        'regular':   '400',  // Body, Caption
+        'black':     '900',
+        'extrabold': '800',
+        'bold':      '700',
+        'semibold':  '600',
+        'medium':    '500',
+        'regular':   '400',
       },
 
-      // ── Spacing (brand guidelines, page 4 — 8px base unit) ────────────────
+      // ── Spacing (8px system, sections 100-120px per guidelines) ────────────
       spacing: {
-        // Brand spacing tokens — use these in components
-        'space-1':  '0.25rem',   // 4px  — icon-to-label gap, micro-spacing
-        'space-2':  '0.5rem',    // 8px  — tight element spacing
-        'space-3':  '0.75rem',   // 12px — component internal padding (sm)
-        'space-4':  '1rem',      // 16px — default component padding
-        'space-5':  '1.5rem',    // 24px — section internal spacing, card padding
-        'space-6':  '2rem',      // 32px — gap between components
-        'space-7':  '3rem',      // 48px — section padding mobile
-        'space-8':  '4rem',      // 64px — section padding desktop
-        'space-9':  '6rem',      // 96px — large section breaks, hero padding
-        'space-10': '8rem',      // 128px — page-level vertical rhythm
-        // Component-specific sizes
-        'nav-height':  '4rem',   // 64px — navigation bar height
-        'page-margin': '5rem',   // 80px — desktop page horizontal margin
-        'card-pad':    '1.5rem', // 24px — card internal padding
-        'btn-x':       '1.5rem', // 24px — button horizontal padding
-        'btn-y':       '0.75rem',// 12px — button vertical padding
-        'input-h':     '3rem',   // 48px — input field height
+        'space-1':  '0.25rem',   // 4px
+        'space-2':  '0.5rem',    // 8px
+        'space-3':  '0.75rem',   // 12px
+        'space-4':  '1rem',      // 16px
+        'space-5':  '1.5rem',    // 24px
+        'space-6':  '2rem',      // 32px
+        'space-7':  '3rem',      // 48px
+        'space-8':  '4rem',      // 64px
+        'space-9':  '6rem',      // 96px
+        'space-10': '8rem',      // 128px
+        'nav-height':  '4.5rem', // 72px (increased from 64px)
+        'page-margin': '5rem',
+        'card-pad':    '2rem',   // 32px (increased per guidelines)
+        'btn-x':       '1.75rem',
+        'btn-y':       '0.875rem',
+        'input-h':     '3.25rem', // 52px (taller inputs)
       },
 
-      // ── Max widths ─────────────────────────────────────────────────────────
       maxWidth: {
-        site:  '1280px',  // Content never exceeds this — centred on screen
-        prose: '720px',   // Blog posts and legal pages
+        site:  '1280px',
+        prose: '720px',
       },
 
-      // ── Border radius (from component specs, page 5) ───────────────────────
+      // ── Border radius — buttons 14px, cards 20px ───────────────────────────
       borderRadius: {
-        brand:   '6px',   // Buttons, cards, inputs
-        'brand-sm': '4px',
-        'brand-lg': '8px',
+        brand:    '8px',    // base elements
+        'btn':    '14px',   // buttons (per guidelines 14-16px)
+        'card':   '20px',   // cards (per guidelines 20-24px)
+        'card-lg':'24px',   // larger cards
+        'input':  '10px',   // form inputs
+        'pill':   '9999px', // badges, pills
       },
 
-      // ── Box shadows ────────────────────────────────────────────────────────
+      // ── Shadow system — consistent, not heavy ──────────────────────────────
       boxShadow: {
-        card:    '0 1px 3px rgba(11, 45, 120, 0.08), 0 1px 2px rgba(11, 45, 120, 0.06)',
-        'card-hover': '0 4px 12px rgba(11, 45, 120, 0.12), 0 2px 4px rgba(11, 45, 120, 0.08)',
-        nav:     '0 1px 0 rgba(11, 45, 120, 0.08)',
+        'card':        '0 1px 4px rgba(15,23,42,0.04), 0 4px 16px rgba(15,23,42,0.06)',
+        'card-hover':  '0 8px 40px rgba(15,23,42,0.14), 0 2px 8px rgba(15,23,42,0.06)',
+        'btn':         '0 1px 4px rgba(37,99,235,0.15), 0 2px 8px rgba(37,99,235,0.08)',
+        'btn-hover':   '0 4px 16px rgba(37,99,235,0.30), 0 2px 6px rgba(37,99,235,0.12)',
+        'nav':         '0 1px 0 rgba(15,23,42,0.06)',
+        'nav-scrolled':'0 4px 24px rgba(15,23,42,0.08)',
+        'focus':       '0 0 0 3px rgba(37,99,235,0.20)',
+        'input':       '0 1px 2px rgba(15,23,42,0.04)',
+        'input-focus': '0 0 0 3px rgba(37,99,235,0.15)',
+      },
+
+      // ── Transition timing ──────────────────────────────────────────────────
+      transitionTimingFunction: {
+        'smooth': 'cubic-bezier(0.16, 1, 0.3, 1)',
+      },
+      transitionDuration: {
+        '250': '250ms',
       },
     },
   },

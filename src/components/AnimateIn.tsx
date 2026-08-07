@@ -1,7 +1,7 @@
 'use client'
+import React from 'react'
 import { useInView } from '@/hooks/useInView'
 import { CSSProperties } from 'react'
-import { JSX } from 'react/jsx-runtime'
 
 interface AnimateInProps {
   children: React.ReactNode
@@ -19,24 +19,23 @@ const directionClass: Record<NonNullable<AnimateInProps['direction']>, string> =
 }
 
 export function AnimateIn({
-  children,
-  delay = 0,
-  direction = 'up',
-  className = '',
-  as: Tag = 'div',
+  children, delay = 0, direction = 'up',
+  className = '', as: Tag = 'div',
 }: AnimateInProps) {
   const { ref, isInView } = useInView()
 
-  const style: CSSProperties = {
-    animationDelay: `${delay}ms`,
-    animationFillMode: 'both',
-  }
+  const style: CSSProperties = isInView
+    ? { animationDelay: `${delay}ms` }
+    : { opacity: 0 }
 
   return (
     <Tag
-      ref={ref}
-      className={`${isInView ? directionClass[direction] : 'opacity-0'} ${className}`}
-      style={isInView ? style : undefined}
+      ref={ref as React.Ref<HTMLElement>}
+      // When not in view: opacity-0 via inline style
+      // When in view: animation class (which transitions FROM opacity-0 TO opacity-1)
+      // Default state is opacity:1 so SSR always renders visibly — JS adds animation
+      className={`${isInView ? directionClass[direction] : ''} ${className}`}
+      style={style}
     >
       {children}
     </Tag>

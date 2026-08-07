@@ -4,9 +4,7 @@ import { Button } from '@/components/ui/Button'
 import { SectionHeader } from '@/components/ui/Elements'
 import { IconArrowRight, IconCheck } from '@/components/icons'
 
-// ─────────────────────────────────────────────────────────────────────────────
-// CTABand
-// ─────────────────────────────────────────────────────────────────────────────
+// ── CTABand ──────────────────────────────────────────────────────────────────
 export interface CTABandProps {
   heading: string
   body?: string
@@ -16,19 +14,28 @@ export interface CTABandProps {
 
 export function CTABand({ heading, body, primaryCta, secondaryCta }: CTABandProps) {
   return (
-    <section className="bg-navy py-space-9">
-      <div className="site-container text-center max-w-3xl mx-auto">
+    <section className="relative bg-navy overflow-hidden" style={{ padding: '7rem 0' }}>
+      {/* Gradient blob */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] opacity-15"
+          style={{ background: 'radial-gradient(circle, #7C3AED 0%, #2563EB 50%, transparent 75%)', filter: 'blur(80px)' }} />
+      </div>
+      <div className="site-container relative text-center" style={{ maxWidth: '720px', margin: '0 auto' }}>
         <AnimateIn>
-          <h2 className="font-display text-h2 font-bold text-white leading-tight mb-4">
+          <h2 className="font-display font-bold text-white leading-tight mb-5"
+            style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
             {heading}
           </h2>
         </AnimateIn>
         {body && (
           <AnimateIn delay={100}>
-            <p className="text-body-lg text-white/80 leading-relaxed mb-8">{body}</p>
+            <p className="text-white/65 leading-relaxed mb-8"
+              style={{ fontSize: 'clamp(16px, 1.2vw, 19px)' }}>
+              {body}
+            </p>
           </AnimateIn>
         )}
-        <AnimateIn delay={200} className="flex flex-wrap justify-center gap-4">
+        <AnimateIn delay={200} className="flex flex-wrap justify-center gap-3">
           <Button variant="primary-dark" href={primaryCta.href} icon={<IconArrowRight size={16} />}>
             {primaryCta.label}
           </Button>
@@ -43,9 +50,7 @@ export function CTABand({ heading, body, primaryCta, secondaryCta }: CTABandProp
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// CapabilityCard
-// ─────────────────────────────────────────────────────────────────────────────
+// ── CapabilityCard ────────────────────────────────────────────────────────────
 export interface CapabilityCardProps {
   title: string
   description: string
@@ -54,19 +59,26 @@ export interface CapabilityCardProps {
 
 export function CapabilityCard({ title, description, icon }: CapabilityCardProps) {
   return (
-    <div className="bg-white border border-border-default rounded-brand p-space-5 hover-lift hover:border-teal cursor-default">
+    <div className="group bg-white rounded-card border border-border-default shadow-card p-8
+                    hover:-translate-y-[6px] hover:shadow-card-hover hover:border-blue/30
+                    transition-all duration-250 ease-smooth">
       {icon && (
-        <div className="text-teal mb-4 w-8 h-8">{icon}</div>
+        <div className="text-blue mb-5 w-8 h-8 group-hover:scale-110 transition-transform duration-250">
+          {icon}
+        </div>
       )}
-      <h3 className="font-display text-h4 font-bold text-charcoal mb-2">{title}</h3>
-      <p className="text-body-sm text-charcoal/75 leading-relaxed">{description}</p>
+      <h3 className="font-display font-semibold text-navy mb-3"
+        style={{ fontSize: '1.0625rem' }}>
+        {title}
+      </h3>
+      <p className="text-charcoal/70 leading-relaxed" style={{ fontSize: '0.9375rem' }}>
+        {description}
+      </p>
     </div>
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// CapabilitiesGrid
-// ─────────────────────────────────────────────────────────────────────────────
+// ── CapabilitiesGrid ──────────────────────────────────────────────────────────
 export interface CapabilitiesGridProps {
   eyebrow?: string
   heading?: string
@@ -79,13 +91,13 @@ export function CapabilitiesGrid({ eyebrow, heading, subheading, items }: Capabi
     <section className="bg-offwhite section-py">
       <div className="site-container">
         {heading && (
-          <AnimateIn className="mb-10">
+          <AnimateIn className="mb-12">
             <SectionHeader eyebrow={eyebrow} heading={heading} subheading={subheading} />
           </AnimateIn>
         )}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item, i) => (
-            <AnimateIn key={item.title} delay={i * 80}>
+            <AnimateIn key={item.title} delay={i * 70}>
               <CapabilityCard {...item} />
             </AnimateIn>
           ))}
@@ -95,9 +107,7 @@ export function CapabilitiesGrid({ eyebrow, heading, subheading, items }: Capabi
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// UseCaseCard
-// ─────────────────────────────────────────────────────────────────────────────
+// ── UseCaseCard ───────────────────────────────────────────────────────────────
 export interface UseCaseCardProps {
   title: string
   description: string
@@ -106,21 +116,28 @@ export interface UseCaseCardProps {
 
 export function UseCaseCard({ title, description, number }: UseCaseCardProps) {
   return (
-    <div className="relative bg-teal-light border-l-4 border-teal rounded-brand p-space-5 overflow-hidden">
+    <div className="relative bg-white rounded-card border border-border-default shadow-card p-8 overflow-hidden
+                    hover:-translate-y-[6px] hover:shadow-card-hover hover:border-teal/40
+                    transition-all duration-250 ease-smooth">
       {number !== undefined && (
-        <span className="absolute top-2 right-4 text-[64px] font-black text-teal/15 leading-none select-none" aria-hidden="true">
+        <span className="absolute top-4 right-6 font-display font-black text-teal/10 select-none"
+          style={{ fontSize: '72px', lineHeight: 1 }} aria-hidden="true">
           {number}
         </span>
       )}
-      <h3 className="font-display text-h3 font-bold text-teal mb-2 relative">{title}</h3>
-      <p className="text-body text-charcoal leading-relaxed relative">{description}</p>
+      <div className="w-1 h-10 bg-teal rounded-full mb-5" />
+      <h3 className="font-display font-semibold text-navy mb-3"
+        style={{ fontSize: '1.0625rem' }}>
+        {title}
+      </h3>
+      <p className="text-charcoal/70 leading-relaxed" style={{ fontSize: '0.9375rem' }}>
+        {description}
+      </p>
     </div>
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// UseCasesGrid
-// ─────────────────────────────────────────────────────────────────────────────
+// ── UseCasesGrid ──────────────────────────────────────────────────────────────
 export interface UseCasesGridProps {
   eyebrow?: string
   heading?: string
@@ -132,13 +149,13 @@ export function UseCasesGrid({ eyebrow, heading, items }: UseCasesGridProps) {
     <section className="bg-white section-py">
       <div className="site-container">
         {heading && (
-          <AnimateIn className="mb-10">
+          <AnimateIn className="mb-12">
             <SectionHeader eyebrow={eyebrow} heading={heading} />
           </AnimateIn>
         )}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-space-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {items.map((item, i) => (
-            <AnimateIn key={item.title} delay={i * 100}>
+            <AnimateIn key={item.title} delay={i * 80}>
               <UseCaseCard {...item} number={i + 1} />
             </AnimateIn>
           ))}
@@ -148,9 +165,7 @@ export function UseCasesGrid({ eyebrow, heading, items }: UseCasesGridProps) {
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// ImplementationStep
-// ─────────────────────────────────────────────────────────────────────────────
+// ── ImplementationStep ────────────────────────────────────────────────────────
 export interface ImplementationStepProps {
   number: number
   title: string
@@ -161,27 +176,27 @@ export interface ImplementationStepProps {
 export function ImplementationStep({ number, title, description, isLast }: ImplementationStepProps) {
   return (
     <div className="flex gap-6">
-      {/* Number column */}
       <div className="flex flex-col items-center flex-shrink-0">
-        <div className="w-12 h-12 rounded-full bg-teal-light border-2 border-teal flex items-center justify-center text-teal font-display font-bold text-h4 hover:animate-[pulseTeal_1s_ease-in-out] transition-all">
+        <div className="w-11 h-11 rounded-full bg-blue text-white flex items-center justify-center
+                        font-display font-bold text-[15px] shadow-btn flex-shrink-0">
           {number}
         </div>
-        {!isLast && (
-          <div className="w-0.5 flex-1 bg-teal/20 mt-3 mb-0 min-h-[32px]" aria-hidden="true" />
-        )}
+        {!isLast && <div className="w-px flex-1 bg-blue/15 mt-3 min-h-[32px]" aria-hidden="true" />}
       </div>
-      {/* Content */}
       <div className="pb-8">
-        <h3 className="font-display text-h4 font-bold text-navy mb-2">{title}</h3>
-        <p className="text-body text-charcoal/80 leading-relaxed">{description}</p>
+        <h3 className="font-display font-semibold text-navy mb-2"
+          style={{ fontSize: '1.0625rem' }}>
+          {title}
+        </h3>
+        <p className="text-charcoal/70 leading-relaxed" style={{ fontSize: '0.9375rem' }}>
+          {description}
+        </p>
       </div>
     </div>
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// ImplementationSteps
-// ─────────────────────────────────────────────────────────────────────────────
+// ── ImplementationSteps ───────────────────────────────────────────────────────
 export interface ImplementationStepsProps {
   eyebrow?: string
   heading?: string
@@ -192,15 +207,15 @@ export function ImplementationSteps({ eyebrow, heading, steps }: ImplementationS
   return (
     <section className="bg-offwhite section-py">
       <div className="site-container">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {heading && (
-            <AnimateIn direction="left" className="lg:sticky lg:top-24">
-              <SectionHeader eyebrow={eyebrow} heading={heading} />
+            <AnimateIn direction="left" className="lg:sticky lg:top-28">
+              <SectionHeader eyebrow={eyebrow} heading={heading} headingSize="h3" />
             </AnimateIn>
           )}
           <div>
             {steps.map((step, i) => (
-              <AnimateIn key={step.title} delay={i * 100} direction="right">
+              <AnimateIn key={step.title} delay={i * 90} direction="right">
                 <ImplementationStep
                   number={i + 1}
                   title={step.title}
@@ -216,9 +231,7 @@ export function ImplementationSteps({ eyebrow, heading, steps }: ImplementationS
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// NumberedChallenge
-// ─────────────────────────────────────────────────────────────────────────────
+// ── NumberedChallenge ─────────────────────────────────────────────────────────
 export interface NumberedChallengeProps {
   number: number
   title: string
@@ -227,59 +240,63 @@ export interface NumberedChallengeProps {
 
 export function NumberedChallenge({ number, title, description }: NumberedChallengeProps) {
   return (
-    <div className="relative bg-offwhite rounded-brand p-space-6 border border-transparent hover:border-teal transition-colors duration-200 overflow-hidden">
-      <span className="absolute top-0 right-4 text-[80px] font-black text-navy/10 leading-none select-none" aria-hidden="true">
+    <div className="relative bg-offwhite rounded-card p-8 border border-transparent
+                    hover:border-blue/20 hover:shadow-card transition-all duration-250 ease-smooth overflow-hidden">
+      <span className="absolute top-2 right-5 font-display font-black text-navy/[0.06] select-none"
+        style={{ fontSize: '88px', lineHeight: 1 }} aria-hidden="true">
         {number}
       </span>
-      <h3 className="font-display text-h3 font-bold text-teal mb-3 relative">{title}</h3>
-      <p className="text-body text-charcoal leading-relaxed relative">{description}</p>
+      <div className="w-8 h-8 bg-accent-light rounded-brand flex items-center justify-center mb-4">
+        <span className="text-accent font-display font-bold text-[13px]">{number}</span>
+      </div>
+      <h3 className="font-display font-semibold text-navy mb-3"
+        style={{ fontSize: '1.0625rem' }}>
+        {title}
+      </h3>
+      <p className="text-charcoal/70 leading-relaxed" style={{ fontSize: '0.9375rem' }}>
+        {description}
+      </p>
     </div>
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// SolutionsMappingTable
-// ─────────────────────────────────────────────────────────────────────────────
-export interface MappingRow {
-  challenge: string
-  product: string
-  configuration: string
-}
+// ── SolutionsMappingTable ─────────────────────────────────────────────────────
+export interface MappingRow { challenge: string; product: string; configuration: string }
 
 export function SolutionsMappingTable({ heading, rows }: { heading?: string; rows: MappingRow[] }) {
   return (
     <div>
       {heading && (
-        <h3 className="font-display text-h3 font-bold text-navy mb-6">{heading}</h3>
+        <h3 className="font-display font-bold text-navy mb-6" style={{ fontSize: '1.5rem' }}>
+          {heading}
+        </h3>
       )}
-      {/* Desktop table */}
-      <div className="hidden md:block overflow-hidden rounded-brand border border-border-default">
+      <div className="hidden md:block overflow-hidden rounded-card border border-border-default shadow-card">
         <table className="w-full text-left">
           <thead>
-            <tr className="bg-navy text-white">
-              <th className="px-5 py-4 text-label font-semibold uppercase tracking-wide w-1/3">Challenge</th>
-              <th className="px-5 py-4 text-label font-semibold uppercase tracking-wide w-1/4">ManageEngine product</th>
-              <th className="px-5 py-4 text-label font-semibold uppercase tracking-wide">What we configure</th>
+            <tr className="bg-navy">
+              <th className="px-6 py-4 text-white font-semibold text-[12px] uppercase tracking-widest w-1/3">Challenge</th>
+              <th className="px-6 py-4 text-white font-semibold text-[12px] uppercase tracking-widest w-1/4">ManageEngine product</th>
+              <th className="px-6 py-4 text-white font-semibold text-[12px] uppercase tracking-widest">What we configure</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((row, i) => (
               <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-offwhite'}>
-                <td className="px-5 py-4 text-body-sm font-semibold text-charcoal align-top">{row.challenge}</td>
-                <td className="px-5 py-4 text-body-sm text-teal font-semibold align-top">{row.product}</td>
-                <td className="px-5 py-4 text-body-sm text-charcoal/80 align-top leading-relaxed">{row.configuration}</td>
+                <td className="px-6 py-4 text-[14px] font-semibold text-charcoal align-top">{row.challenge}</td>
+                <td className="px-6 py-4 text-[14px] text-blue font-semibold align-top">{row.product}</td>
+                <td className="px-6 py-4 text-[14px] text-charcoal/75 align-top leading-relaxed">{row.configuration}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      {/* Mobile cards */}
       <div className="md:hidden space-y-4">
         {rows.map((row, i) => (
-          <div key={i} className="border border-border-default rounded-brand p-4">
-            <p className="text-body-sm font-bold text-charcoal mb-1">{row.challenge}</p>
-            <p className="text-body-sm text-teal font-semibold mb-2">{row.product}</p>
-            <p className="text-body-sm text-charcoal/75 leading-relaxed">{row.configuration}</p>
+          <div key={i} className="rounded-card border border-border-default p-5 shadow-card">
+            <p className="text-[14px] font-bold text-charcoal mb-1">{row.challenge}</p>
+            <p className="text-[14px] text-blue font-semibold mb-2">{row.product}</p>
+            <p className="text-[13px] text-charcoal/70 leading-relaxed">{row.configuration}</p>
           </div>
         ))}
       </div>
@@ -287,17 +304,15 @@ export function SolutionsMappingTable({ heading, rows }: { heading?: string; row
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// ComplianceItem
-// ─────────────────────────────────────────────────────────────────────────────
+// ── ComplianceItem ────────────────────────────────────────────────────────────
 export function ComplianceItem({ title, description }: { title: string; description: string }) {
   return (
-    <div className="bg-navy-light border-l-4 border-navy rounded-brand p-space-5">
+    <div className="bg-navy-light border-l-4 border-blue rounded-r-card p-6">
       <div className="flex items-start gap-3">
-        <IconCheck size={20} className="text-navy flex-shrink-0 mt-0.5" />
+        <IconCheck size={18} className="text-blue flex-shrink-0 mt-0.5" />
         <div>
-          <h4 className="font-display text-h4 font-bold text-navy mb-2">{title}</h4>
-          <p className="text-body text-charcoal leading-relaxed">{description}</p>
+          <h4 className="font-display font-semibold text-navy mb-2" style={{ fontSize: '1.0625rem' }}>{title}</h4>
+          <p className="text-charcoal/75 leading-relaxed" style={{ fontSize: '0.9375rem' }}>{description}</p>
         </div>
       </div>
     </div>

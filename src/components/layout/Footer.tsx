@@ -3,37 +3,44 @@ import { footerColumns, footerBottomBar } from '@/data/navigation'
 
 export function Footer() {
   return (
-    <footer className="bg-navy text-white">
+    <footer className="relative bg-navy text-white overflow-hidden">
+      {/* Subtle gradient */}
+      <div className="absolute bottom-0 left-0 w-full h-1/2 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse at bottom left, rgba(124,58,237,0.08) 0%, transparent 70%)' }}
+        aria-hidden="true" />
 
-      {/* ── Main body ─────────────────────────────────────────── */}
-      <div className="site-container pt-16 pb-12">
+      {/* Main footer */}
+      <div className="site-container relative" style={{ paddingTop: '5rem', paddingBottom: '4rem' }}>
 
-        {/* Tagline + descriptor */}
-        <div className="mb-12 pb-10 border-b border-white/10">
+        {/* Tagline block */}
+        <div style={{ marginBottom: '3.5rem', paddingBottom: '3rem', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
           <p className="font-display font-bold text-white leading-snug"
-            style={{ fontSize: 'clamp(18px, 1.8vw, 22px)' }}>
-            Your ManageEngine. Our Expertise. Zero Hassle.
+            style={{ fontSize: 'clamp(18px, 2vw, 24px)' }}>
+            Your ManageEngine. Our Expertise.
           </p>
-          <p className="text-white/45 text-[13px] mt-2">
+          <p className="font-display font-bold text-white/60"
+            style={{ fontSize: 'clamp(18px, 2vw, 24px)' }}>
+            Zero Hassle.
+          </p>
+          <p className="text-white/40 mt-2" style={{ fontSize: '13px' }}>
             Authorized ManageEngine Partner · Chennai, India · Pan-India delivery
           </p>
         </div>
 
-        {/* 5-column link grid */}
+        {/* 5-column links */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {footerColumns.map(col => (
             <div key={col.heading}>
-              {/* Column heading -- solid white, clearly readable */}
-              <h4 className="text-white font-semibold text-[11px] uppercase tracking-[0.1em] mb-4">
+              <h4 className="text-white font-semibold uppercase tracking-[0.1em]"
+                style={{ fontSize: '11px', marginBottom: '1.25rem' }}>
                 {col.heading}
               </h4>
-              <ul className="space-y-2.5">
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {col.items.map(item => (
                   <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="text-white/55 hover:text-white text-[13px] leading-snug transition-colors duration-150"
-                    >
+                    <Link href={item.href}
+                      className="text-white/50 hover:text-white transition-colors duration-200"
+                      style={{ fontSize: '13px', lineHeight: 1.5 }}>
                       {item.label}
                     </Link>
                   </li>
@@ -43,9 +50,9 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Partner disclaimer */}
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <p className="text-white/35 text-[12px] leading-relaxed max-w-2xl">
+        {/* Disclaimer */}
+        <div style={{ marginTop: '3rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+          <p className="text-white/30" style={{ fontSize: '12px', lineHeight: 1.6, maxWidth: '560px' }}>
             ManagedFirst Technologies is an authorized ManageEngine partner in India.
             ManageEngine is a trademark of Zoho Corporation Pvt. Ltd.
             All product names, logos, and brands are property of their respective owners.
@@ -53,15 +60,14 @@ export function Footer() {
         </div>
       </div>
 
-      {/* ── Bottom bar -- copyright, clearly readable ───────────── */}
-      <div className="border-t border-white/10">
-        <div className="site-container py-5">
+      {/* Bottom bar */}
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="site-container" style={{ paddingTop: '1.25rem', paddingBottom: '1.25rem' }}>
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-            {/* Copyright -- text-white/65 ensures visibility on navy */}
-            <p className="text-white/65 text-[12px]">
+            <p className="text-white/60" style={{ fontSize: '12px' }}>
               {footerBottomBar.copyright}
             </p>
-            <p className="text-white/45 text-[12px] sm:text-right">
+            <p className="text-white/40 sm:text-right" style={{ fontSize: '12px' }}>
               {footerBottomBar.cin} &nbsp;·&nbsp; Reg. Office: {footerBottomBar.address}
             </p>
           </div>

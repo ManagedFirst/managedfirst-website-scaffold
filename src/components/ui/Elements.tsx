@@ -1,46 +1,44 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// Badge
-// ─────────────────────────────────────────────────────────────────────────────
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
+// ── Badge ────────────────────────────────────────────────────────────────────
 export interface BadgeProps {
   children: ReactNode
-  variant?: 'teal' | 'navy' | 'blue' | 'muted' | 'amber'
+  variant?: 'teal' | 'navy' | 'blue' | 'muted' | 'amber' | 'accent'
   className?: string
 }
 
-const badgeVariants = {
-  teal:  'bg-teal-light text-teal',
-  navy:  'bg-navy-light text-navy',
-  blue:  'bg-blue/10 text-blue',
-  muted: 'bg-offwhite text-muted',
-  amber: 'bg-amber/15 text-amber',
+const badgeVariants: Record<string, string> = {
+  teal:   'bg-teal-light text-teal',
+  navy:   'bg-navy-light text-navy',
+  blue:   'bg-blue-light text-blue',
+  muted:  'bg-offwhite text-muted',
+  amber:  'bg-amber/15 text-amber',
+  accent: 'bg-accent-light text-accent',
 }
 
 export function Badge({ children, variant = 'teal', className = '' }: BadgeProps) {
   return (
-    <span className={`inline-flex items-center px-3 py-1 rounded-full text-label font-medium ${badgeVariants[variant]} ${className}`}>
+    <span className={`inline-flex items-center px-3 py-1 rounded-pill text-[12px] font-semibold tracking-wide ${badgeVariants[variant]} ${className}`}>
       {children}
     </span>
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Breadcrumb
-// ─────────────────────────────────────────────────────────────────────────────
+// ── Breadcrumb ───────────────────────────────────────────────────────────────
 export interface BreadcrumbItem { name: string; href: string }
 
 export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-caption text-muted flex-wrap">
+    <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 flex-wrap"
+      style={{ fontSize: '13px', color: '#94A3B8' }}>
       {items.map((item, i) => (
         <span key={item.href} className="flex items-center gap-1.5">
           {i > 0 && <span className="text-muted/40" aria-hidden="true">/</span>}
           {i === items.length - 1 ? (
-            <span className="text-charcoal" aria-current="page">{item.name}</span>
+            <span style={{ color: '#1E293B' }} aria-current="page">{item.name}</span>
           ) : (
-            <Link href={item.href} className="hover:text-navy transition-colors duration-150">
+            <Link href={item.href} className="hover:text-blue transition-colors duration-200">
               {item.name}
             </Link>
           )}
@@ -50,9 +48,7 @@ export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// SectionHeader
-// ─────────────────────────────────────────────────────────────────────────────
+// ── SectionHeader ────────────────────────────────────────────────────────────
 export interface SectionHeaderProps {
   eyebrow?: string
   heading: string
@@ -63,38 +59,38 @@ export interface SectionHeaderProps {
   className?: string
 }
 
-const headingSizes = {
-  display: 'text-display font-black',
-  h1:      'text-h1 font-extrabold',
-  h2:      'text-h2 font-bold',
-  h3:      'text-h3 font-bold',
-}
-
 export function SectionHeader({
-  eyebrow,
-  heading,
-  subheading,
-  align = 'left',
-  headingSize = 'h2',
-  light = false,
-  className = '',
+  eyebrow, heading, subheading,
+  align = 'left', headingSize = 'h2',
+  light = false, className = '',
 }: SectionHeaderProps) {
-  const alignClass = align === 'center' ? 'text-center items-center' : 'text-left items-start'
-  const textColor  = light ? 'text-white' : 'text-navy'
-  const subColor   = light ? 'text-white/80' : 'text-charcoal/80'
+  const alignCls   = align === 'center' ? 'text-center items-center' : 'text-left items-start'
+  const textColor  = light ? 'text-white'        : 'text-navy'
+  const subColor   = light ? 'text-white/65'     : 'text-charcoal/70'
+  const eyeColor   = light ? 'text-teal'         : 'text-accent'
+
+  const sizeStyles: Record<string, string> = {
+    display: 'clamp(42px, 5vw, 72px)',
+    h1:      'clamp(36px, 4.5vw, 64px)',
+    h2:      'clamp(28px, 3.5vw, 48px)',
+    h3:      'clamp(22px, 2.5vw, 36px)',
+  }
 
   return (
-    <div className={`flex flex-col ${alignClass} ${className}`}>
+    <div className={`flex flex-col ${alignCls} ${className}`}>
       {eyebrow && (
-        <span className="text-overline uppercase tracking-widest text-teal mb-3 font-medium">
+        <span className={`font-semibold tracking-widest mb-4 ${eyeColor}`}
+          style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
           {eyebrow}
         </span>
       )}
-      <h2 className={`font-display ${headingSizes[headingSize]} ${textColor} leading-tight`}>
+      <h2 className={`font-display font-bold ${textColor} leading-tight tracking-tight`}
+        style={{ fontSize: sizeStyles[headingSize] }}>
         {heading}
       </h2>
       {subheading && (
-        <p className={`text-body-lg ${subColor} mt-4 max-w-2xl leading-relaxed`}>
+        <p className={`${subColor} mt-5 leading-relaxed`}
+          style={{ fontSize: 'clamp(16px, 1.2vw, 19px)', maxWidth: '640px' }}>
           {subheading}
         </p>
       )}
@@ -102,33 +98,18 @@ export function SectionHeader({
   )
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// SkeletonCard
-// ─────────────────────────────────────────────────────────────────────────────
+// ── SkeletonCard ─────────────────────────────────────────────────────────────
 export function SkeletonCard({ variant = 'blog' }: { variant?: 'blog' | 'case-study' | 'product' }) {
-  if (variant === 'blog') {
-    return (
-      <div className="rounded-brand border border-border-default overflow-hidden">
-        <div className="skeleton aspect-video w-full" />
-        <div className="p-space-5 space-y-3">
-          <div className="skeleton h-5 w-20 rounded-full" />
-          <div className="skeleton h-6 w-full rounded" />
-          <div className="skeleton h-6 w-4/5 rounded" />
-          <div className="skeleton h-4 w-full rounded mt-2" />
-          <div className="skeleton h-4 w-3/4 rounded" />
-          <div className="skeleton h-4 w-16 rounded mt-4" />
-        </div>
-      </div>
-    )
-  }
-
   return (
-    <div className="rounded-brand border border-border-default p-space-5 space-y-3">
-      <div className="skeleton h-5 w-24 rounded-full" />
-      <div className="skeleton h-6 w-full rounded" />
-      <div className="skeleton h-6 w-3/4 rounded" />
-      <div className="skeleton h-4 w-full rounded mt-4" />
-      <div className="skeleton h-4 w-2/3 rounded" />
+    <div className="rounded-card border border-border-default overflow-hidden shadow-card">
+      {variant === 'blog' && <div className="skeleton aspect-video w-full" />}
+      <div className="p-8 space-y-3">
+        <div className="skeleton h-5 w-20 rounded-pill" />
+        <div className="skeleton h-6 w-full rounded-brand" />
+        <div className="skeleton h-6 w-4/5 rounded-brand" />
+        <div className="skeleton h-4 w-full rounded-brand mt-2" />
+        <div className="skeleton h-4 w-3/4 rounded-brand" />
+      </div>
     </div>
   )
 }

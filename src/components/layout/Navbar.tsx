@@ -2,20 +2,20 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
-import { navigation, footerColumns } from '@/data/navigation'
+import { navigation } from '@/data/navigation'
 import { IconMenu, IconX, IconChevronDown } from '@/components/icons'
 
-// ── Desktop dropdown wrapper ──────────────────────────────────────────────────
+// ── Desktop dropdown ──────────────────────────────────────────────────────────
 function DropdownItem({ item }: { item: typeof navigation[0] }) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    function handleClick(e: MouseEvent) {
+    function handler(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
     }
-    document.addEventListener('mousedown', handleClick)
-    return () => document.removeEventListener('mousedown', handleClick)
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
   }, [])
 
   if (item.cta) {
@@ -26,28 +26,27 @@ function DropdownItem({ item }: { item: typeof navigation[0] }) {
     )
   }
 
-  // Products -- mega-menu (columns)
   if (item.columns) {
     return (
       <div ref={ref} className="relative">
-        <button
-          onClick={() => setOpen(o => !o)}
-          className="flex items-center gap-1 nav-link nav-underline py-1 px-0.5"
-          aria-expanded={open}
-        >
+        <button onClick={() => setOpen(o => !o)}
+          className="nav-link flex items-center gap-1 py-1"
+          aria-expanded={open}>
           {item.label}
-          <IconChevronDown size={14} className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+          <IconChevronDown size={14} strokeWidth={2}
+            className={`text-muted transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
         </button>
 
         {open && (
-          <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 animate-fade-in"
-            style={{ width: 'min(900px, 90vw)' }}>
-            <div className="bg-white rounded-brand shadow-xl border-t-2 border-teal border border-border-default p-6">
+          <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 z-50 animate-fade-in"
+            style={{ width: 'min(920px, 90vw)' }}>
+            <div className="bg-white rounded-card shadow-card-hover border border-border-default p-6"
+              style={{ borderTop: '2px solid #2563EB' }}>
               <div className="grid grid-cols-3 gap-6">
-                {item.columns.map(col => (
+                {item.columns!.map(col => (
                   <div key={col.heading}>
                     <Link href={col.href}
-                      className="block text-label font-bold text-navy uppercase tracking-wide mb-3 hover:text-teal transition-colors"
+                      className="block text-[11px] font-bold text-navy uppercase tracking-widest mb-3 hover:text-blue transition-colors"
                       onClick={() => setOpen(false)}>
                       {col.heading}
                     </Link>
@@ -56,11 +55,11 @@ function DropdownItem({ item }: { item: typeof navigation[0] }) {
                         <li key={sub.href}>
                           <Link href={sub.href} onClick={() => setOpen(false)}
                             className="group flex flex-col">
-                            <span className="text-body-sm font-medium text-charcoal group-hover:text-blue transition-colors">
+                            <span className="text-[14px] font-medium text-charcoal group-hover:text-blue transition-colors">
                               {sub.label}
                             </span>
                             {sub.description && (
-                              <span className="text-caption text-muted">{sub.description}</span>
+                              <span className="text-[12px] text-muted">{sub.description}</span>
                             )}
                           </Link>
                         </li>
@@ -76,30 +75,29 @@ function DropdownItem({ item }: { item: typeof navigation[0] }) {
     )
   }
 
-  // Simple dropdown (items)
   if (item.items) {
     return (
       <div ref={ref} className="relative">
-        <button
-          onClick={() => setOpen(o => !o)}
-          className="flex items-center gap-1 nav-link nav-underline py-1 px-0.5"
-          aria-expanded={open}
-        >
+        <button onClick={() => setOpen(o => !o)}
+          className="nav-link flex items-center gap-1 py-1"
+          aria-expanded={open}>
           {item.label}
-          <IconChevronDown size={14} className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+          <IconChevronDown size={14} strokeWidth={2}
+            className={`text-muted transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
         </button>
 
         {open && (
-          <div className="absolute left-0 top-full mt-2 z-50 w-72 animate-fade-in">
-            <div className="bg-white rounded-brand shadow-xl border-t-2 border-teal border border-border-default py-2">
+          <div className="absolute left-0 top-full mt-3 z-50 w-72 animate-fade-in">
+            <div className="bg-white rounded-card shadow-card-hover border border-border-default py-2"
+              style={{ borderTop: '2px solid #2563EB' }}>
               {item.items.map(sub => (
                 <Link key={sub.href} href={sub.href} onClick={() => setOpen(false)}
                   className="flex flex-col px-5 py-2.5 hover:bg-offwhite transition-colors group">
-                  <span className="text-body-sm font-medium text-charcoal group-hover:text-blue transition-colors">
+                  <span className="text-[14px] font-medium text-charcoal group-hover:text-blue transition-colors">
                     {sub.label}
                   </span>
                   {sub.description && (
-                    <span className="text-caption text-muted">{sub.description}</span>
+                    <span className="text-[12px] text-muted">{sub.description}</span>
                   )}
                 </Link>
               ))}
@@ -111,27 +109,23 @@ function DropdownItem({ item }: { item: typeof navigation[0] }) {
   }
 
   return (
-    <Link href={item.href!} className="nav-link nav-underline py-1 px-0.5">
-      {item.label}
-    </Link>
+    <Link href={item.href!} className="nav-link py-1">{item.label}</Link>
   )
 }
 
-// ── Mobile nav ────────────────────────────────────────────────────────────────
+// ── Mobile nav overlay ────────────────────────────────────────────────────────
 function MobileNav({ onClose }: { onClose: () => void }) {
   const [openSection, setOpenSection] = useState<string | null>(null)
 
   return (
     <div className="fixed inset-0 z-50 bg-navy flex flex-col animate-fade-in">
-      {/* Header */}
-      <div className="flex items-center justify-between px-6 h-16 border-b border-white/10 flex-shrink-0">
-        <span className="font-display font-bold text-white text-h4">ManagedFirst</span>
-        <button onClick={onClose} className="p-2 text-white/70 hover:text-white">
+      <div className="flex items-center justify-between px-6 h-[72px] border-b border-white/10 flex-shrink-0">
+        <span className="font-display font-bold text-white text-[18px]">ManagedFirst</span>
+        <button onClick={onClose} className="p-2 text-white/60 hover:text-white transition-colors">
           <IconX size={22} />
         </button>
       </div>
 
-      {/* Nav items */}
       <div className="flex-1 overflow-y-auto px-6 py-6 space-y-1">
         {navigation.map(item => {
           if (item.cta) {
@@ -144,26 +138,23 @@ function MobileNav({ onClose }: { onClose: () => void }) {
             )
           }
 
-          const hasChildren = !!(item.items || item.columns)
           const allItems = item.items ?? item.columns?.flatMap(c => c.items) ?? []
-          const isOpen = openSection === item.label
+          const isOpen   = openSection === item.label
 
-          if (hasChildren) {
+          if (allItems.length > 0) {
             return (
               <div key={item.label}>
-                <button
-                  onClick={() => setOpenSection(isOpen ? null : item.label)}
-                  className="w-full flex items-center justify-between py-3 text-white font-display font-semibold text-body"
-                >
+                <button onClick={() => setOpenSection(isOpen ? null : item.label)}
+                  className="w-full flex items-center justify-between py-3 text-white font-display font-semibold text-[16px]">
                   {item.label}
-                  <IconChevronDown size={18} className={`text-white/50 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                  <IconChevronDown size={18} strokeWidth={2}
+                    className={`text-white/40 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {isOpen && (
-                  <div className="pl-4 pb-2 space-y-1 border-l border-teal/30 ml-2">
+                  <div className="pl-4 pb-3 space-y-1 border-l border-teal/30 ml-2">
                     {allItems.map(sub => (
-                      <Link key={sub.href} href={sub.href}
-                        onClick={onClose}
-                        className="block py-2 text-white/70 hover:text-white text-body-sm transition-colors">
+                      <Link key={sub.href} href={sub.href} onClick={onClose}
+                        className="block py-2 text-white/65 hover:text-white text-[14px] transition-colors">
                         {sub.label}
                       </Link>
                     ))}
@@ -175,7 +166,7 @@ function MobileNav({ onClose }: { onClose: () => void }) {
 
           return (
             <Link key={item.label} href={item.href!} onClick={onClose}
-              className="block py-3 text-white font-display font-semibold text-body hover:text-teal transition-colors">
+              className="block py-3 text-white font-display font-semibold text-[16px] hover:text-teal transition-colors">
               {item.label}
             </Link>
           )
@@ -187,57 +178,56 @@ function MobileNav({ onClose }: { onClose: () => void }) {
 
 // ── Navbar ────────────────────────────────────────────────────────────────────
 export function Navbar() {
-  const [scrolled, setScrolled]     = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [mobile, setMobile]     = useState(false)
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 50)
+    const handler = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', handler, { passive: true })
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : ''
+    document.body.style.overflow = mobile ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
-  }, [mobileOpen])
+  }, [mobile])
 
   return (
     <>
-      <header
-        className={`sticky top-0 z-40 h-[64px] flex items-center bg-white transition-shadow duration-200 ${
-          scrolled ? 'shadow-nav' : 'border-b border-border-default'
-        }`}
-      >
+      <header className={`sticky top-0 z-40 h-[72px] flex items-center transition-all duration-250
+        ${scrolled
+          ? 'bg-white/90 backdrop-blur-xl shadow-nav-scrolled border-b border-border-default'
+          : 'bg-white border-b border-border-default'
+        }`}>
         <div className="site-container flex items-center justify-between w-full">
+
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="w-8 h-8 bg-navy rounded-md flex items-center justify-center">
-              <span className="text-white font-display font-black text-sm">M</span>
+          <Link href="/" className="flex items-center gap-2.5 flex-shrink-0 group">
+            <div className="w-8 h-8 bg-navy rounded-brand flex items-center justify-center
+                            group-hover:bg-blue transition-colors duration-250">
+              <span className="text-white font-display font-black text-[13px]">M</span>
             </div>
-            <span className="font-display font-bold text-navy text-h5">ManagedFirst</span>
+            <span className="font-display font-bold text-navy text-[17px] group-hover:text-blue transition-colors">
+              ManagedFirst
+            </span>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-7" aria-label="Main navigation">
             {navigation.map(item => (
               <DropdownItem key={item.label} item={item} />
             ))}
           </nav>
 
-          {/* Mobile hamburger */}
-          <button
-            className="lg:hidden p-2 text-charcoal hover:text-navy"
-            onClick={() => setMobileOpen(true)}
-            aria-label="Open navigation menu"
-          >
+          {/* Mobile toggle */}
+          <button className="lg:hidden p-2 text-charcoal hover:text-blue transition-colors"
+            onClick={() => setMobile(true)} aria-label="Open navigation">
             <IconMenu size={22} />
           </button>
         </div>
       </header>
 
-      {/* Mobile nav overlay */}
-      {mobileOpen && <MobileNav onClose={() => setMobileOpen(false)} />}
+      {mobile && <MobileNav onClose={() => setMobile(false)} />}
     </>
   )
 }
