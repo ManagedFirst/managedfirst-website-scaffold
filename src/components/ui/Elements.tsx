@@ -70,10 +70,10 @@ export function SectionHeader({
   const eyeColor   = light ? 'text-teal'         : 'text-accent'
 
   const sizeStyles: Record<string, string> = {
-    display: 'clamp(42px, 5vw, 72px)',
-    h1:      'clamp(36px, 4.5vw, 64px)',
-    h2:      'clamp(28px, 3.5vw, 48px)',
-    h3:      'clamp(22px, 2.5vw, 36px)',
+    display: 'clamp(36px, 4vw, 60px)',
+    h1:      'clamp(28px, 3.5vw, 48px)',
+    h2:      'clamp(22px, 2.5vw, 36px)',
+    h3:      'clamp(18px, 2vw, 28px)',
   }
 
   return (

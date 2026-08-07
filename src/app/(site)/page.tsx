@@ -94,7 +94,7 @@ export default function HomePage() {
               </span>
 
               <h1 className="font-display font-extrabold text-white leading-[1.07] tracking-tight mb-7"
-                style={{ fontSize: 'clamp(36px, 5.5vw, 70px)' }}>
+                style={{ fontSize: 'clamp(32px, 4.5vw, 62px)' }}>
                 ManageEngine installed is not ManageEngine working.
               </h1>
 

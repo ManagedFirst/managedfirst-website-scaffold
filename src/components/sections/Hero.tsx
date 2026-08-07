@@ -60,7 +60,7 @@ export function Hero({
 
               {/* H1 — always renders at opacity:1. No animation class. */}
               <h1 className="font-display font-extrabold text-white leading-tight tracking-tight mb-6"
-                style={{ fontSize: 'clamp(36px, 5vw, 68px)', lineHeight: 1.08 }}>
+                style={{ fontSize: 'clamp(28px, 3.8vw, 52px)', lineHeight: 1.1 }}>
                 {heading}
               </h1>
 
@@ -109,7 +109,7 @@ export function Hero({
                 </p>
               )}
               <h1 className="font-display font-extrabold text-navy leading-tight mb-6"
-                style={{ fontSize: 'clamp(32px, 4vw, 56px)', lineHeight: 1.1 }}>
+                style={{ fontSize: 'clamp(26px, 3.2vw, 44px)', lineHeight: 1.12 }}>
                 {heading}
               </h1>
               {subheading && (
@@ -155,7 +155,7 @@ export function Hero({
 
         {/* H1 — ALWAYS VISIBLE — opacity:1 is default. No animate-fade-up. */}
         <h1 className="font-display font-extrabold text-navy leading-tight tracking-tight mb-6"
-          style={{ fontSize: 'clamp(32px, 4.5vw, 60px)', lineHeight: 1.1, maxWidth: '780px' }}>
+          style={{ fontSize: 'clamp(24px, 3vw, 42px)', lineHeight: 1.12, maxWidth: '800px' }}>
           {heading}
         </h1>
 

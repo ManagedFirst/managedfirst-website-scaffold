@@ -23,7 +23,7 @@ export function CTABand({ heading, body, primaryCta, secondaryCta }: CTABandProp
       <div className="site-container relative text-center" style={{ maxWidth: '720px', margin: '0 auto' }}>
         <AnimateIn>
           <h2 className="font-display font-bold text-white leading-tight mb-5"
-            style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
+            style={{ fontSize: 'clamp(20px, 2.4vw, 34px)' }}>
             {heading}
           </h2>
         </AnimateIn>
