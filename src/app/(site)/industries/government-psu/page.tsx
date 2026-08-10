@@ -5,6 +5,7 @@ import { AnimateIn } from '@/components/AnimateIn'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, NumberedChallenge, SolutionsMappingTable, ComplianceItem } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
+import { IndustryIllustration } from '@/components/illustrations/IndustryIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine for Government and PSU in India | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function IndustriesGovernmentPsuPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow='Industries | Government and PSU' heading='ManageEngine implementation for government departments and PSUs -- configured for large workforce management and compliance obligations.' subheading='Identity and access management for large government workforces with complex role structures. Endpoint visibility across distributed locations. Compliance reporting and audit evidence for government IT framework requirements.'
         primaryCta={{ label: 'Book a Government Implementation Review', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See our services', href: '/services' }} />
+        secondaryCta={{ label: 'See our services', href: '/services' }}
+        visual={<IndustryIllustration title='Government and PSU' className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-offwhite section-py">
         <div className="site-container">

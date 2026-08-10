@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand, ImplementationSteps } from '@/components/sections/Sections'
 import { SectionHeader, Breadcrumb } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
+import { ServicesIllustration } from '@/components/illustrations/ServicesIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Evaluation Assistance | ManagedFirst Technologies',
@@ -27,7 +28,9 @@ export default function ServicesEvaluationAssistancePage() {
 
       <Hero variant="light" eyebrow='Services | Evaluation Assistance' heading='Test ManageEngine in your environment. With your data. Before you sign anything.' subheading="ManagedFirst sets up and configures ManageEngine trials in your environment -- so you evaluate the product against your actual use cases, not against a vendor's default demo configuration."
         primaryCta={{ label: 'Book an Evaluation Call', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<ServicesIllustration className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-offwhite section-py">
         <div className="site-container">

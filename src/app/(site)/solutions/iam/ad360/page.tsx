@@ -3,6 +3,7 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, CapabilitiesGrid, ImplementationSteps, UseCasesGrid } from '@/components/sections/Sections'
+import { IAMIllustration } from '@/components/illustrations/IAMIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine AD360 Implementation | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function SolutionsIamAd360Page() {
         heading='One platform for your entire identity and access management programme.'
         subheading="AD360 is ManageEngine's unified IAM platform. ManagedFirst implements the full scope -- user lifecycle management, MFA, SSO, identity governance, and compliance auditing -- configured around your Active Directory structure and operational requirements."
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<IAMIllustration className='w-full max-w-[480px]' />}
+        />
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements AD360." steps={steps} />

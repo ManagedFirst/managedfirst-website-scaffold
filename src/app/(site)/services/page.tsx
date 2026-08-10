@@ -7,6 +7,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
 import { IconConsulting, IconEvaluation, IconImplementation, IconTraining, IconManagedServices, IconSupportAMC, IconMethodology, IconArrowRight, IconCheck } from '@/components/icons'
+import { ServicesIllustration } from '@/components/illustrations/ServicesIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Implementation Services -- Assessment, Deployment, Governance | ManagedFirst',
@@ -61,7 +62,9 @@ export default function ServicesPage() {
         heading="Implementation is not a single event. It is a lifecycle."
         subheading="Deploying ManageEngine successfully -- and keeping it delivering value -- requires different types of expertise at different stages. Assessment before architecture. Architecture before configuration. Configuration before training. Training before governance. ManagedFirst provides structured services at each stage, with defined deliverables, documented processes, and clear outcomes."
         primaryCta={{ label: 'Review the Implementation Methodology', href: '/services/implementation-methodology' }}
-        secondaryCta={{ label: 'Book a 30-minute call', href: '/free-consultation' }} />
+        secondaryCta={{ label: 'Book a 30-minute call', href: '/free-consultation' }}
+        visual={<ServicesIllustration className='w-full max-w-[480px]' />}
+        />
 
       {/* Service Cards */}
       <section className="bg-white section-py">

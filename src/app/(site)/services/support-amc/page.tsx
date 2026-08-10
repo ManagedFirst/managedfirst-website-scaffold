@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand, ImplementationSteps } from '@/components/sections/Sections'
 import { SectionHeader, Breadcrumb } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
+import { ServicesIllustration } from '@/components/illustrations/ServicesIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Support and AMC | ManagedFirst Technologies',
@@ -27,7 +28,9 @@ export default function ServicesSupportAmcPage() {
 
       <Hero variant="light" eyebrow='Services | Support and AMC' heading='Responsive ManageEngine support when you need it. Renewals handled before they lapse.' subheading="ManagedFirst's Support and AMC service provides annual maintenance coverage and technical support for ManageEngine deployments -- with response times and renewal management that a generic vendor support channel cannot match."
         primaryCta={{ label: 'Discuss Support Requirements', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<ServicesIllustration className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-offwhite section-py">
         <div className="site-container">

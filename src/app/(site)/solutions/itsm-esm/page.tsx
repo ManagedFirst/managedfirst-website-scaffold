@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
+import { ITSMIllustration } from '@/components/illustrations/ITSMIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ITSM / ESM | ManageEngine ServiceDesk Plus Partner India | ManagedFirst',
@@ -24,7 +25,9 @@ export default function ItsmEsmHubPage() {
         heading='A service desk that routes tickets manually, misses SLAs, and has no change management is a ticketing system -- not an ITSM platform.'
         subheading='IT teams spend hours on work ServiceDesk Plus should be doing automatically -- categorising tickets, routing to technicians, escalating at-risk SLAs, and recording changes. ManagedFirst implements ServiceDesk Plus to the full ITSM scope: incident, change, problem, asset, and enterprise service management -- configured around your processes.'
         primaryCta={{ label: 'Get a Free ITSM Review', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See products', href: '#products' }} />
+        secondaryCta={{ label: 'See products', href: '#products' }}
+        visual={<ITSMIllustration className='w-full max-w-[520px]' />}
+        />
 
       <section className="bg-white section-py">
         <div className="site-container max-w-3xl">

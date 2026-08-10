@@ -5,6 +5,7 @@ import { AnimateIn } from '@/components/AnimateIn'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, SolutionsMappingTable, ComplianceItem } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
+import { ComplianceIllustration } from '@/components/illustrations/ComplianceIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'RBI IT Framework Compliance with ManageEngine | ManagedFirst Technologies',
@@ -35,7 +36,9 @@ export default function ComplianceRbiItFrameworkPage() {
         heading="RBI IT framework requirements for banks and NBFCs are specific. ManageEngine addresses several of them directly."
         subheading="ManagedFirst implements ManageEngine for banks and NBFCs with configurations built around RBI IT framework requirements -- privileged access governance, change management documentation, security monitoring, and audit evidence."
         primaryCta={{ label: 'Book a Free RBI IT Review', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See BFSI implementation', href: '/industries/bfsi' }} />
+        secondaryCta={{ label: 'See BFSI implementation', href: '/industries/bfsi' }}
+        visual={<ComplianceIllustration className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-white section-py">
         <div className="site-container max-w-3xl">

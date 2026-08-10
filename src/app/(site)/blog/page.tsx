@@ -1,3 +1,4 @@
+import { UIPanel, MetricRow, MiniChart } from '@/components/illustrations/UIPanel'
 import type { Metadata } from 'next'
 import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'

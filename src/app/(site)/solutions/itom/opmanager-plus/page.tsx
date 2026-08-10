@@ -3,6 +3,7 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, CapabilitiesGrid, ImplementationSteps, UseCasesGrid } from '@/components/sections/Sections'
+import { ITOMIllustration } from '@/components/illustrations/ITOMIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine OpManager Plus Implementation | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function SolutionsItomOpmanagerPlusPage() {
         heading='See your entire IT infrastructure. Get alerts that mean something.'
         subheading="OpManager Plus is ManageEngine's unified IT operations suite. ManagedFirst implements network monitoring, server monitoring, configuration management, and bandwidth analysis -- with thresholds and dashboards configured for your infrastructure."
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<ITOMIllustration className='w-full max-w-[480px]' />}
+        />
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements OpManager Plus." steps={steps} />

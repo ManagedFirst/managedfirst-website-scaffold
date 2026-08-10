@@ -33,7 +33,7 @@ export function AnimateIn({
       ref={ref as React.Ref<HTMLElement>}
       // When not in view: opacity-0 via inline style
       // When in view: animation class (which transitions FROM opacity-0 TO opacity-1)
-      // Default state is opacity:1 so SSR always renders visibly — JS adds animation
+      // Default state is opacity:1 so SSR always renders visibly -- JS adds animation
       className={`${isInView ? directionClass[direction] : ''} ${className}`}
       style={style}
     >

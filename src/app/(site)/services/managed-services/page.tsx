@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand, ImplementationSteps } from '@/components/sections/Sections'
 import { SectionHeader, Breadcrumb } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
+import { ServicesIllustration } from '@/components/illustrations/ServicesIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Managed Services | ManagedFirst Technologies',
@@ -27,7 +28,9 @@ export default function ServicesManagedServicesPage() {
 
       <Hero variant="light" eyebrow='Services | Managed Services' heading="Your ManageEngine environment, managed. Without consuming your IT team's time." subheading="ManagedFirst's managed services engagement takes ongoing responsibility for your ManageEngine environment -- configuration upkeep, version management, operational monitoring, and reporting -- delivered under a defined SLA."
         primaryCta={{ label: 'Discuss a Managed Services Engagement', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<ServicesIllustration className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-offwhite section-py">
         <div className="site-container">

@@ -3,6 +3,7 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, CapabilitiesGrid, ImplementationSteps, UseCasesGrid } from '@/components/sections/Sections'
+import { UEMSIllustration } from '@/components/illustrations/UEMSIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Mobile Device Manager Plus Implementation | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function SolutionsUemsMobileDeviceManagerPlusPage() {
         heading='Manage every mobile device in your organisation. Corporate-owned and personal.'
         subheading="Mobile Device Manager Plus is ManageEngine's dedicated MDM platform for iOS, Android, and Windows devices -- corporate-owned and BYOD -- with separate management policies for each."
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<UEMSIllustration className='w-full max-w-[480px]' />}
+        />
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements Mobile Device Manager Plus." steps={steps} />

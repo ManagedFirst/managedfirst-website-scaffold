@@ -3,6 +3,7 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, CapabilitiesGrid, ImplementationSteps, UseCasesGrid } from '@/components/sections/Sections'
+import { UEMSIllustration } from '@/components/illustrations/UEMSIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Endpoint Central Implementation | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function SolutionsUemsEndpointCentralPage() {
         heading='Stop managing endpoints one problem at a time.'
         subheading="Endpoint Central is ManageEngine's unified endpoint management and security platform. ManagedFirst implements patch management, software deployment, endpoint security policies, and asset management -- configured for your device environment."
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<UEMSIllustration className='w-full max-w-[480px]' />}
+        />
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements Endpoint Central." steps={steps} />

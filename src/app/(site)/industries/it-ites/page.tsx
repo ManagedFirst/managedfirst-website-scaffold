@@ -5,6 +5,7 @@ import { AnimateIn } from '@/components/AnimateIn'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, NumberedChallenge, SolutionsMappingTable, ComplianceItem } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
+import { IndustryIllustration } from '@/components/illustrations/IndustryIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine for IT and ITES Companies in India | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function IndustriesItItesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow='Industries | IT and ITES' heading='ManageEngine implementation for IT and ITES organisations -- configured for high-volume service delivery and compliance requirements.' subheading='Service desk for high-volume internal IT and client-facing support teams. Identity management for large, frequently rotating workforces. SIEM and log management for SOC functions and compliance reporting for clients in regulated sectors.'
         primaryCta={{ label: 'Book an IT/ITES Implementation Review', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See our services', href: '/services' }} />
+        secondaryCta={{ label: 'See our services', href: '/services' }}
+        visual={<IndustryIllustration title='IT and ITES' className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-offwhite section-py">
         <div className="site-container">

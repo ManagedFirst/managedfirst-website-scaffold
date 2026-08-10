@@ -1,10 +1,10 @@
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 
-// ── Site layout — public pages only ────────────────────────────────────────
+// ── Site layout -- public pages only ────────────────────────────────────────
 // Wraps all public routes with the site chrome (Navbar + Footer).
 // This layout is NOT applied to (payload)/ routes, so /admin never
-// gets Navbar/Footer wrapped around it — fixing the hydration crash.
+// gets Navbar/Footer wrapped around it -- fixing the hydration crash.
 // globals.css is imported in the root layout.tsx one level up.
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (

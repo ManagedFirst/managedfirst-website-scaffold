@@ -5,6 +5,7 @@ import { AnimateIn } from '@/components/AnimateIn'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, NumberedChallenge, SolutionsMappingTable, ComplianceItem } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
+import { IndustryIllustration } from '@/components/illustrations/IndustryIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine for Educational Institutions in India | ManagedFirst Technologies',
@@ -29,7 +30,9 @@ export default function IndustriesEducationPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow='Industries | Education' heading='ManageEngine implementation for educational institutions -- configured for academic cycles and multi-population identity management.' subheading='Identity lifecycle management for students, faculty, and administrative staff across academic cycles. Endpoint management for campus device pools. IT helpdesk for institutions running centralised IT support across departments.'
         primaryCta={{ label: 'Book an Education Implementation Review', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See our services', href: '/services' }} />
+        secondaryCta={{ label: 'See our services', href: '/services' }}
+        visual={<IndustryIllustration title='Education' className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-offwhite section-py">
         <div className="site-container">

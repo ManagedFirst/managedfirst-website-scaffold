@@ -1,3 +1,4 @@
+import { ServicesIllustration } from '@/components/illustrations/ServicesIllustration'
 import type { Metadata } from 'next'
 import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
@@ -36,7 +37,9 @@ export default function AboutPage() {
         heading="Enterprise software delivers value only when it is implemented correctly. We were founded to do that."
         subheading="ManagedFirst Technologies was founded on the observation that most ManageEngine deployments cover the basics and stop. The automation, governance, integrations, and compliance configuration that make the platform an operational asset remain unconfigured -- not because organisations do not want them, but because deployment was treated as installation."
         primaryCta={{ label: 'See Our Implementation Approach', href: '/services/implementation-methodology' }}
-        secondaryCta={{ label: 'Contact us', href: '/contact' }} />
+        secondaryCta={{ label: 'Contact us', href: '/contact' }}
+        visual={<ServicesIllustration className="w-full max-w-[460px]" />}
+        />
 
       {/* Our Story */}
       <section className="bg-white section-py">

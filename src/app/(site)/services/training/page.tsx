@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand, ImplementationSteps } from '@/components/sections/Sections'
 import { SectionHeader, Breadcrumb } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
+import { ServicesIllustration } from '@/components/illustrations/ServicesIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Training Services | ManagedFirst Technologies',
@@ -27,7 +28,9 @@ export default function ServicesTrainingPage() {
 
       <Hero variant="light" eyebrow='Services | Training' heading='Your team, running ManageEngine confidently after go-live.' subheading='Role-specific training for administrators, IT technicians, and end users -- delivered against your specific configuration, not a generic product walkthrough. Your team operates the platform independently after training.'
         primaryCta={{ label: 'Book a Training Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<ServicesIllustration className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-offwhite section-py">
         <div className="site-container">

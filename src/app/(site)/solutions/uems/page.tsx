@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
+import { UEMSIllustration } from '@/components/illustrations/UEMSIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Unified Endpoint Management | ManageEngine Endpoint Central Partner India | ManagedFirst',
@@ -24,7 +25,9 @@ export default function UemsHubPage() {
         heading='Unmanaged endpoints are not an edge case. They are the default state of growing IT environments.'
         subheading='Devices that have not been patched, software installed without approval, USB ports open across the fleet, mobile devices operating outside any management policy -- each one is a security incident waiting to surface. ManagedFirst implements Endpoint Central and Mobile Device Manager Plus, configured around your device mix, your patch schedule, and your security policies.'
         primaryCta={{ label: 'Get a Free Endpoint Exposure Assessment', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See products', href: '#products' }} />
+        secondaryCta={{ label: 'See products', href: '#products' }}
+        visual={<UEMSIllustration className='w-full max-w-[520px]' />}
+        />
 
       <section className="bg-white section-py">
         <div className="site-container max-w-3xl">

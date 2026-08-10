@@ -5,6 +5,7 @@ import { AnimateIn } from '@/components/AnimateIn'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, SolutionsMappingTable, ComplianceItem } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
+import { ComplianceIllustration } from '@/components/illustrations/ComplianceIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ISO 27001 Compliance with ManageEngine | ManagedFirst Technologies',
@@ -36,7 +37,9 @@ export default function ComplianceIso27001Page() {
         heading="ISO 27001 requires demonstrable controls. ManageEngine provides them. We configure the evidence."
         subheading="ManageEngine tools address multiple ISO 27001 Annex A control domains when configured correctly. ManagedFirst implements and configures the tools, documents the controls, and produces the audit evidence your certification team needs."
         primaryCta={{ label: 'Book a Free ISO 27001 Review', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See all compliance pages', href: '/dpdpa-compliance' }} />
+        secondaryCta={{ label: 'See all compliance pages', href: '/dpdpa-compliance' }}
+        visual={<ComplianceIllustration className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-white section-py">
         <div className="site-container max-w-3xl">

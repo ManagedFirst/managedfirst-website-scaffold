@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand, ImplementationSteps } from '@/components/sections/Sections'
 import { SectionHeader, Breadcrumb } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
+import { ServicesIllustration } from '@/components/illustrations/ServicesIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Implementation Services -- Architecture, Configuration, Integration | ManagedFirst',
@@ -27,7 +28,9 @@ export default function ServicesImplementationPage() {
 
       <Hero variant="light" eyebrow='Services | Implementation' heading='ManageEngine deployed for your environment. Not around it.' subheading="Installing ManageEngine takes hours. Configuring it so it genuinely serves your organisation takes weeks -- and that work is where most deployments either succeed or produce a tool your team learns to work around. ManagedFirst's implementation service covers architecture, configuration, workflow build, integration, testing, and a documented handover."
         primaryCta={{ label: 'Get a Scoped Implementation Proposal', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<ServicesIllustration className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-offwhite section-py">
         <div className="site-container">

@@ -3,6 +3,7 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, CapabilitiesGrid, ImplementationSteps, UseCasesGrid } from '@/components/sections/Sections'
+import { ITOMIllustration } from '@/components/illustrations/ITOMIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Applications Manager Implementation | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function SolutionsItomApplicationsManagerPage() {
         heading='Know which query is slowing down your application. Before users notice.'
         subheading="Applications Manager is ManageEngine's application performance monitoring tool. ManagedFirst implements APM monitoring for your application stack -- Java, .NET, databases, web servers, and middleware -- configured for your environment."
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<ITOMIllustration className='w-full max-w-[480px]' />}
+        />
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements Applications Manager." steps={steps} />

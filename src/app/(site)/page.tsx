@@ -1,3 +1,4 @@
+import { UIPanel, MetricRow, StatusItem, MiniChart } from '@/components/illustrations/UIPanel'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata } from '@/lib/metadata'
@@ -15,7 +16,7 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Implementation Partner India | ManagedFirst Technologies',
-  description: 'Most ManageEngine deployments configure the basics and stop. ManagedFirst implements the full platform — architecture, integration, governance, and automation — for enterprises across India. Authorized partner, Chennai.',
+  description: 'Most ManageEngine deployments configure the basics and stop. ManagedFirst implements the full platform -- architecture, integration, governance, and automation -- for enterprises across India. Authorized partner, Chennai.',
   canonicalPath: '/',
 })
 
@@ -29,17 +30,17 @@ const solutions = [
 ]
 
 const whyUs = [
-  { n: '01', title: 'ManageEngine is the only thing we do.', body: 'Our practice covers ManageEngine exclusively — all 15 products, all six solution categories, every configuration scenario. When a complex question arises, it is not new to us.' },
+  { n: '01', title: 'ManageEngine is the only thing we do.', body: 'Our practice covers ManageEngine exclusively -- all 15 products, all six solution categories, every configuration scenario. When a complex question arises, it is not new to us.' },
   { n: '02', title: 'We implement to the full scope, not the minimum viable deployment.', body: 'Most deployments configure the basics. We implement the automation, integrations, governance workflows, and advanced configuration that make the platform an operational asset.' },
   { n: '03', title: 'Every engagement produces documentation your team keeps.', body: 'Implementation is complete when your team can operate independently. Every engagement delivers a configuration runbook covering every setting applied and every workflow built.' },
-  { n: '04', title: 'Indian regulatory requirements are built into every engagement.', body: 'DPDPA, RBI IT framework, ISO 27001 — these are not add-ons. We configure ManageEngine for the regulatory environment Indian enterprises operate in.' },
+  { n: '04', title: 'Indian regulatory requirements are built into every engagement.', body: 'DPDPA, RBI IT framework, ISO 27001 -- these are not add-ons. We configure ManageEngine for the regulatory environment Indian enterprises operate in.' },
 ]
 
 const services = [
   { title: 'Consulting', href: '/services/consulting', desc: 'Written assessment, product recommendation, and implementation roadmap before any deployment begins.' },
   { title: 'Evaluation Assistance', href: '/services/evaluation-assistance', desc: 'ManageEngine configured in your environment for a structured trial against your actual use cases.' },
   { title: 'Implementation', href: '/services/implementation', desc: 'Architecture, configuration, integration, testing, and documented handover. Built around your processes.' },
-  { title: 'Training and Enablement', href: '/services/training', desc: 'Role-specific training against your specific deployment — not a generic product walkthrough.' },
+  { title: 'Training and Enablement', href: '/services/training', desc: 'Role-specific training against your specific deployment -- not a generic product walkthrough.' },
   { title: 'Managed Services', href: '/services/managed-services', desc: 'Ongoing configuration management, version upgrades, and operational reporting.' },
   { title: 'Support and AMC', href: '/services/support-amc', desc: 'Responsive technical support and licence renewals managed before they lapse.' },
 ]
@@ -67,7 +68,7 @@ export default function HomePage() {
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen bg-navy flex items-center overflow-hidden">
-        {/* Blurred gradient shapes — redesign guideline 6 */}
+        {/* Blurred gradient shapes -- redesign guideline 6 */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
           <div className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full opacity-20 animate-blob"
             style={{ background: 'radial-gradient(circle, #7C3AED 0%, #2563EB 55%, transparent 80%)', filter: 'blur(90px)' }} />
@@ -83,7 +84,7 @@ export default function HomePage() {
         <div className="site-container relative z-10 w-full" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
           <div className="grid lg:grid-cols-2 gap-14 items-center" style={{ minHeight: '80vh' }}>
 
-            {/* Text — always visible, no animation opacity dependency */}
+            {/* Text -- always visible, no animation opacity dependency */}
             <div className="flex flex-col justify-center">
               <span className="inline-flex items-center gap-2 mb-8">
                 <span className="w-2 h-2 rounded-full bg-teal" style={{ animation: 'pulseTeal 2s ease-in-out infinite' }} />
@@ -100,7 +101,7 @@ export default function HomePage() {
 
               <p className="text-white/65 leading-relaxed mb-10"
                 style={{ fontSize: 'clamp(16px, 1.3vw, 19px)', maxWidth: '530px' }}>
-                Enterprise organisations purchase ManageEngine and receive a deployment that covers the basics. The automation, governance, integrations, and compliance configuration remain untouched. ManagedFirst closes that gap — across all six solution categories, for enterprises across India.
+                Enterprise organisations purchase ManageEngine and receive a deployment that covers the basics. The automation, governance, integrations, and compliance configuration remain untouched. ManagedFirst closes that gap -- across all six solution categories, for enterprises across India.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-12">
@@ -112,7 +113,7 @@ export default function HomePage() {
                 </Button>
               </div>
 
-              {/* Trust signals — inline, always visible */}
+              {/* Trust signals -- inline, always visible */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-8 border-t border-white/10">
                 {[
                   'Authorised ManageEngine Partner',
@@ -130,9 +131,24 @@ export default function HomePage() {
 
             {/* Dashboard illustration */}
             <div className="hidden lg:flex items-center justify-end">
-              <div className="w-full max-w-[560px] animate-float"
-                style={{ filter: 'drop-shadow(0 40px 80px rgba(0,0,0,0.4))' }}>
-                <DashboardIllustration />
+              <div className="relative w-full max-w-[560px]">
+                {/* Floating outcome cards */}
+                <div className="absolute -top-5 -left-8 z-10 bg-white rounded-2xl shadow-card-hover px-4 py-3 border border-border-default animate-fade-in">
+                  <p className="text-[9px] text-muted font-semibold uppercase tracking-widest mb-1">Deployment Status</p>
+                  <p className="font-display font-bold text-navy text-[18px] leading-none">Fully operational</p>
+                  <div className="flex items-center gap-1.5 mt-1">
+                    <span className="w-2 h-2 rounded-full bg-[#22c55e] inline-block"/>
+                    <p className="text-[9px] text-[#22c55e] font-medium">All 15 products active</p>
+                  </div>
+                </div>
+                <div className="absolute -bottom-5 -right-4 z-10 bg-white rounded-2xl shadow-card-hover px-4 py-3 border border-border-default animate-fade-in delay-200">
+                  <p className="text-[9px] text-muted font-semibold uppercase tracking-widest mb-1">SLA Compliance</p>
+                  <p className="font-display font-bold text-navy text-[18px] leading-none">97.8%</p>
+                  <p className="text-[9px] text-[#22c55e] font-medium mt-1">↑ this month</p>
+                </div>
+                <div className="animate-float" style={{ filter: 'drop-shadow(0 40px 80px rgba(0,0,0,0.4))' }}>
+                  <DashboardIllustration />
+                </div>
               </div>
             </div>
           </div>
@@ -179,7 +195,7 @@ export default function HomePage() {
             <AnimateIn direction="right" className="space-y-5">
               {[
                 'IT teams install ManageEngine, configure incident management and basic monitoring, and move on. The software is live. The project is complete.',
-                'But the workflow automation, cross-tool integrations, access governance, and compliance reporting remain untouched — the configuration that turns an installed tool into an operational asset.',
+                'But the workflow automation, cross-tool integrations, access governance, and compliance reporting remain untouched -- the configuration that turns an installed tool into an operational asset.',
                 'This is not a product problem. The platform is capable. The gap is in how implementations are scoped, architected, and configured for the organisation\'s actual environment.',
                 'ManagedFirst implements ManageEngine to its full operational scope: architecture, configuration mapped to your processes, integration with your existing systems, and documentation your team uses independently.',
               ].map((p, i) => (
@@ -192,6 +208,50 @@ export default function HomePage() {
               </div>
             </AnimateIn>
           </div>
+          {/* Visual panel -- what managed vs unmanaged looks like */}
+          <AnimateIn className="mt-14 lg:mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="rounded-2xl overflow-hidden border border-border-default shadow-card bg-[#0F172A]">
+                <div className="flex items-center gap-2 px-4 py-2.5 bg-[#1E293B] border-b border-white/5">
+                  <span className="text-[10px] font-semibold text-red uppercase tracking-wide">Before -- Default deployment</span>
+                </div>
+                <div className="p-4 space-y-2">
+                  {[
+                    ['Tickets routed manually', 'error'],
+                    ['Patch compliance unknown', 'error'],
+                    ['AD deprovisioning: manual', 'error'],
+                    ['No privileged access audit', 'error'],
+                    ['Compliance reports: manual', 'warn'],
+                  ].map(([label, status]) => (
+                    <div key={label} className="flex items-center gap-2 py-1">
+                      <span className={`w-2 h-2 rounded-full flex-shrink-0 ${status === 'error' ? 'bg-red' : 'bg-amber'}`}/>
+                      <span className="text-[11px] text-white/55">{label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="rounded-2xl overflow-hidden border border-teal/30 shadow-card bg-[#0F172A]">
+                <div className="flex items-center gap-2 px-4 py-2.5 bg-[#1E293B] border-b border-teal/10">
+                  <span className="text-[10px] font-semibold text-teal uppercase tracking-wide">After -- ManagedFirst implementation</span>
+                </div>
+                <div className="p-4 space-y-2">
+                  {[
+                    ['Auto-routing by category & priority', 'ok'],
+                    ['94.2% patch compliance -- tracked', 'ok'],
+                    ['Deprovisioning within defined SLA', 'ok'],
+                    ['Full session recording -- PAM360', 'ok'],
+                    ['Compliance reports -- automated', 'ok'],
+                  ].map(([label, status]) => (
+                    <div key={label} className="flex items-center gap-2 py-1">
+                      <span className="w-2 h-2 rounded-full flex-shrink-0 bg-[#22c55e]"/>
+                      <span className="text-[11px] text-white/80">{label}</span>
+                      <span className="ml-auto text-[9px] text-[#22c55e] font-medium">✓</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </AnimateIn>
         </div>
       </section>
 
@@ -393,7 +453,7 @@ export default function HomePage() {
                 The DPDPA is in enforcement.<br />Is your IT environment ready?
               </h2>
               <p className="text-white/55 leading-relaxed" style={{ fontSize: '16px', maxWidth: '460px' }}>
-                Five specific technical obligations. ManageEngine addresses each one — when configured correctly.
+                Five specific technical obligations. ManageEngine addresses each one -- when configured correctly.
               </p>
             </AnimateIn>
             <AnimateIn direction="right" className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:justify-end">
@@ -419,7 +479,7 @@ export default function HomePage() {
           </AnimateIn>
           <AnimateIn delay={100}>
             <p className="text-charcoal/60 leading-relaxed mb-10" style={{ fontSize: '18px' }}>
-              If it is not — book a free assessment. We will review your current deployment, identify the configuration gaps, and tell you specifically what a complete implementation would change.
+              If it is not -- book a free assessment. We will review your current deployment, identify the configuration gaps, and tell you specifically what a complete implementation would change.
             </p>
           </AnimateIn>
           <AnimateIn delay={200} className="flex flex-wrap justify-center gap-3">

@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
+import { ITOMIllustration } from '@/components/illustrations/ITOMIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'IT Operations Management | ManageEngine OpManager Partner India | ManagedFirst',
@@ -24,7 +25,9 @@ export default function ItomHubPage() {
         heading='Monitoring tools that generate more alerts than anyone reads provide coverage without visibility.'
         subheading='Network events, server performance alerts, and application response time warnings that arrive without context or priority routing are not monitoring -- they are noise. ManagedFirst implements OpManager Plus, Site24x7, and Applications Manager with thresholds calibrated for your infrastructure, dashboards relevant to your operations, and escalation paths that reach the right person at the right time.'
         primaryCta={{ label: 'Get a Free ITOM Architecture Review', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See products', href: '#products' }} />
+        secondaryCta={{ label: 'See products', href: '#products' }}
+        visual={<ITOMIllustration className='w-full max-w-[520px]' />}
+        />
 
       <section className="bg-white section-py">
         <div className="site-container max-w-3xl">

@@ -7,6 +7,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand, NumberedChallenge, SolutionsMappingTable } from '@/components/sections/Sections'
 import { SectionHeader, Badge } from '@/components/ui/Elements'
 import { IconAD360, IconADManager, IconADSelfService, IconADAudit, IconPAM360, IconArrowRight } from '@/components/icons'
+import { IAMIllustration } from '@/components/illustrations/IAMIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Identity and Access Management | ManageEngine IAM Partner India | ManagedFirst',
@@ -44,7 +45,9 @@ export default function IAMHubPage() {
         heading="Access controls fail at scale not because organisations lack tools, but because the tools are not configured to govern access consistently."
         subheading="User accounts accumulate. Privileged credentials circulate. Former employees retain access. Compliance auditors ask for evidence that does not exist. ManagedFirst implements ManageEngine's IAM suite -- architecture, provisioning automation, privileged access governance, and audit-ready compliance reporting -- for enterprises that need access controls that work, not just tools that are installed."
         primaryCta={{ label: 'Get a Free IAM Architecture Review', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See IAM Products', href: '#products' }} />
+        secondaryCta={{ label: 'See IAM Products', href: '#products' }}
+        visual={<IAMIllustration className='w-full max-w-[520px]' />}
+        />
 
       {/* Problem */}
       <section className="bg-white section-py">

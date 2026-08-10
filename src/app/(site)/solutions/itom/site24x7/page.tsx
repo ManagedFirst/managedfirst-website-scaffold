@@ -3,6 +3,7 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, CapabilitiesGrid, ImplementationSteps, UseCasesGrid } from '@/components/sections/Sections'
+import { ITOMIllustration } from '@/components/illustrations/ITOMIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Site24x7 Implementation | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function SolutionsItomSite24x7Page() {
         heading='Monitor your infrastructure from the outside in. See what your users actually experience.'
         subheading="Site24x7 is ManageEngine's cloud-based monitoring platform for websites, servers, applications, networks, and cloud infrastructure. ManagedFirst implements and configures monitoring relevant to your specific infrastructure."
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<ITOMIllustration className='w-full max-w-[480px]' />}
+        />
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements Site24x7." steps={steps} />

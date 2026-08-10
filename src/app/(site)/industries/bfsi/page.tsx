@@ -5,6 +5,7 @@ import { AnimateIn } from '@/components/AnimateIn'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, NumberedChallenge, SolutionsMappingTable, ComplianceItem } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
+import { IndustryIllustration } from '@/components/illustrations/IndustryIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine for Banking and Financial Services | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function IndustriesBfsiPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow='Industries | Banking and Financial Services' heading='ManageEngine implementation for banks and NBFCs -- configured for RBI obligations and DPDPA requirements.' subheading='Privileged access governance for core banking systems. SIEM monitoring with DPDPA compliance reporting. Change management audit trails for RBI IT framework requirements. Log360 and PAM360 configured for financial services security operations.'
         primaryCta={{ label: 'Book a BFSI Implementation Review', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See our services', href: '/services' }} />
+        secondaryCta={{ label: 'See our services', href: '/services' }}
+        visual={<IndustryIllustration title='Banking and Financial Services' className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-offwhite section-py">
         <div className="site-container">

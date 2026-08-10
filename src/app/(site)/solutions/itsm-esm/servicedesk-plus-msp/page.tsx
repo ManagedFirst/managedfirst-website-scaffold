@@ -3,6 +3,7 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, CapabilitiesGrid, ImplementationSteps, UseCasesGrid } from '@/components/sections/Sections'
+import { ITSMIllustration } from '@/components/illustrations/ITSMIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine ServiceDesk Plus MSP Implementation | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function SolutionsItsmEsmServicedeskPlusMspPage() {
         heading='Manage IT for multiple organisations from one platform. Without mixing up their data.'
         subheading="ServiceDesk Plus MSP is ManageEngine's multi-tenant ITSM platform for IT service providers and group companies managing IT for multiple entities."
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<ITSMIllustration className='w-full max-w-[480px]' />}
+        />
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements ServiceDesk Plus MSP." steps={steps} />

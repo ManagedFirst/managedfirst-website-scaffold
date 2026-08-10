@@ -3,6 +3,7 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, CapabilitiesGrid, ImplementationSteps, UseCasesGrid } from '@/components/sections/Sections'
+import { AnalyticsIllustration } from '@/components/illustrations/AnalyticsIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Analytics Plus Implementation | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function SolutionsItAnalyticsAnalyticsPlusPage() {
         heading='Your ManageEngine tools generate data every second. Analytics Plus makes it usable.'
         subheading='Analytics Plus connects data from ServiceDesk Plus, OpManager Plus, Endpoint Central, Log360, and other ManageEngine products into unified dashboards and reports for IT leadership and operations teams.'
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<AnalyticsIllustration className='w-full max-w-[480px]' />}
+        />
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements Analytics Plus." steps={steps} />

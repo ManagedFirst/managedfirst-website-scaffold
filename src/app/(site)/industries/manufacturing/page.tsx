@@ -5,6 +5,7 @@ import { AnimateIn } from '@/components/AnimateIn'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, NumberedChallenge, SolutionsMappingTable, ComplianceItem } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
+import { IndustryIllustration } from '@/components/illustrations/IndustryIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine for Manufacturing Companies in India | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function IndustriesManufacturingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow='Industries | Manufacturing' heading='ManageEngine implementation for manufacturing organisations -- configured for plant, warehouse, and corporate IT environments.' subheading='Endpoint management across plant and office device environments. Network monitoring across multi-site operations with differentiated alerting for production and corporate infrastructure. Change management with audit trails for production IT governance.'
         primaryCta={{ label: 'Book a Manufacturing Implementation Review', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See our services', href: '/services' }} />
+        secondaryCta={{ label: 'See our services', href: '/services' }}
+        visual={<IndustryIllustration title='Manufacturing' className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-offwhite section-py">
         <div className="site-container">

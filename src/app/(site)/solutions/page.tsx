@@ -5,6 +5,7 @@ import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { AnimateIn } from '@/components/AnimateIn'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Elements'
+import { AnalyticsIllustration } from '@/components/illustrations/AnalyticsIllustration'
 import {
   IconAD360, IconServiceDesk, IconEndpointCentral,
   IconLog360, IconOpManager, IconAnalyticsPlus, IconArrowRight,
@@ -21,7 +22,7 @@ const categories = [
     title: 'Identity and Access Management',
     href: '/solutions/iam',
     icon: <IconAD360 size={32} />,
-    description: 'Identity lifecycle management across a distributed workforce is not a tooling problem — it is a configuration and architecture problem. We implement the full ManageEngine IAM suite: provisioning, governance, privileged access, and audit trails.',
+    description: 'Identity lifecycle management across a distributed workforce is not a tooling problem -- it is a configuration and architecture problem. We implement the full ManageEngine IAM suite: provisioning, governance, privileged access, and audit trails.',
     products: ['AD360', 'ADManager Plus', 'ADSelfService Plus', 'ADAudit Plus', 'PAM360'],
     compliance: ['DPDPA', 'ISO 27001', 'RBI IT Framework'],
   },
@@ -29,7 +30,7 @@ const categories = [
     title: 'IT Service and Enterprise Service Management',
     href: '/solutions/itsm-esm',
     icon: <IconServiceDesk size={32} />,
-    description: 'A service desk that routes tickets manually, misses SLAs, and lacks change management is a ticketing system — not an ITSM platform. We configure ServiceDesk Plus to the full ITSM scope: incident, change, problem, asset, and enterprise service management.',
+    description: 'A service desk that routes tickets manually, misses SLAs, and lacks change management is a ticketing system -- not an ITSM platform. We configure ServiceDesk Plus to the full ITSM scope: incident, change, problem, asset, and enterprise service management.',
     products: ['ServiceDesk Plus', 'ServiceDesk Plus MSP'],
     compliance: ['ITIL v4'],
   },
@@ -37,7 +38,7 @@ const categories = [
     title: 'Unified Endpoint Management and Security',
     href: '/solutions/uems',
     icon: <IconEndpointCentral size={32} />,
-    description: 'Unpatched devices, unapproved software, open USB ports, and unmanaged mobile devices are not edge cases — they are the default state of growing IT environments. We implement Endpoint Central and MDM with policies calibrated for your device mix.',
+    description: 'Unpatched devices, unapproved software, open USB ports, and unmanaged mobile devices are not edge cases -- they are the default state of growing IT environments. We implement Endpoint Central and MDM with policies calibrated for your device mix.',
     products: ['Endpoint Central', 'Mobile Device Manager Plus'],
     compliance: ['DPDPA', 'ISO 27001'],
   },
@@ -85,7 +86,7 @@ export default function SolutionsPage() {
             </h1>
             <p className="text-white/70 leading-relaxed max-w-2xl"
               style={{ fontSize: 'clamp(15px, 1.2vw, 18px)' }}>
-              ManagedFirst implements and supports ManageEngine's complete product portfolio. The deployment approach is identical across all six categories — documented, configured, integrated, and operational.
+              ManagedFirst implements and supports ManageEngine's complete product portfolio. The deployment approach is identical across all six categories -- documented, configured, integrated, and operational.
             </p>
           </div>
         </div>

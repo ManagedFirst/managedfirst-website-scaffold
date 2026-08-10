@@ -3,6 +3,7 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, CapabilitiesGrid, ImplementationSteps, UseCasesGrid } from '@/components/sections/Sections'
+import { IAMIllustration } from '@/components/illustrations/IAMIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine ADAudit Plus Implementation | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function SolutionsIamAdauditPlusPage() {
         heading='A complete audit trail of everything that happens in your Active Directory.'
         subheading='ADAudit Plus records every change in your AD, Windows file servers, and cloud environments -- who changed what, when, from which machine -- with pre-built compliance reports for DPDPA, ISO 27001, SOX, and HIPAA.'
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<IAMIllustration className='w-full max-w-[480px]' />}
+        />
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements ADAudit Plus." steps={steps} />

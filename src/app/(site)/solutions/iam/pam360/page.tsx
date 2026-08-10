@@ -3,6 +3,7 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, CapabilitiesGrid, ImplementationSteps, UseCasesGrid } from '@/components/sections/Sections'
+import { IAMIllustration } from '@/components/illustrations/IAMIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine PAM360 Implementation | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function SolutionsIamPam360Page() {
         heading='Control every privileged account in your organisation. Know who used it, when, and why.'
         subheading='PAM360 vaults privileged credentials for all your critical systems, records every privileged session end-to-end, and enforces approval workflows for access to sensitive environments -- configured for your IT environment and compliance obligations.'
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<IAMIllustration className='w-full max-w-[480px]' />}
+        />
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements PAM360." steps={steps} />

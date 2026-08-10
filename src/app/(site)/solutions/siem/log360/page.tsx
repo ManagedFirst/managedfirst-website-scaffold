@@ -3,6 +3,7 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, CapabilitiesGrid, ImplementationSteps, UseCasesGrid } from '@/components/sections/Sections'
+import { SIEMIllustration } from '@/components/illustrations/SIEMIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Log360 SIEM Implementation | ManagedFirst Technologies',
@@ -23,7 +24,9 @@ export default function SolutionsSiemLog360Page() {
         heading='Centralise your security logs. Get alerts your security team will actually act on.'
         subheading="Log360 is ManageEngine's unified SIEM platform. ManagedFirst implements log management, threat detection, UEBA, and compliance reporting -- with correlation rules tuned to your threat profile, not defaults."
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<SIEMIllustration className='w-full max-w-[480px]' />}
+        />
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements Log360." steps={steps} />

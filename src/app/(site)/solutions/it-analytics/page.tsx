@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
+import { AnalyticsIllustration } from '@/components/illustrations/AnalyticsIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'IT Analytics | ManageEngine Analytics Plus Partner India | ManagedFirst',
@@ -24,7 +25,9 @@ export default function ItAnalyticsHubPage() {
         heading='IT performance data locked inside individual tool dashboards never reaches the leadership that needs it.'
         subheading='ServiceDesk Plus has SLA reports. OpManager has infrastructure dashboards. Endpoint Central has patch compliance data. Each sits in its own console, accessible only to the team that operates it. Analytics Plus connects data from across your ManageEngine environment into unified dashboards your IT leadership can use to make decisions.'
         primaryCta={{ label: 'Get a Free Analytics Requirements Review', href: '/free-consultation' }}
-        secondaryCta={{ label: 'See products', href: '#products' }} />
+        secondaryCta={{ label: 'See products', href: '#products' }}
+        visual={<AnalyticsIllustration className='w-full max-w-[520px]' />}
+        />
 
       <section className="bg-white section-py">
         <div className="site-container max-w-3xl">

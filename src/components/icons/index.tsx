@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ManagedFirst Technologies — Icon System v2.0
+// ManagedFirst Technologies -- Icon System v2.0
 // Redesign: Lucide React icons replacing custom SVGs
 // All exports maintain the same names as v1 for zero import changes across pages
 // ─────────────────────────────────────────────────────────────────────────────

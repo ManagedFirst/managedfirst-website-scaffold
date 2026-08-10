@@ -9,6 +9,7 @@ import { SectionHeader } from '@/components/ui/Elements'
 import { Button } from '@/components/ui/Button'
 import { IconCheck, IconArrowRight } from '@/components/icons'
 import { LeadMagnetForm } from '@/components/forms/Forms'
+import { ComplianceIllustration } from '@/components/illustrations/ComplianceIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'DPDPA Compliance with ManageEngine | ManagedFirst Technologies',
@@ -57,7 +58,9 @@ export default function DpdpaCompliancePage() {
         heading="The Digital Personal Data Protection Act is in enforcement. Here is what your IT environment needs to demonstrate."
         subheading="DPDPA creates five specific technical obligations for IT teams -- not at the policy level, but at the level of access controls, monitoring, audit trails, and breach detection. ManagedFirst configures ManageEngine to deliver each one."
         primaryCta={{ label: 'Get a Free DPDPA Assessment', href: '/free-consultation' }}
-        secondaryCta={{ label: 'Download the DPDPA Checklist', href: '/resources/guides' }} />
+        secondaryCta={{ label: 'Download the DPDPA Checklist', href: '/resources/guides' }}
+        visual={<ComplianceIllustration className='w-full max-w-[480px]' />}
+        />
 
       {/* Five Obligations */}
       <section className="bg-white section-py">

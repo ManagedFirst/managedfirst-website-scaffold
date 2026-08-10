@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand, ImplementationSteps } from '@/components/sections/Sections'
 import { SectionHeader, Breadcrumb } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
+import { ServicesIllustration } from '@/components/illustrations/ServicesIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Implementation Methodology | ManagedFirst Technologies',
@@ -27,7 +28,9 @@ export default function ServicesImplementationMethodologyPage() {
 
       <Hero variant="light" eyebrow='Services | Implementation Methodology' heading='How ManagedFirst implements ManageEngine. Documented, repeatable, and applied to every engagement.' subheading='Implementation quality should not depend on which consultant is assigned or how pressed for time the project is. Our methodology documents the standards applied to every ManagedFirst engagement -- the stages, the outputs, the governance, and the handover requirements.'
         primaryCta={{ label: 'Book a Methodology Review Call', href: '/free-consultation' }}
-        secondaryCta={{ label: 'All Services', href: '/services' }} />
+        secondaryCta={{ label: 'All Services', href: '/services' }}
+        visual={<ServicesIllustration className='w-full max-w-[480px]' />}
+        />
 
       <section className="bg-offwhite section-py">
         <div className="site-container">
