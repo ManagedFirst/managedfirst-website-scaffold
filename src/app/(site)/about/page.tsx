@@ -79,14 +79,14 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="bg-white section-py">
+      {/* <section className="bg-white section-py">
         <div className="site-container">
           <AnimateIn className="mb-10"><SectionHeader eyebrow="The Team" heading="The founding team." /></AnimateIn>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-space-6 max-w-2xl">
             {founders.map((f, i) => (
               <AnimateIn key={f.name} delay={i * 100}>
                 <div className="flex flex-col items-center text-center p-space-5 bg-offwhite rounded-brand border border-border-default">
-                  {/* Photo placeholder */}
+                  
                   <div className="w-24 h-24 bg-navy-light rounded-full flex items-center justify-center text-navy font-display font-bold text-h2 mb-4">
                     {f.initials}
                   </div>
@@ -101,7 +101,7 @@ export default function AboutPage() {
             <p className="text-caption text-muted">Founder photos and biography text will be added before go-live.</p>
           </AnimateIn>
         </div>
-      </section>
+      </section> */}
 
       {/* Location */}
       <section className="bg-offwhite section-py">
