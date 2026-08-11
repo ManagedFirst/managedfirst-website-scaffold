@@ -14,9 +14,10 @@ import type { ProductPageData } from '@/data/productPageData'
 interface ProductPageLayoutProps {
   data: ProductPageData
   breadcrumbs: { name: string; href: string }[]
+  visual?: ReactNode
 }
 
-export function ProductPageLayout({ data, breadcrumbs }: ProductPageLayoutProps) {
+export function ProductPageLayout({ data, breadcrumbs, visual }: ProductPageLayoutProps) {
   return (
     <>
       {/* Breadcrumb */}
@@ -34,6 +35,7 @@ export function ProductPageLayout({ data, breadcrumbs }: ProductPageLayoutProps)
         subheading={data.subheading}
         primaryCta={data.primaryCta}
         secondaryCta={data.secondaryCta}
+        visual={visual}
       />
 
       {/* Problem Section */}

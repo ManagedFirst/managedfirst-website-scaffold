@@ -5,9 +5,9 @@ import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { AnimateIn } from '@/components/AnimateIn'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Elements'
+
 import { AnalyticsIllustration } from '@/components/illustrations/AnalyticsIllustration'
-import {
-  IconAD360, IconServiceDesk, IconEndpointCentral,
+import {  IconAD360, IconServiceDesk, IconEndpointCentral,
   IconLog360, IconOpManager, IconAnalyticsPlus, IconArrowRight,
 } from '@/components/icons'
 

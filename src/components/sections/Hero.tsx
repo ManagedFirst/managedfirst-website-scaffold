@@ -66,9 +66,9 @@ export function Hero({
               </div>
             </div>
 
-            {/* Visual -- only on large screens */}
+            {/* Visual -- stacked below text on mobile/tablet, side-by-side on lg+ */}
             {hasVisual && (
-              <div className="hidden lg:flex items-center justify-center relative">
+              <div className="flex items-center justify-center relative mt-8 lg:mt-0">
                 {visual}
               </div>
             )}
@@ -110,7 +110,7 @@ export function Hero({
                 )}
               </div>
             </div>
-            {visual && <div className="hidden lg:block">{visual}</div>}
+            {visual && <div className="mt-8 lg:mt-0">{visual}</div>}
           </div>
         </div>
       </section>
@@ -150,7 +150,7 @@ export function Hero({
               )}
             </div>
           </div>
-          {visual && <div className="hidden lg:flex items-start justify-center pt-2">{visual}</div>}
+          {visual && <div className="flex items-start justify-center pt-2 mt-8 lg:mt-0">{visual}</div>}
         </div>
       </div>
     </section>

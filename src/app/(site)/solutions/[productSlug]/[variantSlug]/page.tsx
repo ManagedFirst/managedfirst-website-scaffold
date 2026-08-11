@@ -9,6 +9,11 @@ import { Breadcrumb, SectionHeader } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
 import { locationRecords, type LocationRecord } from '@/data/pseo-locations'
 import { industryRecords, type IndustryRecord } from '@/data/pseo-industries'
+import { ITSMIllustration } from '@/components/illustrations/ITSMIllustration'
+import { UEMSIllustration } from '@/components/illustrations/UEMSIllustration'
+import { SIEMIllustration } from '@/components/illustrations/SIEMIllustration'
+import { IAMIllustration } from '@/components/illustrations/IAMIllustration'
+import { ITOMIllustration } from '@/components/illustrations/ITOMIllustration'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -28,6 +33,18 @@ function findRecord(productSlug: string, variantSlug: string): AnyRecord | null 
     r => r.productSlug === productSlug && r.industrySlug === variantSlug
   )
   return ind ?? null
+}
+
+// ── Illustration map ─────────────────────────────────────────────────────────
+
+function getIllustration(productSlug: string) {
+  if (productSlug === 'servicedesk-plus') return <ITSMIllustration className="w-full max-w-[420px]" />
+  if (productSlug === 'endpoint-central') return <UEMSIllustration className="w-full max-w-[420px]" />
+  if (productSlug === 'log360')           return <SIEMIllustration className="w-full max-w-[420px]" />
+  if (productSlug === 'ad360')            return <IAMIllustration  className="w-full max-w-[420px]" />
+  if (productSlug === 'pam360')           return <IAMIllustration  className="w-full max-w-[420px]" />
+  if (productSlug === 'opmanager-plus')   return <ITOMIllustration className="w-full max-w-[420px]" />
+  return <ITSMIllustration className="w-full max-w-[420px]" />
 }
 
 // ── Next.js 15: params is a Promise ─────────────────────────────────────────
@@ -99,6 +116,7 @@ export default async function PseoPage({ params }: PageProps) {
         subheading={record.introParagraph}
         primaryCta={{ label: ctaLabel, href: '/free-consultation' }}
         secondaryCta={{ label: 'All services', href: '/services' }}
+        visual={getIllustration(productSlug)}
       />
 
       {/* ── Location context ─────────────────────────────────────────── */}

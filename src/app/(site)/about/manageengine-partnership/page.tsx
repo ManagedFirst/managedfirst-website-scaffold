@@ -6,6 +6,7 @@ import { Hero } from '@/components/sections/Hero'
 import { CTABand } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
 import { IconCheck } from '@/components/icons'
+import { ServicesIllustration } from '@/components/illustrations/ServicesIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Authorized Partner India | ManagedFirst Technologies',
@@ -29,7 +30,8 @@ export default function AboutManageenginePartnershipPage() {
         heading="Authorized ManageEngine partner -- what that means in practice."
         subheading="Authorized partnership is not a marketing badge. It defines the technical resources available to ManagedFirst, the channel through which licences are procured, and the accountability structure that governs how we implement."
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
-        secondaryCta={{ label: 'About ManagedFirst', href: '/about' }} />
+        secondaryCta={{ label: 'About ManagedFirst', href: '/about' }}
+        visual={<ServicesIllustration className="w-full max-w-[460px]" />} />
 
       <section className="bg-white section-py">
         <div className="site-container max-w-3xl">

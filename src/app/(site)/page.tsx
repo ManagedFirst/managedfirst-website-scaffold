@@ -129,11 +129,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Dashboard illustration */}
-            <div className="hidden lg:flex items-center justify-end">
-              <div className="relative w-full max-w-[560px]">
-                {/* Floating outcome cards */}
-                <div className="absolute -top-5 -left-8 z-10 bg-white rounded-2xl shadow-card-hover px-4 py-3 border border-border-default animate-fade-in">
+            {/* Dashboard illustration -- stacked on mobile/tablet, side-by-side on lg+ */}
+            <div className="flex items-center justify-end mt-10 lg:mt-0">
+              <div className="relative w-full max-w-[560px] px-8 pt-6 pb-6 lg:px-0 lg:pt-0 lg:pb-0">
+                {/* Floating outcome cards -- safe position on mobile, negative offset on lg+ */}
+                <div className="absolute top-0 left-0 lg:-top-5 lg:-left-8 z-10 bg-white rounded-2xl shadow-card-hover px-4 py-3 border border-border-default animate-fade-in">
                   <p className="text-[9px] text-muted font-semibold uppercase tracking-widest mb-1">Deployment Status</p>
                   <p className="font-display font-bold text-navy text-[18px] leading-none">Fully operational</p>
                   <div className="flex items-center gap-1.5 mt-1">
@@ -141,7 +141,7 @@ export default function HomePage() {
                     <p className="text-[9px] text-[#22c55e] font-medium">All 15 products active</p>
                   </div>
                 </div>
-                <div className="absolute -bottom-5 -right-4 z-10 bg-white rounded-2xl shadow-card-hover px-4 py-3 border border-border-default animate-fade-in delay-200">
+                <div className="absolute bottom-0 right-0 lg:-bottom-5 lg:-right-4 z-10 bg-white rounded-2xl shadow-card-hover px-4 py-3 border border-border-default animate-fade-in delay-200">
                   <p className="text-[9px] text-muted font-semibold uppercase tracking-widest mb-1">SLA Compliance</p>
                   <p className="font-display font-bold text-navy text-[18px] leading-none">97.8%</p>
                   <p className="text-[9px] text-[#22c55e] font-medium mt-1">↑ this month</p>
