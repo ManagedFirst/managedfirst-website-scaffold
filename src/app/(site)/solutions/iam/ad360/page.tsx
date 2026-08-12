@@ -30,7 +30,7 @@ export default function SolutionsIamAd360Page() {
       <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements AD360." steps={steps} />
-      <CTABand heading='See what a properly configured IAM environment looks like in your organisation.'
+      <CTABand heading='Activate the full capability of ManageEngine"s IAM suite in your organisation.'
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
         secondaryCta={{ label: 'Contact us', href: '/contact' }} />
     </>

@@ -13,7 +13,7 @@ import { ComplianceIllustration } from '@/components/illustrations/ComplianceIll
 
 export const metadata: Metadata = buildMetadata({
   title: 'DPDPA Compliance with ManageEngine | ManagedFirst Technologies',
-  description: 'ManagedFirst helps Indian enterprises achieve DPDPA compliance using ManageEngine. Access controls, audit trails, monitoring, and compliance reporting -- configured to the five technical obligations under the Act.',
+  description: 'ManageEngine addresses every DPDPA technical obligation when correctly implemented. Log360, AD360, ADAudit Plus, Endpoint Central -- configured for DPDPA compliance by an authorized ManageEngine partner.',
   canonicalPath: '/dpdpa-compliance',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'DPDPA Compliance', href: '/dpdpa-compliance' }]
@@ -55,7 +55,7 @@ export default function DpdpaCompliancePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(faqSchema(faqs)) }} />
 
       <Hero variant="dark" eyebrow="Compliance | DPDPA"
-        heading="The Digital Personal Data Protection Act is in enforcement. Here is what your IT environment needs to demonstrate."
+        heading="The Digital Personal Data Protection Act is in enforcement. Here is how ManageEngine -- correctly implemented -- helps your IT environment meet every technical obligation."
         subheading="DPDPA creates five specific technical obligations for IT teams -- not at the policy level, but at the level of access controls, monitoring, audit trails, and breach detection. ManagedFirst configures ManageEngine to deliver each one."
         primaryCta={{ label: 'Get a Free DPDPA Assessment', href: '/free-consultation' }}
         secondaryCta={{ label: 'Download the DPDPA Checklist', href: '/resources/guides' }}

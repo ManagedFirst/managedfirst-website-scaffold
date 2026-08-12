@@ -16,7 +16,7 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Implementation Partner India | ManagedFirst Technologies',
-  description: 'Most ManageEngine deployments configure the basics and stop. ManagedFirst implements the full platform -- architecture, integration, governance, and automation -- for enterprises across India. Authorized partner, Chennai.',
+  description: 'ManagedFirst Technologies is an authorized ManageEngine implementation partner in India. Full-scope architecture, configuration, integration and governance across all six ManageEngine solution categories. Chennai-based, pan-India delivery.',
   canonicalPath: '/',
 })
 
@@ -31,7 +31,7 @@ const solutions = [
 
 const whyUs = [
   { n: '01', title: 'ManageEngine is the only thing we do.', body: 'Our practice covers ManageEngine exclusively -- all 15 products, all six solution categories, every configuration scenario. When a complex question arises, it is not new to us.' },
-  { n: '02', title: 'We implement to the full scope, not the minimum viable deployment.', body: 'Most deployments configure the basics. We implement the automation, integrations, governance workflows, and advanced configuration that make the platform an operational asset.' },
+  { n: '02', title: 'We configure ManageEngine to its full operational scope.', body: "ManageEngine's full capability spans automation, integrations, governance workflows, and advanced configuration across every solution category. We implement all of it -- mapped specifically to your environment, your processes, and your compliance requirements." },
   { n: '03', title: 'Every engagement produces documentation your team keeps.', body: 'Implementation is complete when your team can operate independently. Every engagement delivers a configuration runbook covering every setting applied and every workflow built.' },
   { n: '04', title: 'Indian regulatory requirements are built into every engagement.', body: 'DPDPA, RBI IT framework, ISO 27001 -- these are not add-ons. We configure ManageEngine for the regulatory environment Indian enterprises operate in.' },
 ]
@@ -96,12 +96,12 @@ export default function HomePage() {
 
               <h1 className="font-display font-extrabold text-white leading-[1.07] tracking-tight mb-7"
                 style={{ fontSize: 'clamp(32px, 4.5vw, 62px)' }}>
-                ManageEngine installed is not ManageEngine working.
+                Implement ManageEngine to its full capability.
               </h1>
 
               <p className="text-white/65 leading-relaxed mb-10"
                 style={{ fontSize: 'clamp(16px, 1.3vw, 19px)', maxWidth: '530px' }}>
-                Enterprise organisations purchase ManageEngine and receive a deployment that covers the basics. The automation, governance, integrations, and compliance configuration remain untouched. ManagedFirst closes that gap -- across all six solution categories, for enterprises across India.
+                ManageEngine is one of the most comprehensive IT management platforms available to Indian enterprises -- spanning identity governance, ITSM, endpoint security, SIEM, and analytics across 15 products and six solution categories. ManagedFirst provides the structured implementation expertise to activate everything it offers. Architecture, configuration, integration, and governance -- delivered with a documented methodology.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-12">
@@ -188,16 +188,16 @@ export default function HomePage() {
               </p>
               <blockquote className="font-display font-bold text-navy leading-tight"
                 style={{ fontSize: 'clamp(26px, 3vw, 42px)' }}>
-                "Most ManageEngine deployments use less than half the platform."
+                "ManageEngine's capability spans 15 products and six solution categories. Activating all of it takes structured implementation expertise."
               </blockquote>
               <div className="mt-8 w-16 h-1 rounded-full" style={{ background: 'linear-gradient(90deg, #2563EB, #7C3AED)' }} />
             </AnimateIn>
             <AnimateIn direction="right" className="space-y-5">
               {[
-                'IT teams install ManageEngine, configure incident management and basic monitoring, and move on. The software is live. The project is complete.',
-                'But the workflow automation, cross-tool integrations, access governance, and compliance reporting remain untouched -- the configuration that turns an installed tool into an operational asset.',
+                'ManageEngine is a comprehensive platform designed for the full scope of enterprise IT management. Activating everything it offers -- across identity governance, ITSM, endpoint security, SIEM, and analytics -- requires structured implementation that matches the platform"s depth.',
+                'Environment-specific architecture, workflow configuration mapped to your processes, integration with your existing systems, and compliance mapping for your regulatory obligations -- this is the implementation work that translates ManageEngine"s capability into operational results.',
                 'This is not a product problem. The platform is capable. The gap is in how implementations are scoped, architected, and configured for the organisation\'s actual environment.',
-                'ManagedFirst implements ManageEngine to its full operational scope: architecture, configuration mapped to your processes, integration with your existing systems, and documentation your team uses independently.',
+                'ManagedFirst specializes exclusively in ManageEngine implementation -- architecture designed for your environment, configuration mapped to your processes, integration with your existing systems, and documentation your team keeps.',
               ].map((p, i) => (
                 <p key={i} className="text-charcoal/75 leading-relaxed" style={{ fontSize: '16px' }}>{p}</p>
               ))}
@@ -217,11 +217,11 @@ export default function HomePage() {
                 </div>
                 <div className="p-4 space-y-2">
                   {[
-                    ['Tickets routed manually', 'error'],
-                    ['Patch compliance unknown', 'error'],
-                    ['AD deprovisioning: manual', 'error'],
-                    ['No privileged access audit', 'error'],
-                    ['Compliance reports: manual', 'warn'],
+                    ['Platform capability partially configured', 'warn'],
+                    ['Workflows requiring manual steps', 'warn'],
+                    ['System integrations deferred', 'warn'],
+                    ['Compliance reporting compiled manually', 'warn'],
+                    ['Team dependent on external support', 'warn'],
                   ].map(([label, status]) => (
                     <div key={label} className="flex items-center gap-2 py-1">
                       <span className={`w-2 h-2 rounded-full flex-shrink-0 ${status === 'error' ? 'bg-red' : 'bg-amber'}`}/>
@@ -236,11 +236,11 @@ export default function HomePage() {
                 </div>
                 <div className="p-4 space-y-2">
                   {[
-                    ['Auto-routing by category & priority', 'ok'],
-                    ['94.2% patch compliance -- tracked', 'ok'],
-                    ['Deprovisioning within defined SLA', 'ok'],
-                    ['Full session recording -- PAM360', 'ok'],
-                    ['Compliance reports -- automated', 'ok'],
+                    ['Full platform capability activated', 'ok'],
+                    ['Workflows automated to your processes', 'ok'],
+                    ['System integrations built and documented', 'ok'],
+                    ['Compliance reports auto-generated', 'ok'],
+                    ['Team operates independently with runbook', 'ok'],
                   ].map(([label, status]) => (
                     <div key={label} className="flex items-center gap-2 py-1">
                       <span className="w-2 h-2 rounded-full flex-shrink-0 bg-[#22c55e]"/>
@@ -266,7 +266,7 @@ export default function HomePage() {
               </p>
               <h2 className="font-display font-bold text-navy leading-tight"
                 style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
-                Six solution categories.<br className="hidden lg:block" />One authorised partner.
+                Six solution categories.<br className="hidden lg:block" /> Every one fully implemented.
               </h2>
             </AnimateIn>
             <AnimateIn delay={100} className="flex-shrink-0">
@@ -450,10 +450,10 @@ export default function HomePage() {
               </p>
               <h2 className="font-display font-bold text-white leading-tight mb-4"
                 style={{ fontSize: 'clamp(26px, 3vw, 44px)' }}>
-                The DPDPA is in enforcement.<br />Is your IT environment ready?
+                ManageEngine addresses every DPDPA technical obligation. We implement the controls correctly.
               </h2>
               <p className="text-white/55 leading-relaxed" style={{ fontSize: '16px', maxWidth: '460px' }}>
-                Five specific technical obligations. ManageEngine addresses each one -- when configured correctly.
+                Log360, AD360, ADAudit Plus, Endpoint Central -- each ManageEngine product maps directly to specific DPDPA obligations. ManagedFirst configures them to produce the controls and audit evidence your compliance team needs.
               </p>
             </AnimateIn>
             <AnimateIn direction="right" className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:justify-end">
@@ -474,12 +474,12 @@ export default function HomePage() {
           <AnimateIn>
             <h2 className="font-display font-bold text-navy leading-tight mb-6"
               style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
-              Your ManageEngine environment should be running its full capability.
+              Ready to get the full value of your ManageEngine investment?
             </h2>
           </AnimateIn>
           <AnimateIn delay={100}>
             <p className="text-charcoal/60 leading-relaxed mb-10" style={{ fontSize: '18px' }}>
-              If it is not -- book a free assessment. We will review your current deployment, identify the configuration gaps, and tell you specifically what a complete implementation would change.
+              Book a free consultation with India's authorized ManageEngine implementation partner. We will review your environment and tell you exactly what a structured, full-scope implementation would deliver.
             </p>
           </AnimateIn>
           <AnimateIn delay={200} className="flex flex-wrap justify-center gap-3">

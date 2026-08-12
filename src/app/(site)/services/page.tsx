@@ -10,8 +10,8 @@ import { IconConsulting, IconEvaluation, IconImplementation, IconTraining, IconM
 import { ServicesIllustration } from '@/components/illustrations/ServicesIllustration'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'ManageEngine Implementation Services -- Assessment, Deployment, Governance | ManagedFirst',
-  description: 'ManagedFirst delivers ManageEngine services across the full engagement lifecycle -- assessment, architecture, deployment, integration, training, and long-term operational governance. Authorized partner, Chennai.',
+  title: 'ManageEngine Implementation Services India | ManagedFirst Technologies',
+  description: 'ManageEngine consulting, implementation, training, managed services, and support from an authorized partner. Full-scope ManageEngine services across all six solution categories. Chennai, pan-India.',
   canonicalPath: '/services',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Services', href: '/services' }]

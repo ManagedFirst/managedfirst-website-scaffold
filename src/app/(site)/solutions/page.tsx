@@ -5,11 +5,11 @@ import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { AnimateIn } from '@/components/AnimateIn'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Elements'
-
-import { AnalyticsIllustration } from '@/components/illustrations/AnalyticsIllustration'
-import {  IconAD360, IconServiceDesk, IconEndpointCentral,
+import {   IconAD360, IconServiceDesk, IconEndpointCentral,
   IconLog360, IconOpManager, IconAnalyticsPlus, IconArrowRight,
 } from '@/components/icons'
+import { AnalyticsIllustration } from '@/components/illustrations/AnalyticsIllustration'
+
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Solutions India | ManagedFirst Technologies',
@@ -38,7 +38,7 @@ const categories = [
     title: 'Unified Endpoint Management and Security',
     href: '/solutions/uems',
     icon: <IconEndpointCentral size={32} />,
-    description: 'Unpatched devices, unapproved software, open USB ports, and unmanaged mobile devices are not edge cases -- they are the default state of growing IT environments. We implement Endpoint Central and MDM with policies calibrated for your device mix.',
+    description: 'Unpatched devices, unapproved software, open USB ports, and unmanaged mobile devices are not edge cases -- they are the the endpoint management need of enterprise IT environments. We implement Endpoint Central and MDM with policies calibrated for your device mix.',
     products: ['Endpoint Central', 'Mobile Device Manager Plus'],
     compliance: ['DPDPA', 'ISO 27001'],
   },
@@ -46,7 +46,7 @@ const categories = [
     title: 'IT Operations Management',
     href: '/solutions/itom',
     icon: <IconOpManager size={32} />,
-    description: 'Monitoring tools that generate more alerts than anyone reads provide coverage without visibility. We implement OpManager Plus, Site24x7, and Applications Manager with thresholds, dashboards, and escalation paths configured for your infrastructure.',
+    description: 'ManageEngine OpManager Plus, Site24x7, and Applications Manager deliver comprehensive IT operations monitoring -- from network topology to application performance. ManagedFirst configures thresholds, dashboards, and escalation paths specific to your infrastructure. We implement OpManager Plus, Site24x7, and Applications Manager with thresholds, dashboards, and escalation paths configured for your infrastructure.',
     products: ['OpManager Plus', 'Site24x7', 'Applications Manager'],
     compliance: [],
   },
@@ -54,7 +54,7 @@ const categories = [
     title: 'Security Information and Event Management',
     href: '/solutions/siem',
     icon: <IconLog360 size={32} />,
-    description: 'A SIEM that surfaces every event equally is indistinguishable from no SIEM. We implement Log360 with correlation rules tuned for your threat profile, alert thresholds below noise level, and compliance reports for your regulatory obligations.',
+    description: 'ManageEngine Log360 delivers unified SIEM capability -- centralised log management, threat detection, UEBA, and automated compliance reporting. ManagedFirst implements Log360 with configuration tuned to your threat profile and compliance obligations. We implement Log360 with correlation rules tuned for your threat profile, alert thresholds below noise level, and compliance reports for your regulatory obligations.',
     products: ['Log360', 'ADAudit Plus', 'Firewall Analyzer'],
     compliance: ['DPDPA', 'ISO 27001', 'CERT-In'],
   },
@@ -62,7 +62,7 @@ const categories = [
     title: 'IT Analytics',
     href: '/solutions/it-analytics',
     icon: <IconAnalyticsPlus size={32} />,
-    description: 'IT performance data locked inside individual tool dashboards never reaches the leadership that needs it. We implement Analytics Plus connecting data from across your ManageEngine environment into dashboards your IT leadership can act on.',
+    description: 'ManageEngine Analytics Plus connects data from across your ManageEngine environment -- ServiceDesk Plus, OpManager Plus, Endpoint Central, Log360 -- into unified dashboards your IT leadership can act on. We implement Analytics Plus connecting data from across your ManageEngine environment into dashboards your IT leadership can act on.',
     products: ['Analytics Plus'],
     compliance: [],
   },

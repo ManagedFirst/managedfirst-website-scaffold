@@ -9,8 +9,8 @@ import { IconCheck } from '@/components/icons'
 import { ITOMIllustration } from '@/components/illustrations/ITOMIllustration'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'IT Operations Management | ManageEngine OpManager Partner India | ManagedFirst',
-  description: 'ManagedFirst implements ManageEngine OpManager Plus, Site24x7, and Applications Manager. Network monitoring, server monitoring, and APM configured for your infrastructure. Authorized partner, Chennai.',
+  title: 'ManageEngine OpManager Plus Implementation India | ManagedFirst Technologies',
+  description: 'Authorized ManageEngine ITOM implementation partner. OpManager Plus, Site24x7, Applications Manager -- network monitoring, server monitoring, and APM for Indian enterprises.',
   canonicalPath: '/solutions/itom',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Solutions', href: '/solutions/itom' }, { name: 'ITOM', href: '/solutions/itom' }]
@@ -22,7 +22,7 @@ export default function ItomHubPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow='ITOM | IT Operations Management'
-        heading='Monitoring tools that generate more alerts than anyone reads provide coverage without visibility.'
+        heading='ManageEngine OpManager Plus, Site24x7, and Applications Manager deliver comprehensive IT operations monitoring -- from network topology to application performance. ManagedFirst configures thresholds, dashboards, and escalation paths specific to your infrastructure.'
         subheading='Network events, server performance alerts, and application response time warnings that arrive without context or priority routing are not monitoring -- they are noise. ManagedFirst implements OpManager Plus, Site24x7, and Applications Manager with thresholds calibrated for your infrastructure, dashboards relevant to your operations, and escalation paths that reach the right person at the right time.'
         primaryCta={{ label: 'Get a Free ITOM Architecture Review', href: '/free-consultation' }}
         secondaryCta={{ label: 'See products', href: '#products' }}

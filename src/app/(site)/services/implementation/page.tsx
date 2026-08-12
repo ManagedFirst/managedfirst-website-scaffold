@@ -9,8 +9,8 @@ import { IconCheck } from '@/components/icons'
 import { ServicesIllustration } from '@/components/illustrations/ServicesIllustration'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'ManageEngine Implementation Services -- Architecture, Configuration, Integration | ManagedFirst',
-  description: 'ManagedFirst delivers full ManageEngine implementation -- architecture, configuration, workflow build, system integration, and documented handover. Your environment, not generic defaults. Authorized partner.',
+  title: 'ManageEngine Implementation Services | ManagedFirst Technologies',
+  description: 'Full-scope ManageEngine implementation -- architecture, configuration, integration, and documented handover. Authorized ManageEngine implementation partner, Chennai. Pan-India delivery.',
   canonicalPath: '/services/implementation',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: 'Implementation and Customisation', href: '/services/implementation' }]

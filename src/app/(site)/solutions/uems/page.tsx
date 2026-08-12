@@ -9,8 +9,8 @@ import { IconCheck } from '@/components/icons'
 import { UEMSIllustration } from '@/components/illustrations/UEMSIllustration'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Unified Endpoint Management | ManageEngine Endpoint Central Partner India | ManagedFirst',
-  description: 'ManagedFirst implements ManageEngine Endpoint Central and Mobile Device Manager Plus. Patch management, endpoint security, software governance, and MDM for Indian enterprises. Authorized partner.',
+  title: 'ManageEngine Endpoint Central Implementation India | ManagedFirst Technologies',
+  description: 'Authorized ManageEngine endpoint management implementation partner. Endpoint Central and Mobile Device Manager Plus -- patch management, endpoint security, and MDM for Indian enterprises.',
   canonicalPath: '/solutions/uems',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Solutions', href: '/solutions/uems' }, { name: 'UEMS', href: '/solutions/uems' }]
@@ -22,7 +22,7 @@ export default function UemsHubPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow='UEMS | Unified Endpoint Management and Security'
-        heading='Unmanaged endpoints are not an edge case. They are the default state of growing IT environments.'
+        heading='ManageEngine Endpoint Central and Mobile Device Manager Plus deliver comprehensive unified endpoint management -- patch automation, endpoint security, software governance, and MDM for every device type in your environment.'
         subheading='Devices that have not been patched, software installed without approval, USB ports open across the fleet, mobile devices operating outside any management policy -- each one is a security incident waiting to surface. ManagedFirst implements Endpoint Central and Mobile Device Manager Plus, configured around your device mix, your patch schedule, and your security policies.'
         primaryCta={{ label: 'Get a Free Endpoint Exposure Assessment', href: '/free-consultation' }}
         secondaryCta={{ label: 'See products', href: '#products' }}
@@ -33,8 +33,8 @@ export default function UemsHubPage() {
         <div className="site-container max-w-3xl">
           <AnimateIn><h2 className="font-display text-h2 font-bold text-navy mb-6">IT teams managing 200 or more devices without centralised management spend most of their time reacting to problems that a managed environment would have prevented.</h2></AnimateIn>
           <AnimateIn delay={100}><p className="text-body text-charcoal leading-relaxed mb-4">Endpoints that have not been patched in months. Software installed by users without approval -- some unlicensed, some a security risk. Devices that left the office perimeter and are no longer under any management policy. USB ports open across the fleet with no data transfer controls.</p></AnimateIn>
-          <AnimateIn delay={180}><p className="text-body text-charcoal leading-relaxed mb-4">These are not edge cases. They are the normal state of endpoint environments that grew faster than the tools used to manage them.</p></AnimateIn>
-          <AnimateIn delay={260}><p className="text-body text-charcoal leading-relaxed mb-4">DPDPA's requirement for reasonable technical security measures on systems processing personal data makes unpatched, unmanaged endpoints a compliance liability. Endpoint Central configured correctly -- patch policies, software governance, endpoint security, and MDM -- turns endpoint management from a reactive function into a governed one.</p></AnimateIn>
+          <AnimateIn delay={180}><p className="text-body text-charcoal leading-relaxed mb-4">Getting full value from Endpoint Central's capability requires implementation work: device group configuration, patch policy design, software deployment packages, security policy deployment, and asset management setup. That is what ManagedFirst provides.</p></AnimateIn>
+          <AnimateIn delay={260}><p className="text-body text-charcoal leading-relaxed mb-4">DPDPA's requirement for reasonable technical security measures applies directly to the endpoint environment. ManageEngine Endpoint Central configured to its full scope -- patch policies, software governance, endpoint security, and MDM -- provides the controls and compliance evidence your team needs.</p></AnimateIn>
         </div>
       </section>
 

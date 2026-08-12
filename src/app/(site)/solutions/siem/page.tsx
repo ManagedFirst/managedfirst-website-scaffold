@@ -9,8 +9,8 @@ import { IconCheck } from '@/components/icons'
 import { SIEMIllustration } from '@/components/illustrations/SIEMIllustration'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'SIEM | ManageEngine Log360 Partner India | ManagedFirst',
-  description: 'ManagedFirst implements ManageEngine Log360, ADAudit Plus, and Firewall Analyzer. Log management, threat detection, UEBA, and DPDPA compliance reporting. Authorized partner, Chennai.',
+  title: 'ManageEngine Log360 SIEM Implementation India | ManagedFirst Technologies',
+  description: 'Authorized ManageEngine SIEM implementation partner. Log360, ADAudit Plus, Firewall Analyzer -- log management, threat detection, UEBA, and DPDPA compliance reporting for Indian enterprises.',
   canonicalPath: '/solutions/siem',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Solutions', href: '/solutions/siem' }, { name: 'SIEM', href: '/solutions/siem' }]
@@ -22,7 +22,7 @@ export default function SiemHubPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow='SIEM | Security Information and Event Management'
-        heading='A SIEM that surfaces every event equally is indistinguishable from no SIEM.'
+        heading='ManageEngine Log360 delivers unified SIEM capability -- centralised log management, threat detection, UEBA, and automated compliance reporting. ManagedFirst implements Log360 with configuration tuned to your threat profile and compliance obligations.'
         subheading='Log data collected and stored is not the same as log data analysed and acted on. ManagedFirst implements Log360 with correlation rules tuned for your threat profile, alert thresholds below noise level, UEBA baselines specific to your user behaviour, and compliance reports for your regulatory obligations -- so your security team acts on signals, not noise.'
         primaryCta={{ label: 'Get a Free SIEM Architecture Review', href: '/free-consultation' }}
         secondaryCta={{ label: 'See products', href: '#products' }}

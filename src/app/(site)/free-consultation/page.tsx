@@ -15,7 +15,7 @@ const CALENDAR_URL = 'https://calendar.google.com/calendar/appointments/schedule
 
 const situations = [
   { n: '1', title: 'Evaluating ManageEngine for the first time', body: 'You want an independent view of which products fit, what deployment involves, and what implementation cost looks like.' },
-  { n: '2', title: 'ManageEngine is installed but not delivering', body: 'The platform is live but not working the way it was purchased to. You want to understand the configuration gap.' },
+  { n: '2', title: 'you want to activate more ManageEngine capability', body: 'The platform is live but not working the way it was purchased to. You want to understand the configuration gap.' },
   { n: '3', title: 'You have a specific compliance requirement', body: 'DPDPA, ISO 27001, or RBI IT framework. Which ManageEngine tools address which obligations, and how.' },
   { n: '4', title: 'Planning a significant expansion', body: 'Adding new products or sites. You want to scope the change before engaging for implementation.' },
 ]

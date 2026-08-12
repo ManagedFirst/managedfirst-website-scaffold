@@ -11,8 +11,8 @@ import { IconMapPin, IconCheck } from '@/components/icons'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'About ManagedFirst Technologies -- Enterprise ManageEngine Implementation Partner',
-  description: 'ManagedFirst Technologies was founded to solve the enterprise software implementation gap. An authorized ManageEngine partner based in Chennai, built on the belief that implementation determines whether technology delivers operational value.',
+  title: 'About ManagedFirst Technologies -- Authorized ManageEngine Implementation Partner India',
+  description: 'ManagedFirst Technologies is an authorized ManageEngine implementation partner based in Chennai. Our practice is built entirely around ManageEngine -- all 15 products, six solution categories, pan-India delivery.',
   canonicalPath: '/about',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'About', href: '/about' }]
@@ -35,7 +35,7 @@ export default function AboutPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="light" eyebrow="About ManagedFirst"
         heading="Enterprise software delivers value only when it is implemented correctly. We were founded to do that."
-        subheading="ManagedFirst Technologies was founded on the observation that most ManageEngine deployments cover the basics and stop. The automation, governance, integrations, and compliance configuration that make the platform an operational asset remain unconfigured -- not because organisations do not want them, but because deployment was treated as installation."
+        subheading="ManagedFirst Technologies was founded on a straightforward conviction: ManageEngine is one of the most capable IT management platforms available, and it deserves implementation expertise that matches its depth. Getting full value from ManageEngine across its six solution categories and 15 products requires structured implementation methodology -- architecture decisions, process configuration, system integration, and governance design. That is the expertise ManagedFirst was built to provide."
         primaryCta={{ label: 'See Our Implementation Approach', href: '/services/implementation-methodology' }}
         secondaryCta={{ label: 'Contact us', href: '/contact' }}
         visual={<ServicesIllustration className="w-full max-w-[460px]" />}
@@ -79,14 +79,14 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      {/* <section className="bg-white section-py">
+      <section className="bg-white section-py">
         <div className="site-container">
           <AnimateIn className="mb-10"><SectionHeader eyebrow="The Team" heading="The founding team." /></AnimateIn>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-space-6 max-w-2xl">
             {founders.map((f, i) => (
               <AnimateIn key={f.name} delay={i * 100}>
                 <div className="flex flex-col items-center text-center p-space-5 bg-offwhite rounded-brand border border-border-default">
-                  
+                  {/* Photo placeholder */}
                   <div className="w-24 h-24 bg-navy-light rounded-full flex items-center justify-center text-navy font-display font-bold text-h2 mb-4">
                     {f.initials}
                   </div>
@@ -101,7 +101,7 @@ export default function AboutPage() {
             <p className="text-caption text-muted">Founder photos and biography text will be added before go-live.</p>
           </AnimateIn>
         </div>
-      </section> */}
+      </section>
 
       {/* Location */}
       <section className="bg-offwhite section-py">

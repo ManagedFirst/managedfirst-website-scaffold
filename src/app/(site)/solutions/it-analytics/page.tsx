@@ -9,8 +9,8 @@ import { IconCheck } from '@/components/icons'
 import { AnalyticsIllustration } from '@/components/illustrations/AnalyticsIllustration'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'IT Analytics | ManageEngine Analytics Plus Partner India | ManagedFirst',
-  description: 'ManagedFirst implements ManageEngine Analytics Plus for Indian enterprises. Unified IT dashboards, cross-tool reporting, and AI-powered insights across your ManageEngine environment. Authorized partner.',
+  title: 'ManageEngine Analytics Plus Implementation India | ManagedFirst Technologies',
+  description: 'Authorized ManageEngine Analytics Plus implementation partner. Unified IT dashboards, cross-tool reporting, and AI-powered insights across your ManageEngine environment.',
   canonicalPath: '/solutions/it-analytics',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Solutions', href: '/solutions/it-analytics' }, { name: 'IT Analytics', href: '/solutions/it-analytics' }]
@@ -22,7 +22,7 @@ export default function ItAnalyticsHubPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow='IT Analytics'
-        heading='IT performance data locked inside individual tool dashboards never reaches the leadership that needs it.'
+        heading='ManageEngine Analytics Plus connects data from across your ManageEngine environment -- ServiceDesk Plus, OpManager Plus, Endpoint Central, Log360 -- into unified dashboards your IT leadership can act on.'
         subheading='ServiceDesk Plus has SLA reports. OpManager has infrastructure dashboards. Endpoint Central has patch compliance data. Each sits in its own console, accessible only to the team that operates it. Analytics Plus connects data from across your ManageEngine environment into unified dashboards your IT leadership can use to make decisions.'
         primaryCta={{ label: 'Get a Free Analytics Requirements Review', href: '/free-consultation' }}
         secondaryCta={{ label: 'See products', href: '#products' }}

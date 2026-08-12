@@ -10,8 +10,8 @@ import { IconAD360, IconADManager, IconADSelfService, IconADAudit, IconPAM360, I
 import { IAMIllustration } from '@/components/illustrations/IAMIllustration'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Identity and Access Management | ManageEngine IAM Partner India | ManagedFirst',
-  description: 'ManagedFirst implements ManageEngine IAM for Indian enterprises -- AD360, ADManager Plus, ADSelfService Plus, ADAudit Plus, and PAM360. Architecture, governance, and compliance. Authorized partner, Chennai.',
+  title: 'ManageEngine IAM Implementation Partner India | ManagedFirst Technologies',
+  description: 'Authorized ManageEngine IAM implementation partner in India. AD360, ADManager Plus, PAM360, ADAudit Plus -- identity governance, provisioning automation, and compliance reporting for Indian enterprises.',
   canonicalPath: '/solutions/iam',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Solutions', href: '/solutions/iam' }, { name: 'Identity and Access Management', href: '/solutions/iam' }]
@@ -42,8 +42,8 @@ export default function IAMHubPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow="Identity and Access Management"
-        heading="Access controls fail at scale not because organisations lack tools, but because the tools are not configured to govern access consistently."
-        subheading="User accounts accumulate. Privileged credentials circulate. Former employees retain access. Compliance auditors ask for evidence that does not exist. ManagedFirst implements ManageEngine's IAM suite -- architecture, provisioning automation, privileged access governance, and audit-ready compliance reporting -- for enterprises that need access controls that work, not just tools that are installed."
+        heading="ManageEngine's IAM suite delivers comprehensive identity governance -- user lifecycle management, privileged access control, and audit-ready compliance reporting. Getting full value from it requires architecture and configuration that matches the platform's depth."
+        subheading="ManageEngine's IAM suite -- AD360, ADManager Plus, ADSelfService Plus, ADAudit Plus, and PAM360 -- delivers comprehensive identity governance for enterprise environments. ManagedFirst implements the full scope: provisioning automation, privileged access governance, access certification reviews, and audit-ready compliance reporting configured for your Active Directory structure and regulatory requirements."
         primaryCta={{ label: 'Get a Free IAM Architecture Review', href: '/free-consultation' }}
         secondaryCta={{ label: 'See IAM Products', href: '#products' }}
         visual={<IAMIllustration className='w-full max-w-[520px]' />}
@@ -53,7 +53,7 @@ export default function IAMHubPage() {
       <section className="bg-white section-py">
         <div className="site-container max-w-3xl">
           <AnimateIn><p className="text-overline uppercase tracking-widest text-teal mb-3">The Access Governance Problem</p></AnimateIn>
-          <AnimateIn delay={100}><h2 className="font-display text-h2 font-bold text-navy mb-6">Most enterprises know their access controls are incomplete. The problem is finding and fixing every gap -- and keeping it fixed.</h2></AnimateIn>
+          <AnimateIn delay={100}><h2 className="font-display text-h2 font-bold text-navy mb-6">ManageEngine's IAM suite is comprehensive by design -- covering the full identity lifecycle from provisioning through deprovisioning, with privileged access control and compliance reporting built in.</h2></AnimateIn>
           {['User accounts accumulate across systems. Former employees retain access for days, sometimes weeks, after they leave. Shared administrator credentials circulate among IT staff. Privileged accounts hold more permissions than the roles that require them. Service accounts with broad access sit unchanged for years.',
             'The compliance implications compound the operational ones. DPDPA requires demonstrable access controls and audit trails for systems handling personal data. ISO 27001 requires documented access reviews and privilege management. RBI\'s IT framework requires privileged access management for regulated entities.',
             'ManageEngine\'s IAM suite -- configured correctly -- gives your team a live view of every identity in your organisation, automated lifecycle controls from onboarding to offboarding, privileged access governance with session recording, and audit-ready compliance reports when they are required.'

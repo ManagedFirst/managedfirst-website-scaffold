@@ -9,8 +9,8 @@ import { IconCheck } from '@/components/icons'
 import { ITSMIllustration } from '@/components/illustrations/ITSMIllustration'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'ITSM / ESM | ManageEngine ServiceDesk Plus Partner India | ManagedFirst',
-  description: 'ManagedFirst implements ManageEngine ServiceDesk Plus for Indian enterprises. Incident management, change control, asset tracking, ESM -- configured for your processes. Authorized partner, Chennai.',
+  title: 'ManageEngine ServiceDesk Plus Implementation India | ManagedFirst Technologies',
+  description: 'Authorized ManageEngine ITSM implementation partner. ServiceDesk Plus -- incident management, change governance, ESM, and asset management configured for your processes. Pan-India delivery.',
   canonicalPath: '/solutions/itsm-esm',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Solutions', href: '/solutions/itsm-esm' }, { name: 'ITSM / ESM', href: '/solutions/itsm-esm' }]
@@ -22,8 +22,8 @@ export default function ItsmEsmHubPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow='ITSM / ESM | IT Service and Enterprise Service Management'
-        heading='A service desk that routes tickets manually, misses SLAs, and has no change management is a ticketing system -- not an ITSM platform.'
-        subheading='IT teams spend hours on work ServiceDesk Plus should be doing automatically -- categorising tickets, routing to technicians, escalating at-risk SLAs, and recording changes. ManagedFirst implements ServiceDesk Plus to the full ITSM scope: incident, change, problem, asset, and enterprise service management -- configured around your processes.'
+        heading='ManageEngine ServiceDesk Plus delivers enterprise ITSM -- incident management, change governance, problem management, asset tracking, and ESM in one platform. Configuring it to serve your specific processes and SLA requirements is where ManagedFirst adds value.'
+        subheading='ManageEngine ServiceDesk Plus delivers enterprise ITSM -- automated routing, SLA management, change governance, asset tracking, and ESM -- in a single platform. ManagedFirst implements it to the full scope of what ServiceDesk Plus offers, configured around your IT team"s actual processes and governance requirements.'
         primaryCta={{ label: 'Get a Free ITSM Review', href: '/free-consultation' }}
         secondaryCta={{ label: 'See products', href: '#products' }}
         visual={<ITSMIllustration className='w-full max-w-[520px]' />}
@@ -32,7 +32,7 @@ export default function ItsmEsmHubPage() {
       <section className="bg-white section-py">
         <div className="site-container max-w-3xl">
           <AnimateIn><h2 className="font-display text-h2 font-bold text-navy mb-6">Most service desks are configured to receive tickets. Not to manage IT operations.</h2></AnimateIn>
-          <AnimateIn delay={100}><p className="text-body text-charcoal leading-relaxed mb-4">IT teams configure ServiceDesk Plus to receive and close tickets. The rest of what the platform can do -- change management with documented approval chains, problem management with a known-error database, SLA escalation before breach, automated asset discovery, self-service portal -- remains at defaults or untouched.</p></AnimateIn>
+          <AnimateIn delay={100}><p className="text-body text-charcoal leading-relaxed mb-4">ServiceDesk Plus offers significant capability beyond basic ticket management -- change governance with approval workflows, problem management with root cause tracking, asset lifecycle management, and enterprise service management across departments. ManagedFirst configures the full scope, specific to your organisation.</p></AnimateIn>
           <AnimateIn delay={180}><p className="text-body text-charcoal leading-relaxed mb-4">The operational cost is visible: manual triage that the routing rules should handle. SLA breaches that escalation paths should have caught. Recurring incidents that problem management should have documented and eliminated. Changes to production systems made without audit trails.</p></AnimateIn>
           <AnimateIn delay={260}><p className="text-body text-charcoal leading-relaxed mb-4">ManagedFirst implements ServiceDesk Plus to its full scope -- process mapping, workflow build, SLA configuration, change management, asset management, ITSM integration, and self-service portal -- configured for your organisation's actual operations.</p></AnimateIn>
         </div>
