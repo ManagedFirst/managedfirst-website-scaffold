@@ -213,6 +213,15 @@ export const footerColumns = [
       { label: 'MIMM Quick Assessment Guide',     href: '/resources/guides#mimm-quick-assessment' },
     ],
   },
+  {
+    heading: 'Legal',
+    items: [
+      { label: 'Privacy Policy',      href: '/privacy-policy' },
+      { label: 'Terms & Conditions',  href: '/terms-and-conditions' },
+      { label: 'Disclaimer',          href: '/disclaimer' },
+      { label: 'Cookie Policy',       href: '/cookie-policy' },
+    ],
+  },
 ]
 
 // ── Footer bottom bar ──────────────────────────────────────────────────────────
