@@ -23,9 +23,9 @@ const GA_ID  = 'G-YQCBHHFGWV'
 
 export const metadata: Metadata = defaultMetadata
 
-// ── Root layout -- minimal passthrough ──────────────────────────────────────
+// ── Root layout — minimal passthrough ──────────────────────────────────────
 // Provides <html> and <body> for ALL routes (including Payload admin).
-// Does NOT include Navbar/Footer -- those live in (site)/layout.tsx only,
+// Does NOT include Navbar/Footer — those live in (site)/layout.tsx only,
 // so the Payload admin (/admin) is never wrapped in site chrome.
 // Bug 3 fix: no nested <html> conflict with Payload's admin renderer.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -51,6 +51,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
       </head>
       <body className="bg-white text-charcoal antialiased">
         {/* GTM noscript fallback */}

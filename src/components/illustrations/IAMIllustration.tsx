@@ -1,4 +1,4 @@
-// IAM Hero Illustration -- User provisioning / access governance UI mockup
+// IAM Hero Illustration — User provisioning / access governance UI mockup
 export function IAMIllustration({ className = '' }: { className?: string }) {
   const users = [
     { name: 'Priya Sharma', role: 'Finance Manager', dept: 'Finance', status: 'active', since: '2d ago' },
@@ -12,13 +12,13 @@ export function IAMIllustration({ className = '' }: { className?: string }) {
   }
   return (
     <div className={`relative ${className}`} aria-hidden="true">
-      {/* Floating card -- top right */}
+      {/* Floating card — top right */}
       <div className="absolute -top-4 -right-4 z-10 bg-white rounded-2xl shadow-xl px-4 py-3 border border-border-default min-w-[160px]">
         <p className="text-[10px] text-muted font-medium uppercase tracking-wide mb-1">Access Reviews</p>
         <p className="font-display font-bold text-navy text-[22px] leading-none">3 pending</p>
         <p className="text-[10px] text-red font-medium mt-1">Due in 2 days</p>
       </div>
-      {/* Floating card -- bottom left */}
+      {/* Floating card — bottom left */}
       <div className="absolute -bottom-4 -left-4 z-10 bg-white rounded-2xl shadow-xl px-4 py-3 border border-border-default">
         <p className="text-[10px] text-muted font-medium uppercase tracking-wide mb-1">Provisioned Today</p>
         <p className="font-display font-bold text-navy text-[22px] leading-none">14 users</p>

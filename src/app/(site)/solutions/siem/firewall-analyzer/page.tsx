@@ -22,12 +22,12 @@ export default function SolutionsSiemFirewallAnalyzerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="light" eyebrow='SIEM | Firewall Analyzer'
         heading='See what your firewall is actually doing. Not just what you configured it to do.'
-        subheading='Firewall Analyzer collects and analyses logs from firewall and network security devices -- giving your security team traffic visibility, policy analysis, bandwidth monitoring, and compliance reports from your network perimeter.'
+        subheading='Firewall Analyzer collects and analyses logs from firewall and network security devices — giving your security team traffic visibility, policy analysis, bandwidth monitoring, and compliance reports from your network perimeter.'
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
         secondaryCta={{ label: 'All Services', href: '/services' }}
         visual={<SIEMIllustration className='w-full max-w-[480px]' />}
         />
-      <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
+      <CapabilitiesGrid eyebrow="What we configure" heading="Capabilities we can configure." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements Firewall Analyzer." steps={steps} />
       <CTABand heading='Implement firewall log management that gives your security team network visibility and policy analysis capability.'

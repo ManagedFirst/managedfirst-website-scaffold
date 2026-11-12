@@ -16,10 +16,10 @@ export const metadata: Metadata = buildMetadata({
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'About', href: '/about' }, { name: 'ManageEngine Partnership', href: '/about/manageengine-partnership' }]
 
 const benefits = [
-  { title: 'Technical Access and Certification', body: 'Authorized partnership provides access to ManageEngine\'s partner-level technical resources -- documentation, product roadmap previews, and certified training programmes. Our technical team is trained and certified on ManageEngine\'s current product versions, not on documentation that lags behind releases.' },
-  { title: 'Licence Procurement Through a Verified Channel', body: 'Purchasing ManageEngine licences through an authorized partner is the verified procurement channel -- with accurate edition guidance, renewal tracking, and the contractual relationship that generic procurement does not provide.' },
+  { title: 'Technical Access and Certification', body: 'Authorized partnership provides access to ManageEngine\'s partner-level technical resources — documentation, product roadmap previews, and certified training programmes. Our technical team is trained and certified on ManageEngine\'s current product versions, not on documentation that lags behind releases.' },
+  { title: 'Licence Procurement Through a Verified Channel', body: 'Purchasing ManageEngine licences through an authorized partner is the verified procurement channel — with accurate edition guidance, renewal tracking, and the contractual relationship that generic procurement does not provide.' },
   { title: 'Partner-Level Support Escalation', body: 'When complex technical issues require ManageEngine\'s own engineering team, authorized partners have a direct escalation path. Support tickets that would spend weeks in the general queue can be escalated with context to the right team.' },
-  { title: 'Implementation Accountability', body: 'Authorized partners are accountable to ManageEngine for implementation quality. Partnership is not a reseller arrangement -- it is a framework that includes implementation standards, customer feedback, and ongoing technical competency requirements.' },
+  { title: 'Implementation Accountability', body: 'Authorized partners are accountable to ManageEngine for implementation quality. Partnership is not a reseller arrangement — it is a framework that includes implementation standards, customer feedback, and ongoing technical competency requirements.' },
 ]
 
 export default function AboutManageenginePartnershipPage() {
@@ -27,7 +27,7 @@ export default function AboutManageenginePartnershipPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="light" eyebrow="About | ManageEngine Partnership"
-        heading="Authorized ManageEngine partner -- what that means in practice."
+        heading="Authorized ManageEngine partner — what that means in practice."
         subheading="Authorized partnership is not a marketing badge. It defines the technical resources available to ManagedFirst, the channel through which licences are procured, and the accountability structure that governs how we implement."
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
         secondaryCta={{ label: 'About ManagedFirst', href: '/about' }}
@@ -37,7 +37,7 @@ export default function AboutManageenginePartnershipPage() {
         <div className="site-container max-w-3xl">
           <AnimateIn><h2 className="font-display text-h2 font-bold text-navy mb-6">Authorized partnership is not a reseller arrangement.</h2></AnimateIn>
           {[
-            'The ManageEngine partner programme distinguishes between resellers and implementation partners. Resellers sell licences. Implementation partners are accountable for the quality of what gets deployed -- not just what gets sold.',
+            'The ManageEngine partner programme distinguishes between resellers and implementation partners. Resellers sell licences. Implementation partners are accountable for the quality of what gets deployed — not just what gets sold.',
             'ManagedFirst\'s authorized partner status means we have access to partner-level technical resources, certified training programmes, and direct escalation channels to ManageEngine\'s technical team. It means our implementations are conducted under a framework that ManageEngine can review and that clients can rely on.',
             'For clients, the practical consequence is that ManageEngine licence procurement through ManagedFirst happens through a verified channel, with accurate edition guidance and renewal tracking. Implementation is conducted by a team that is certified on ManageEngine\'s current product versions and accountable to the partner programme standards.',
           ].map((p, i) => <AnimateIn key={i} delay={i*80}><p className="text-body text-charcoal leading-relaxed mb-4">{p}</p></AnimateIn>)}

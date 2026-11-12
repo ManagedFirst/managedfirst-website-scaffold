@@ -189,20 +189,31 @@ export function LeadMagnetForm({
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <input {...register('name', { required: true })}
-          className={`input ${errors.name ? 'input-error' : ''}`}
-          placeholder="Your name *" />
-        <input type="email" {...register('email', { required: true, pattern: /^[^@]+@[^@]+\.[^@]+$/ })}
-          className={`input ${errors.email ? 'input-error' : ''}`}
-          placeholder="Work email *" />
+        <Field label="Name" error={errors.name ? 'Name is required' : undefined} required>
+          <input {...register('name', { required: true })}
+            className={`input ${errors.name ? 'input-error' : ''}`}
+            placeholder="Rajesh Kumar" />
+        </Field>
+        <Field label="Work email" error={errors.email ? 'Enter a valid work email' : undefined} required>
+          <input type="email" {...register('email', { required: true, pattern: /^[^@]+@[^@]+\.[^@]+$/ })}
+            className={`input ${errors.email ? 'input-error' : ''}`}
+            placeholder="rajesh@acme.in" />
+        </Field>
       </div>
-      <input {...register('organisation', { required: true })}
-        className={`input ${errors.organisation ? 'input-error' : ''}`}
-        placeholder="Organisation *" />
+      <Field label="Organisation" error={errors.organisation ? 'Organisation is required' : undefined} required>
+        <input {...register('organisation', { required: true })}
+          className={`input ${errors.organisation ? 'input-error' : ''}`}
+          placeholder="Acme Technologies Pvt. Ltd." />
+      </Field>
 
       <Button type="submit" variant="primary-light" disabled={status === 'loading'} className="w-full sm:w-auto">
         {status === 'loading' ? 'Sending...' : (submitLabel ?? `Download ${resourceType === 'checklist' ? 'Free ' : ''}${resourceName} →`)}
       </Button>
+
+      <p style={{ fontSize: '12px', color: '#94A3B8', lineHeight: '1.5' }}>
+        By submitting, you agree to our{' '}
+        <a href="/privacy-policy" style={{ color: '#2563EB', textDecoration: 'underline' }}>Privacy Policy</a>.
+      </p>
     </form>
   )
 }

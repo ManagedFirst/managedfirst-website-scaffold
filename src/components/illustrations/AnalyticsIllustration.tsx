@@ -36,7 +36,7 @@ export function AnalyticsIllustration({ className = '' }: { className?: string }
         ))}
         {/* Line chart */}
         <rect x="8" y="172" width="348" height="140" rx="8" fill="#1E293B" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
-        <text x="20" y="191" fontFamily="Inter,sans-serif" fontSize="10" fontWeight="600" fill="white">SLA Performance -- 12 months</text>
+        <text x="20" y="191" fontFamily="Inter,sans-serif" fontSize="10" fontWeight="600" fill="white">SLA Performance — 12 months</text>
         {/* Grid */}
         {[0,1,2,3].map(i => (<line key={i} x1="20" y1={210 + i * 28} x2="348" y2={210 + i * 28} stroke="rgba(255,255,255,0.04)" strokeWidth="1"/>))}
         {/* Area fill */}

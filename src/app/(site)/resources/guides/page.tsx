@@ -5,7 +5,7 @@ import { AnimateIn } from '@/components/AnimateIn'
 import { Badge, SectionHeader } from '@/components/ui/Elements'
 import { CTABand } from '@/components/sections/Sections'
 import { LeadMagnetForm } from '@/components/forms/Forms'
-import { IconDownload, IconCheck } from '@/components/icons'
+import { IconDownload, IconCheck, IconClock } from '@/components/icons'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Guides and Downloads | ManagedFirst Technologies',
@@ -62,15 +62,15 @@ export default function ResourcesGuidesPage() {
           </AnimateIn>
 
           <AnimateIn>
-            <div id="mimm-quick-assessment" className="bg-white border border-border-default rounded-brand p-space-6 opacity-75 scroll-mt-24">
+            <div id="mimm-quick-assessment" className="bg-white border border-border-default rounded-brand p-space-6 scroll-mt-24">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-offwhite rounded-lg flex items-center justify-center">
-                  <IconDownload size={20} className="text-muted" />
+                  <IconClock size={20} className="text-charcoal/50" />
                 </div>
                 <span className="text-caption text-muted font-medium uppercase tracking-wide">Coming soon</span>
               </div>
-              <h3 className="font-display text-h3 font-bold text-navy mb-2">MIMM Quick Assessment Guide</h3>
-              <p className="text-body text-charcoal/70 leading-relaxed">A self-assessment checklist for evaluating where your ManageEngine deployment sits on the five-level Implementation Maturity Model -- and what Level 3, 4, and 5 look like for each solution category.</p>
+              <h3 className="font-display text-h3 font-bold text-navy mb-2">ManageEngine Implementation Maturity Model (MIMM) Quick Assessment Guide</h3>
+              <p className="text-body text-charcoal leading-relaxed">A self-assessment checklist for evaluating where your ManageEngine deployment sits on the five-level Implementation Maturity Model — and what Level 3, 4, and 5 look like for each solution category.</p>
               <p className="text-body-sm text-muted mt-4">Available with the next content release. Register for the DPDPA checklist above to be notified.</p>
             </div>
           </AnimateIn>

@@ -7,7 +7,7 @@ import { IconMail, IconPhone, IconClock, IconMapPin } from '@/components/icons'
 import { ContactForm } from '@/components/forms/Forms'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Contact ManagedFirst Technologies -- ManageEngine Partner Chennai',
+  title: 'Contact ManagedFirst Technologies — ManageEngine Partner Chennai',
   description: 'Contact ManagedFirst Technologies. We respond to all enquiries within one business day. Chennai-based authorized ManageEngine partner serving enterprises pan-India.',
   canonicalPath: '/contact',
 })

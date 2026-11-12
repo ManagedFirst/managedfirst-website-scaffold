@@ -24,7 +24,7 @@ export function ServicesIllustration({ className = '' }: { className?: string })
         <circle cx="22" cy="20" r="5" fill="#FF5F57"/><circle cx="38" cy="20" r="5" fill="#FEBC2E"/><circle cx="54" cy="20" r="5" fill="#28C840"/>
         <text x="240" y="24" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.4)" textAnchor="middle">ManagedFirst Implementation Roadmap</text>
         <text x="20" y="65" fontFamily="Inter,sans-serif" fontSize="12" fontWeight="700" fill="white">Implementation Roadmap</text>
-        <text x="20" y="80" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.35)">Your ManageEngine deployment -- end to end</text>
+        <text x="20" y="80" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.35)">Your ManageEngine deployment — end to end</text>
         {/* Timeline bar */}
         <rect x="20" y="95" width="440" height="4" rx="2" fill="rgba(255,255,255,0.06)"/>
         {phases.map((p, i) => (

@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 
-const SITE_URL  = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://managedfirst.in'
+const SITE_URL  = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://managedfirsttechnologies.com'
 const SITE_NAME = 'ManagedFirst Technologies'
 
 interface BuildMetadataOptions {
   title: string
   description: string
   canonicalPath: string       // e.g. '/solutions/iam'
-  ogImage?: string            // Absolute URL -- defaults to /og-default.png
+  ogImage?: string            // Absolute URL — defaults to /og-default.png
   noIndex?: boolean           // Set true for admin/staging pages
 }
 

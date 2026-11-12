@@ -22,7 +22,7 @@ export default function CaseStudiesPage() {
           <AnimateIn>
             <p className="text-overline uppercase tracking-widest text-teal mb-3">Knowledge</p>
             <h1 className="font-display text-h1 font-extrabold text-navy mb-4">Case Studies.</h1>
-            <p className="text-body-lg text-charcoal/80 max-w-2xl">Real ManageEngine implementation outcomes -- published with client approval, written from structured client interviews, using actual numbers.</p>
+            <p className="text-body-lg text-charcoal/80 max-w-2xl">Real ManageEngine implementation outcomes — published with client approval, written from structured client interviews, using actual numbers.</p>
           </AnimateIn>
         </div>
       </section>
@@ -31,10 +31,9 @@ export default function CaseStudiesPage() {
         <div className="site-container">
           <AnimateIn>
             <div className="max-w-2xl bg-white rounded-brand border border-border-default p-space-6">
-              <h2 className="font-display text-h3 font-bold text-navy mb-4">Case studies are published as engagements complete.</h2>
-              <p className="text-body text-charcoal leading-relaxed mb-4">We do not publish case studies without client approval, and we do not write case studies without conducting a structured interview with the client contact. Generic case studies written from memory are not useful to anyone evaluating an implementation partner.</p>
-              <p className="text-body text-charcoal leading-relaxed mb-4">This page will be populated as real client engagements complete and approvals are confirmed. The absence of case studies here reflects where we are in the business lifecycle -- not a reluctance to be accountable for outcomes.</p>
-              <p className="text-body text-charcoal leading-relaxed">In the meantime, the implementation blog covers what our work looks like in practice, and a free consultation is the most direct way to assess whether our approach fits your requirements.</p>
+              <h2 className="font-display text-h3 font-bold text-navy mb-4">Our first case studies are on the way.</h2>
+              <p className="text-body text-charcoal leading-relaxed mb-4">We publish case studies only after client approval and a structured interview, using real numbers. Our first ones are coming soon.</p>
+              <p className="text-body text-charcoal leading-relaxed">Read our <a href="/blog" className="text-blue hover:underline">implementation blog</a> in the meantime, or <a href="/free-consultation" className="text-blue hover:underline">book a free consultation</a> to see if our approach fits your requirements.</p>
             </div>
           </AnimateIn>
         </div>

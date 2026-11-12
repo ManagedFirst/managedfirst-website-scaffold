@@ -21,7 +21,7 @@ export function ITOMIllustration({ className = '' }: { className?: string }) {
       <div className="absolute -bottom-4 -left-4 z-10 bg-white rounded-2xl shadow-xl px-4 py-3 border border-border-default">
         <p className="text-[10px] text-muted font-medium uppercase tracking-wide mb-1">Active Alerts</p>
         <p className="font-display font-bold text-red text-[22px] leading-none">3 critical</p>
-        <p className="text-[10px] text-muted mt-1">DB Primary -- down</p>
+        <p className="text-[10px] text-muted mt-1">DB Primary — down</p>
       </div>
       <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" className="w-full drop-shadow-2xl rounded-2xl">
         <rect width="560" height="380" rx="14" fill="#0F172A"/>
@@ -30,7 +30,7 @@ export function ITOMIllustration({ className = '' }: { className?: string }) {
         <circle cx="22" cy="20" r="5" fill="#FF5F57"/><circle cx="38" cy="20" r="5" fill="#FEBC2E"/><circle cx="54" cy="20" r="5" fill="#28C840"/>
         <rect x="70" y="12" width="280" height="16" rx="8" fill="#0F172A"/>
         <text x="210" y="24" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.4)" textAnchor="middle">opmanager.manageengine.com</text>
-        <text x="16" y="66" fontFamily="Inter,sans-serif" fontSize="12" fontWeight="700" fill="white">Network Topology -- Live</text>
+        <text x="16" y="66" fontFamily="Inter,sans-serif" fontSize="12" fontWeight="700" fill="white">Network Topology — Live</text>
         <text x="16" y="80" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.35)">124 devices monitored · Last poll: 45s</text>
         {/* Status pills */}
         {[['▪ 119 Up', '#22c55e'], ['▪ 3 Warning', '#F5A623'], ['▪ 2 Down', '#E8192C']].map(([l, c], i) => (
@@ -52,7 +52,7 @@ export function ITOMIllustration({ className = '' }: { className?: string }) {
             <text x={n.x + 18} y={n.y + 4} fontFamily="Inter,sans-serif" fontSize="8" fill="rgba(255,255,255,0.8)">{n.label}</text>
           </g>
         ))}
-        {/* Right panel -- Alerts */}
+        {/* Right panel — Alerts */}
         <rect x="508" y="50" width="1" height="320" fill="rgba(255,255,255,0.06)"/>
         <rect x="516" y="50" width="36" height="320" rx="8" fill="#1E293B"/>
         <text x="534" y="76" fontFamily="Inter,sans-serif" fontSize="8" fill="rgba(255,255,255,0.4)" textAnchor="middle" transform="rotate(90, 534, 76)">ALERTS</text>

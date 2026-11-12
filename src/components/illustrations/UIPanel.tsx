@@ -1,4 +1,4 @@
-// UIPanel -- a reusable UI mockup panel for internal section visuals
+// UIPanel — a reusable UI mockup panel for internal section visuals
 // Used within page body sections (not hero) to add visual depth
 // Renders a mini browser-frame with content specific to the context
 
@@ -32,7 +32,7 @@ export function UIPanel({ url = 'manageengine.com', children, className = '', he
   )
 }
 
-// MetricRow -- a single metric/KPI row inside a UIPanel
+// MetricRow — a single metric/KPI row inside a UIPanel
 export function MetricRow({ label, value, sub, color = '#2563EB', trend }: {
   label: string; value: string; sub?: string; color?: string; trend?: 'up' | 'down' | 'flat'
 }) {
@@ -50,7 +50,7 @@ export function MetricRow({ label, value, sub, color = '#2563EB', trend }: {
   )
 }
 
-// StatusItem -- a status row with indicator dot
+// StatusItem — a status row with indicator dot
 export function StatusItem({ label, status, value }: {
   label: string; status: 'ok' | 'warn' | 'error'; value?: string
 }) {
@@ -64,7 +64,7 @@ export function StatusItem({ label, status, value }: {
   )
 }
 
-// MiniChart -- a simple SVG bar chart for UIPanel
+// MiniChart — a simple SVG bar chart for UIPanel
 export function MiniChart({ data, height = 60, color = '#2563EB' }: {
   data: number[]; height?: number; color?: string
 }) {

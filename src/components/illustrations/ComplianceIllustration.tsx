@@ -2,9 +2,9 @@ export function ComplianceIllustration({ className = '' }: { className?: string 
   return (
     <div className={`relative ${className}`} aria-hidden="true">
       <div className="absolute -top-4 -right-4 z-10 bg-white rounded-2xl shadow-xl px-4 py-3 border border-border-default min-w-[156px]">
-        <p className="text-[10px] text-muted font-medium uppercase tracking-wide mb-1">Compliance Score</p>
+        <p className="text-[10px] text-muted font-medium uppercase tracking-wide mb-1">Sample Score</p>
         <p className="font-display font-bold text-navy text-[22px] leading-none">94.7%</p>
-        <p className="text-[10px] text-[#22c55e] font-medium mt-1">Audit-ready</p>
+        <p className="text-[10px] text-[#22c55e] font-medium mt-1">Illustrative only</p>
       </div>
       <div className="absolute -bottom-4 -left-4 z-10 bg-white rounded-2xl shadow-xl px-4 py-3 border border-border-default">
         <p className="text-[10px] text-muted font-medium uppercase tracking-wide mb-1">Next Report</p>
@@ -16,9 +16,9 @@ export function ComplianceIllustration({ className = '' }: { className?: string 
         <rect width="480" height="40" rx="14" fill="#1E293B"/>
         <rect y="26" width="480" height="14" fill="#1E293B"/>
         <circle cx="22" cy="20" r="5" fill="#FF5F57"/><circle cx="38" cy="20" r="5" fill="#FEBC2E"/><circle cx="54" cy="20" r="5" fill="#28C840"/>
-        <text x="240" y="24" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.4)" textAnchor="middle">Compliance Report · Auto-generated</text>
+        <text x="240" y="24" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.4)" textAnchor="middle">DPDPA Compliance Report · Illustrative Example</text>
         <text x="20" y="65" fontFamily="Inter,sans-serif" fontSize="12" fontWeight="700" fill="white">DPDPA Compliance Report</text>
-        <text x="20" y="80" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.35)">Generated: Today 08:00 AM · Period: July 2026 · Prepared by ManageEngine</text>
+        <text x="20" y="80" fontFamily="Inter,sans-serif" fontSize="9" fill="rgba(255,255,255,0.35)">Sample data · Illustrative only · Prepared by ManageEngine</text>
         {/* 5 obligations */}
         {[
           { title: 'Reasonable Security Safeguards', tool: 'Log360 + Endpoint Central', status: 'COMPLIANT', pct: 97 },
@@ -43,7 +43,7 @@ export function ComplianceIllustration({ className = '' }: { className?: string 
         ))}
         {/* Footer */}
         <rect x="20" y="320" width="440" height="16" rx="4" fill="rgba(37,99,235,0.1)"/>
-        <text x="240" y="332" fontFamily="Inter,sans-serif" fontSize="8.5" fill="rgba(37,99,235,0.8)" textAnchor="middle">Report auto-delivered to compliance@company.in every Monday 08:00 AM IST</text>
+        <text x="240" y="332" fontFamily="Inter,sans-serif" fontSize="8.5" fill="rgba(37,99,235,0.8)" textAnchor="middle">Illustrative example — actual coverage depends on scope and environment</text>
       </svg>
     </div>
   )

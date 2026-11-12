@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
           await transporter.sendMail({
             from:    `"ManagedFirst Website" <${process.env.SMTP_USER}>`,
             to:      recipient,
-            subject: `New download: ${resourceName} -- ${name} (${organisation})`,
+            subject: `New download: ${resourceName} — ${name} (${organisation})`,
             text:    `Name: ${name}\nEmail: ${email}\nOrganisation: ${organisation}\nResource: ${resourceName}`,
           })
         }

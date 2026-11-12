@@ -5,11 +5,11 @@ import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { AnimateIn } from '@/components/AnimateIn'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Elements'
-import {   IconAD360, IconServiceDesk, IconEndpointCentral,
+import {
+import { AnalyticsIllustration } from '@/components/illustrations/AnalyticsIllustration'
+  IconAD360, IconServiceDesk, IconEndpointCentral,
   IconLog360, IconOpManager, IconAnalyticsPlus, IconArrowRight,
 } from '@/components/icons'
-import { AnalyticsIllustration } from '@/components/illustrations/AnalyticsIllustration'
-
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Solutions India | ManagedFirst Technologies',
@@ -22,7 +22,7 @@ const categories = [
     title: 'Identity and Access Management',
     href: '/solutions/iam',
     icon: <IconAD360 size={32} />,
-    description: 'Identity lifecycle management across a distributed workforce is not a tooling problem -- it is a configuration and architecture problem. We implement the full ManageEngine IAM suite: provisioning, governance, privileged access, and audit trails.',
+    description: 'Identity lifecycle management across a distributed workforce is not a tooling problem — it is a configuration and architecture problem. We implement the full ManageEngine IAM suite: provisioning, governance, privileged access, and audit trails.',
     products: ['AD360', 'ADManager Plus', 'ADSelfService Plus', 'ADAudit Plus', 'PAM360'],
     compliance: ['DPDPA', 'ISO 27001', 'RBI IT Framework'],
   },
@@ -30,7 +30,7 @@ const categories = [
     title: 'IT Service and Enterprise Service Management',
     href: '/solutions/itsm-esm',
     icon: <IconServiceDesk size={32} />,
-    description: 'A service desk that routes tickets manually, misses SLAs, and lacks change management is a ticketing system -- not an ITSM platform. We configure ServiceDesk Plus to the full ITSM scope: incident, change, problem, asset, and enterprise service management.',
+    description: 'A service desk that routes tickets manually, misses SLAs, and lacks change management is a ticketing system — not an ITSM platform. We configure ServiceDesk Plus to the full ITSM scope: incident, change, problem, asset, and enterprise service management.',
     products: ['ServiceDesk Plus', 'ServiceDesk Plus MSP'],
     compliance: ['ITIL v4'],
   },
@@ -38,7 +38,7 @@ const categories = [
     title: 'Unified Endpoint Management and Security',
     href: '/solutions/uems',
     icon: <IconEndpointCentral size={32} />,
-    description: 'Unpatched devices, unapproved software, open USB ports, and unmanaged mobile devices are not edge cases -- they are the the endpoint management need of enterprise IT environments. We implement Endpoint Central and MDM with policies calibrated for your device mix.',
+    description: 'Unpatched devices, unapproved software, open USB ports, and unmanaged mobile devices are not edge cases — they are the default state of growing IT environments. We implement Endpoint Central and MDM with policies calibrated for your device mix.',
     products: ['Endpoint Central', 'Mobile Device Manager Plus'],
     compliance: ['DPDPA', 'ISO 27001'],
   },
@@ -46,7 +46,7 @@ const categories = [
     title: 'IT Operations Management',
     href: '/solutions/itom',
     icon: <IconOpManager size={32} />,
-    description: 'ManageEngine OpManager Plus, Site24x7, and Applications Manager deliver comprehensive IT operations monitoring -- from network topology to application performance. ManagedFirst configures thresholds, dashboards, and escalation paths specific to your infrastructure. We implement OpManager Plus, Site24x7, and Applications Manager with thresholds, dashboards, and escalation paths configured for your infrastructure.',
+    description: 'Monitoring tools that generate more alerts than anyone reads provide coverage without visibility. We implement OpManager Plus, Site24x7, and Applications Manager with thresholds, dashboards, and escalation paths configured for your infrastructure.',
     products: ['OpManager Plus', 'Site24x7', 'Applications Manager'],
     compliance: [],
   },
@@ -54,7 +54,7 @@ const categories = [
     title: 'Security Information and Event Management',
     href: '/solutions/siem',
     icon: <IconLog360 size={32} />,
-    description: 'ManageEngine Log360 delivers unified SIEM capability -- centralised log management, threat detection, UEBA, and automated compliance reporting. ManagedFirst implements Log360 with configuration tuned to your threat profile and compliance obligations. We implement Log360 with correlation rules tuned for your threat profile, alert thresholds below noise level, and compliance reports for your regulatory obligations.',
+    description: 'A SIEM that surfaces every event equally is indistinguishable from no SIEM. We implement Log360 with correlation rules tuned for your threat profile, alert thresholds below noise level, and compliance reports for your regulatory obligations.',
     products: ['Log360', 'ADAudit Plus', 'Firewall Analyzer'],
     compliance: ['DPDPA', 'ISO 27001', 'CERT-In'],
   },
@@ -62,7 +62,7 @@ const categories = [
     title: 'IT Analytics',
     href: '/solutions/it-analytics',
     icon: <IconAnalyticsPlus size={32} />,
-    description: 'ManageEngine Analytics Plus connects data from across your ManageEngine environment -- ServiceDesk Plus, OpManager Plus, Endpoint Central, Log360 -- into unified dashboards your IT leadership can act on. We implement Analytics Plus connecting data from across your ManageEngine environment into dashboards your IT leadership can act on.',
+    description: 'IT performance data locked inside individual tool dashboards never reaches the leadership that needs it. We implement Analytics Plus connecting data from across your ManageEngine environment into dashboards your IT leadership can act on.',
     products: ['Analytics Plus'],
     compliance: [],
   },
@@ -86,7 +86,7 @@ export default function SolutionsPage() {
             </h1>
             <p className="text-white/70 leading-relaxed max-w-2xl"
               style={{ fontSize: 'clamp(15px, 1.2vw, 18px)' }}>
-              ManagedFirst implements and supports ManageEngine's complete product portfolio. The deployment approach is identical across all six categories -- documented, configured, integrated, and operational.
+              ManagedFirst implements and supports ManageEngine's complete product portfolio. The deployment approach is identical across all six categories — documented, configured, integrated, and operational.
             </p>
           </div>
         </div>

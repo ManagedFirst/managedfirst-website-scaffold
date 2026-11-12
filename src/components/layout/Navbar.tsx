@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { navigation } from '@/data/navigation'
 import { IconMenu, IconX, IconChevronDown } from '@/components/icons'
@@ -120,7 +121,7 @@ function MobileNav({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-50 bg-navy flex flex-col animate-fade-in">
       <div className="flex items-center justify-between px-6 h-[72px] border-b border-white/10 flex-shrink-0">
-        <span className="font-display font-bold text-white text-[18px]">ManagedFirst</span>
+        <Image src="/logo.png" alt="ManagedFirst Technologies" width={160} height={44} className="h-8 w-auto brightness-0 invert" />
         <button onClick={onClose} className="p-2 text-white/60 hover:text-white transition-colors">
           <IconX size={22} />
         </button>
@@ -202,14 +203,15 @@ export function Navbar() {
         <div className="site-container flex items-center justify-between w-full">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 flex-shrink-0 group">
-            <div className="w-8 h-8 bg-navy rounded-brand flex items-center justify-center
-                            group-hover:bg-blue transition-colors duration-250">
-              <span className="text-white font-display font-black text-[13px]">M</span>
-            </div>
-            <span className="font-display font-bold text-navy text-[17px] group-hover:text-blue transition-colors">
-              ManagedFirst
-            </span>
+          <Link href="/" className="flex items-center flex-shrink-0" aria-label="ManagedFirst Technologies">
+            <Image
+              src="/logo.png"
+              alt="ManagedFirst Technologies"
+              width={200}
+              height={55}
+              priority
+              className="h-9 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}

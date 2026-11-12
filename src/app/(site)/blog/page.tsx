@@ -9,17 +9,17 @@ import { CTABand } from '@/components/sections/Sections'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Implementation Blog | ManagedFirst Technologies',
-  description: 'Practical guides on ManageEngine implementation -- ITSM, IAM, endpoint management, SIEM, and compliance. Written by authorized ManageEngine implementation partners for Indian enterprise IT teams. implementation team for Indian enterprise IT teams.',
+  description: 'Practical guides on ManageEngine implementation — ITSM, IAM, endpoint management, SIEM, and compliance. Written by ManagedFirst\'s implementation team for Indian enterprise IT teams.',
   canonicalPath: '/blog',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog' }]
 
-// Blog articles -- internal to this module, not exported (Next.js page files cannot export arbitrary constants)
+// Blog articles — internal to this module, not exported (Next.js page files cannot export arbitrary constants)
 const BLOG_ARTICLES = [
-  { slug: 'why-most-manageengine-deployments-underperform', title: 'Getting Full Value from ManageEngine -- What Structured Implementation Delivers', category: 'ManageEngine Implementation', excerpt: 'ManageEngine is a comprehensive IT management platform. Here is what the gap between installation and operation looks like -- and what the deployments that actually work have in common.' },
-  { slug: 'dpdpa-compliance-checklist-for-it-teams', title: 'DPDPA Compliance Checklist for IT Teams -- The Five Technical Obligations and the ManageEngine Controls That Address Them', category: 'Compliance', excerpt: 'DPDPA creates specific technical obligations for IT teams. This checklist covers what each obligation requires technically and which ManageEngine tools address it when configured correctly.' },
-  { slug: 'how-to-evaluate-manageengine-servicedesk-plus', title: 'How to Evaluate ManageEngine ServiceDesk Plus -- A Structured Approach for IT Teams', category: 'IT Operations and ITSM', excerpt: 'A vendor demonstration of ServiceDesk Plus running on default configuration is not a useful evaluation. This guide covers how to structure a ServiceDesk Plus evaluation against your actual use cases.' },
-  { slug: 'manageengine-implementation-maturity-model', title: 'The ManageEngine Implementation Maturity Model -- A Framework for Evaluating Deployment Completeness', category: 'ManageEngine Implementation', excerpt: 'Most ManageEngine deployments sit at Level 2 of a five-level maturity model. This article introduces the MIMM framework -- a structured way to assess where your deployment sits and what Level 3, 4, and 5 look like.' },
+  { slug: 'why-most-manageengine-deployments-underperform', title: 'Why Most ManageEngine Deployments Underperform — And What Separates the Ones That Do Not', category: 'ManageEngine Implementation', excerpt: 'Most ManageEngine deployments configure the basics and stop. Here is what the gap between installation and operation looks like — and what the deployments that actually work have in common.' },
+  { slug: 'dpdpa-compliance-checklist-for-it-teams', title: 'DPDPA Compliance Checklist for IT Teams — The Five Technical Obligations and the ManageEngine Controls That Address Them', category: 'Compliance', excerpt: 'DPDPA creates specific technical obligations for IT teams. This checklist covers what each obligation requires technically and which ManageEngine tools address it when configured correctly.' },
+  { slug: 'how-to-evaluate-manageengine-servicedesk-plus', title: 'How to Evaluate ManageEngine ServiceDesk Plus — A Structured Approach for IT Teams', category: 'IT Operations and ITSM', excerpt: 'A vendor demonstration of ServiceDesk Plus running on default configuration is not a useful evaluation. This guide covers how to structure a ServiceDesk Plus evaluation against your actual use cases.' },
+  { slug: 'manageengine-implementation-maturity-model', title: 'The ManageEngine Implementation Maturity Model — A Framework for Evaluating Deployment Completeness', category: 'ManageEngine Implementation', excerpt: 'Most ManageEngine deployments sit at Level 2 of a five-level maturity model. This article introduces the MIMM framework — a structured way to assess where your deployment sits and what Level 3, 4, and 5 look like.' },
 ]
 
 export default function BlogPage() {
@@ -32,14 +32,14 @@ export default function BlogPage() {
           <AnimateIn>
             <p className="text-overline uppercase tracking-widest text-teal mb-3">Knowledge</p>
             <h1 className="font-display text-h1 font-extrabold text-navy mb-4">The ManagedFirst Blog.</h1>
-            <p className="text-body-lg text-charcoal/80 max-w-2xl">Practical guidance on ManageEngine implementation -- written for IT managers and IT heads at Indian enterprises, not for general audiences.</p>
+            <p className="text-body-lg text-charcoal/80 max-w-2xl">Practical guidance on ManageEngine implementation, written for IT managers and IT heads at Indian enterprises.</p>
           </AnimateIn>
         </div>
       </section>
 
       <section className="bg-offwhite section-py">
         <div className="site-container">
-          {/* Blog grid -- content managed in Payload CMS */}
+          {/* Blog grid — content managed in Payload CMS */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-5 mb-10">
             {BLOG_ARTICLES.map((article, i) => (
               <AnimateIn key={article.slug} delay={i * 80}>

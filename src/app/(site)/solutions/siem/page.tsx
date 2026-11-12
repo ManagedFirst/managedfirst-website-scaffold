@@ -9,21 +9,21 @@ import { IconCheck } from '@/components/icons'
 import { SIEMIllustration } from '@/components/illustrations/SIEMIllustration'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'ManageEngine Log360 SIEM Implementation India | ManagedFirst Technologies',
-  description: 'Authorized ManageEngine SIEM implementation partner. Log360, ADAudit Plus, Firewall Analyzer -- log management, threat detection, UEBA, and DPDPA compliance reporting for Indian enterprises.',
+  title: 'SIEM | ManageEngine Log360 Partner India | ManagedFirst',
+  description: 'ManagedFirst implements ManageEngine Log360, ADAudit Plus, and Firewall Analyzer. Log management, threat detection, UEBA, and DPDPA compliance reporting. Authorized partner, Chennai.',
   canonicalPath: '/solutions/siem',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Solutions', href: '/solutions/siem' }, { name: 'SIEM', href: '/solutions/siem' }]
 
-const successItems = ["Log sources are mapped and all systems processing personal data are monitored -- no blind spots.", "Correlation rules are tuned to your threat profile. Alerts represent real events, not defaults.", "UEBA baselines reflect your users actual behaviour. Anomalies surface against a relevant baseline.", "Alert workflows route incidents to the right team member with the right context.", "Compliance reports for DPDPA, ISO 27001, and applicable sector frameworks are generated automatically on schedule.", "False positives have been systematically eliminated. The security team reads the alert queue because it is meaningful."]
+const successItems = ["Log sources are mapped and all systems processing personal data are monitored — no blind spots.", "Correlation rules are tuned to your threat profile. Alerts represent real events, not defaults.", "UEBA baselines reflect your users actual behaviour. Anomalies surface against a relevant baseline.", "Alert workflows route incidents to the right team member with the right context.", "Compliance reports for DPDPA, ISO 27001, and applicable sector frameworks are generated automatically on schedule.", "False positives have been systematically eliminated. The security team reads the alert queue because it is meaningful."]
 
 export default function SiemHubPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="dark" eyebrow='SIEM | Security Information and Event Management'
-        heading='ManageEngine Log360 delivers unified SIEM capability -- centralised log management, threat detection, UEBA, and automated compliance reporting. ManagedFirst implements Log360 with configuration tuned to your threat profile and compliance obligations.'
-        subheading='Log data collected and stored is not the same as log data analysed and acted on. ManagedFirst implements Log360 with correlation rules tuned for your threat profile, alert thresholds below noise level, UEBA baselines specific to your user behaviour, and compliance reports for your regulatory obligations -- so your security team acts on signals, not noise.'
+        heading='A SIEM that surfaces every event equally is indistinguishable from no SIEM.'
+        subheading='Log data collected and stored is not the same as log data analysed and acted on. ManagedFirst implements Log360 with correlation rules tuned for your threat profile, alert thresholds below noise level, UEBA baselines specific to your user behaviour, and compliance reports for your regulatory obligations — so your security team acts on signals, not noise.'
         primaryCta={{ label: 'Get a Free SIEM Architecture Review', href: '/free-consultation' }}
         secondaryCta={{ label: 'See products', href: '#products' }}
         visual={<SIEMIllustration className='w-full max-w-[520px]' />}
@@ -32,9 +32,9 @@ export default function SiemHubPage() {
       <section className="bg-white section-py">
         <div className="site-container max-w-3xl">
           <AnimateIn><h2 className="font-display text-h2 font-bold text-navy mb-6">Most SIEM deployments collect logs from a handful of sources and surface every event with equal priority. The result is alert fatigue, not threat detection.</h2></AnimateIn>
-          <AnimateIn delay={100}><p className="text-body text-charcoal leading-relaxed mb-4">A SIEM deployment that collects logs, applies default correlation rules, and delivers alerts to an inbox is not operational security -- it is evidence collection. The alerts arrive faster than anyone can review them. The signal-to-noise ratio trains security teams to ignore the queue.</p></AnimateIn>
+          <AnimateIn delay={100}><p className="text-body text-charcoal leading-relaxed mb-4">A SIEM deployment that collects logs, applies default correlation rules, and delivers alerts to an inbox is not operational security — it is evidence collection. The alerts arrive faster than anyone can review them. The signal-to-noise ratio trains security teams to ignore the queue.</p></AnimateIn>
           <AnimateIn delay={180}><p className="text-body text-charcoal leading-relaxed mb-4">Without correlation rules tuned to your environment, UEBA baselines reflecting your users' actual behaviour, and alert workflows routing events to the right team, Log360 is storing security data rather than using it.</p></AnimateIn>
-          <AnimateIn delay={260}><p className="text-body text-charcoal leading-relaxed mb-4">DPDPA requires monitoring of systems processing personal data. ISO 27001 requires centralised log management and incident detection capability. Without a tuned SIEM, neither obligation can be demonstrated. ManagedFirst implements Log360 for the regulatory context Indian enterprises operate in -- not just as a logging platform.</p></AnimateIn>
+          <AnimateIn delay={260}><p className="text-body text-charcoal leading-relaxed mb-4">DPDPA requires monitoring of systems processing personal data. ISO 27001 requires centralised log management and incident detection capability. Without a tuned SIEM, neither obligation can be demonstrated. ManagedFirst implements Log360 for the regulatory context Indian enterprises operate in — not just as a logging platform.</p></AnimateIn>
         </div>
       </section>
 

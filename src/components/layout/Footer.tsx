@@ -68,7 +68,7 @@ export function Footer() {
               {footerBottomBar.copyright}
             </p>
             <p className="text-white/40 sm:text-right" style={{ fontSize: '12px' }}>
-              {footerBottomBar.cin} &nbsp;·&nbsp; Reg. Office: {footerBottomBar.address}
+              {footerBottomBar.cin ? <>{footerBottomBar.cin} &nbsp;·&nbsp; </> : null}Reg. Office: {footerBottomBar.address}
             </p>
           </div>
         </div>

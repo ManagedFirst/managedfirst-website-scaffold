@@ -1,11 +1,11 @@
 export function SIEMIllustration({ className = '' }: { className?: string }) {
   const events = [
-    { time: '14:32:18', type: 'ALERT', msg: 'Brute force attempt -- 47 failed logins', src: '192.168.1.104', severity: 'critical' },
-    { time: '14:31:55', type: 'WARN', msg: 'Privileged account login -- off-hours', src: 'srv-dc-01', severity: 'high' },
-    { time: '14:31:22', type: 'INFO', msg: 'AD group membership changed -- Domain Admins', src: 'DESK-JD-001', severity: 'medium' },
+    { time: '14:32:18', type: 'ALERT', msg: 'Brute force attempt — 47 failed logins', src: '192.168.1.104', severity: 'critical' },
+    { time: '14:31:55', type: 'WARN', msg: 'Privileged account login — off-hours', src: 'srv-dc-01', severity: 'high' },
+    { time: '14:31:22', type: 'INFO', msg: 'AD group membership changed — Domain Admins', src: 'DESK-JD-001', severity: 'medium' },
     { time: '14:30:47', type: 'INFO', msg: 'File access: /finance/Q3_Report.xlsx × 847', src: '192.168.10.23', severity: 'medium' },
-    { time: '14:29:11', type: 'INFO', msg: 'VPN connection established -- remote user', src: '103.45.22.187', severity: 'low' },
-    { time: '14:28:33', type: 'INFO', msg: 'Firewall rule matched -- outbound block', src: '192.168.1.88', severity: 'low' },
+    { time: '14:29:11', type: 'INFO', msg: 'VPN connection established — remote user', src: '103.45.22.187', severity: 'low' },
+    { time: '14:28:33', type: 'INFO', msg: 'Firewall rule matched — outbound block', src: '192.168.1.88', severity: 'low' },
   ]
   const sColor: Record<string, string> = { critical: '#E8192C', high: '#F5A623', medium: '#2563EB', low: '#22c55e' }
   return (

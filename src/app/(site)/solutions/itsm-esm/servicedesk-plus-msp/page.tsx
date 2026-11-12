@@ -27,7 +27,7 @@ export default function SolutionsItsmEsmServicedeskPlusMspPage() {
         secondaryCta={{ label: 'All Services', href: '/services' }}
         visual={<ITSMIllustration className='w-full max-w-[480px]' />}
         />
-      <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
+      <CapabilitiesGrid eyebrow="What we configure" heading="Capabilities we can configure." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements ServiceDesk Plus MSP." steps={steps} />
       <CTABand heading='Configure ServiceDesk Plus MSP for your multi-client or multi-entity IT environment.'

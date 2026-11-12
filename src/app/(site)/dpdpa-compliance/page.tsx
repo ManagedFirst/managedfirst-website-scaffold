@@ -13,14 +13,14 @@ import { ComplianceIllustration } from '@/components/illustrations/ComplianceIll
 
 export const metadata: Metadata = buildMetadata({
   title: 'DPDPA Compliance with ManageEngine | ManagedFirst Technologies',
-  description: 'ManageEngine addresses every DPDPA technical obligation when correctly implemented. Log360, AD360, ADAudit Plus, Endpoint Central -- configured for DPDPA compliance by an authorized ManageEngine partner.',
+  description: 'ManagedFirst helps Indian enterprises achieve DPDPA compliance using ManageEngine. Access controls, audit trails, monitoring, and compliance reporting — configured to the five technical obligations under the Act.',
   canonicalPath: '/dpdpa-compliance',
 })
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'DPDPA Compliance', href: '/dpdpa-compliance' }]
 
 const obligations = [
-  { number: 1, title: 'Implement Reasonable Security Safeguards', description: 'Section 8(5) requires data fiduciaries to implement appropriate technical and organisational measures to prevent personal data breaches. ManageEngine tools -- Log360, Endpoint Central, and AD360 -- deliver access controls, endpoint security, and monitoring that constitute reasonable safeguards when configured correctly.' },
-  { number: 2, title: 'Breach Detection and Notification Capability', description: 'In the event of a breach, the Data Protection Board and affected data principals must be notified. Log360 provides the centralised log repository and incident timeline that makes breach notification accurate -- and the detection capability that identifies breaches before they become discoveries.' },
+  { number: 1, title: 'Implement Reasonable Security Safeguards', description: 'Section 8(5) requires data fiduciaries to implement appropriate technical and organisational measures to prevent personal data breaches. ManageEngine tools — Log360, Endpoint Central, and AD360 — deliver access controls, endpoint security, and monitoring that constitute reasonable safeguards when configured correctly.' },
+  { number: 2, title: 'Breach Detection and Notification Capability', description: 'In the event of a breach, the Data Protection Board and affected data principals must be notified. Log360 provides the centralised log repository and incident timeline that makes breach notification accurate — and the detection capability that identifies breaches before they become discoveries.' },
   { number: 3, title: 'Access Controls and Accountability', description: 'Only personnel with legitimate purpose should access personal data. AD360 and ADManager Plus deliver role-based access controls, automated provisioning and deprovisioning, and access certification reviews. ADAudit Plus provides the audit trail of every access event.' },
   { number: 4, title: 'Data Accuracy and Deletion', description: 'Personal data must be accurate and deleted when no longer needed. ADAudit Plus tracks every modification to personal data records. ADManager Plus automates deprovisioning workflows that remove access when purpose is fulfilled.' },
   { number: 5, title: 'Response to Data Principal Rights Requests', description: 'Data principals have the right to access, correct, and erase their data. Responding accurately requires a searchable audit trail across all systems holding personal data. ADAudit Plus and Log360 provide cross-system log search by individual identity.' },
@@ -42,10 +42,10 @@ const timeline = [
 ]
 
 const faqs = [
-  { question: 'Does DPDPA apply to our organisation?', answer: 'DPDPA applies to any entity that processes digital personal data of Indian citizens in connection with any profiling or offering of goods and services. If your organisation collects, stores, or processes personal data about employees, customers, or citizens, it almost certainly applies. Confirm applicability with your legal counsel -- ManagedFirst advises on the technical implementation, not the regulatory interpretation.' },
+  { question: 'Does DPDPA apply to our organisation?', answer: 'DPDPA applies to any entity that processes digital personal data of Indian citizens in connection with any profiling or offering of goods and services. If your organisation collects, stores, or processes personal data about employees, customers, or citizens, it almost certainly applies. Confirm applicability with your legal counsel — ManagedFirst advises on the technical implementation, not the regulatory interpretation.' },
   { question: 'What counts as "reasonable security safeguards" under DPDPA?', answer: 'The Act does not define reasonable safeguards with technical specificity. In the event of a breach, regulators will examine what controls were in place. Access controls limiting who reaches personal data, monitoring for unauthorised access, endpoint security on devices processing personal data, and patch management are the technical controls most likely to constitute reasonable safeguards.' },
   { question: 'What does ManagedFirst actually do in a DPDPA assessment?', answer: 'We review your current ManageEngine deployment against the five technical obligations. We identify which controls are in place, which are missing, and what configuration would close each gap. The assessment produces a written gap analysis and a prioritised implementation roadmap. It takes two to three weeks from first call to final recommendations.' },
-  { question: 'Do you cover the policy and legal aspects of DPDPA compliance?', answer: 'No. ManagedFirst covers the technical IT implementation only -- the controls, monitoring, and audit trails that constitute reasonable safeguards. Policy documentation, consent management, privacy notices, vendor agreements, and regulatory interpretation are handled by your legal and compliance team.' },
+  { question: 'Do you cover the policy and legal aspects of DPDPA compliance?', answer: 'No. ManagedFirst covers the technical IT implementation only — the controls, monitoring, and audit trails that constitute reasonable safeguards. Policy documentation, consent management, privacy notices, vendor agreements, and regulatory interpretation are handled by your legal and compliance team.' },
 ]
 
 export default function DpdpaCompliancePage() {
@@ -55,8 +55,8 @@ export default function DpdpaCompliancePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(faqSchema(faqs)) }} />
 
       <Hero variant="dark" eyebrow="Compliance | DPDPA"
-        heading="The Digital Personal Data Protection Act is in enforcement. Here is how ManageEngine -- correctly implemented -- helps your IT environment meet every technical obligation."
-        subheading="DPDPA creates five specific technical obligations for IT teams -- not at the policy level, but at the level of access controls, monitoring, audit trails, and breach detection. ManagedFirst configures ManageEngine to deliver each one."
+        heading="DPDPA Compliance Support for Your IT Environment"
+        subheading="DPDPA creates specific technical obligations for IT teams — access controls, monitoring, audit trails, and breach detection. ManagedFirst configures ManageEngine to support each obligation. Technical controls are one part of DPDPA compliance — policy, consent management, and regulatory interpretation are handled by your legal and compliance team."
         primaryCta={{ label: 'Get a Free DPDPA Assessment', href: '/free-consultation' }}
         secondaryCta={{ label: 'Download the DPDPA Checklist', href: '/resources/guides' }}
         visual={<ComplianceIllustration className='w-full max-w-[480px]' />}
@@ -93,7 +93,7 @@ export default function DpdpaCompliancePage() {
       {/* 30-Day Timeline */}
       <section className="bg-white section-py">
         <div className="site-container">
-          <AnimateIn className="mb-10"><SectionHeader eyebrow="Implementation Timeline" heading="30-day DPDPA technical implementation." subheading="The core technical controls can be deployed in four weeks for organisations with an existing ManageEngine environment." /></AnimateIn>
+          <AnimateIn className="mb-10"><SectionHeader eyebrow="Implementation Timeline" heading="Typical 30-Day Implementation Approach." subheading="For organisations with an existing ManageEngine environment, the core technical controls can typically be deployed in four weeks. Actual timeline depends on your environment, scope, and configuration requirements." /></AnimateIn>
           <div className="relative">
             {/* Timeline line */}
             <div className="hidden md:block absolute top-6 left-0 right-0 h-0.5 bg-teal/20 z-0" />

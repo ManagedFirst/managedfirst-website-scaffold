@@ -22,12 +22,12 @@ export default function SolutionsItsmEsmServicedeskPlusPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="light" eyebrow='ITSM / ESM | ServiceDesk Plus'
         heading='A service desk that works the way your IT team works.'
-        subheading="ServiceDesk Plus is ManageEngine's enterprise ITSM platform. ManagedFirst implements the full scope -- incident, change, problem, asset, and enterprise service management -- configured around your team's actual processes."
+        subheading="ServiceDesk Plus is ManageEngine's enterprise ITSM platform. ManagedFirst implements the full scope — incident, change, problem, asset, and enterprise service management — configured around your team's actual processes."
         primaryCta={{ label: 'Book a Free Consultation', href: '/free-consultation' }}
         secondaryCta={{ label: 'All Services', href: '/services' }}
         visual={<ITSMIllustration className='w-full max-w-[480px]' />}
         />
-      <CapabilitiesGrid eyebrow="What we configure" heading="Six capability areas in every implementation." items={capabilities} />
+      <CapabilitiesGrid eyebrow="What we configure" heading="Capabilities we can configure." items={capabilities} />
       <UseCasesGrid eyebrow="Use Cases" heading="Four implementation scenarios." items={useCases} />
       <ImplementationSteps eyebrow="Our Process" heading="How ManagedFirst implements ServiceDesk Plus." steps={steps} />
       <CTABand heading='See what a properly configured service desk looks like in your environment.'

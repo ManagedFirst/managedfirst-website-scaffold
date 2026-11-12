@@ -1,10 +1,10 @@
 export function ITSMIllustration({ className = '' }: { className?: string }) {
   const tickets = [
-    { id: 'INC-2847', title: 'VPN connectivity issue -- Chennai office', priority: 'high', sla: '1h 23m', status: 'In Progress', tech: 'AK' },
-    { id: 'INC-2848', title: 'Email delivery failure -- 12 users', priority: 'critical', sla: '0h 34m', status: 'Open', tech: '--' },
-    { id: 'INC-2849', title: 'Printer offline -- Floor 3', priority: 'low', sla: '6h 00m', status: 'Open', tech: '--' },
-    { id: 'SVC-1204', title: 'New employee onboarding -- Ravi K.', priority: 'medium', sla: '3h 15m', status: 'In Progress', tech: 'PV' },
-    { id: 'CHG-0391', title: 'Firewall rule update -- Production', priority: 'high', sla: '2h 00m', status: 'Pending Approval', tech: 'JD' },
+    { id: 'INC-2847', title: 'VPN connectivity issue — Chennai office', priority: 'high', sla: '1h 23m', status: 'In Progress', tech: 'AK' },
+    { id: 'INC-2848', title: 'Email delivery failure — 12 users', priority: 'critical', sla: '0h 34m', status: 'Open', tech: '--' },
+    { id: 'INC-2849', title: 'Printer offline — Floor 3', priority: 'low', sla: '6h 00m', status: 'Open', tech: '--' },
+    { id: 'SVC-1204', title: 'New employee onboarding — Ravi K.', priority: 'medium', sla: '3h 15m', status: 'In Progress', tech: 'PV' },
+    { id: 'CHG-0391', title: 'Firewall rule update — Production', priority: 'high', sla: '2h 00m', status: 'Pending Approval', tech: 'JD' },
   ]
   const pColors: Record<string, string> = { critical: '#E8192C', high: '#F5A623', medium: '#2563EB', low: '#22c55e' }
   return (

@@ -59,7 +59,7 @@ export function ProductPageLayout({ data, breadcrumbs, visual }: ProductPageLayo
       {/* Capabilities Grid */}
       <CapabilitiesGrid
         eyebrow="Capabilities"
-        heading="What we configure -- and what each capability delivers."
+        heading="What we configure — and what each capability delivers."
         items={data.capabilities.map(c => ({ title: c.title, description: c.body }))}
       />
 

@@ -15,7 +15,7 @@ const CALENDAR_URL = 'https://calendar.google.com/calendar/appointments/schedule
 
 const situations = [
   { n: '1', title: 'Evaluating ManageEngine for the first time', body: 'You want an independent view of which products fit, what deployment involves, and what implementation cost looks like.' },
-  { n: '2', title: 'you want to activate more ManageEngine capability', body: 'The platform is live but not working the way it was purchased to. You want to understand the configuration gap.' },
+  { n: '2', title: 'ManageEngine is installed but not delivering', body: 'The platform is live but not working the way it was purchased to. You want to understand the configuration gap.' },
   { n: '3', title: 'You have a specific compliance requirement', body: 'DPDPA, ISO 27001, or RBI IT framework. Which ManageEngine tools address which obligations, and how.' },
   { n: '4', title: 'Planning a significant expansion', body: 'Adding new products or sites. You want to scope the change before engaging for implementation.' },
 ]
@@ -32,10 +32,10 @@ export default function FreeConsultationPage() {
           <AnimateIn>
             <p className="text-overline uppercase tracking-widest text-teal mb-3">Free Consultation</p>
             <h1 className="font-display text-h1 font-extrabold text-navy mb-4 max-w-2xl leading-tight">
-              Book a free 30-minute ManageEngine consultation.
+              Book a free 30&#8209;minute ManageEngine call.
             </h1>
             <p className="text-body-lg text-charcoal/65 max-w-xl">
-              We review your requirements and tell you honestly what a proper ManageEngine implementation would involve.
+              Tell us what you are trying to do. We will explain, in plain words, what a ManageEngine rollout would involve for you.
             </p>
           </AnimateIn>
         </div>
@@ -45,13 +45,13 @@ export default function FreeConsultationPage() {
         <div className="site-container">
           <div className="grid lg:grid-cols-12 gap-10 items-start">
 
-            {/* Left -- context */}
+            {/* Left — context */}
             <div className="lg:col-span-4 space-y-8">
               <AnimateIn direction="left">
                 <h2 className="font-display text-[17px] font-bold text-navy mb-4">What happens on the call.</h2>
                 <div className="space-y-3">
                   {[
-                    'We review your current ManageEngine environment -- or your planned deployment -- against your stated requirements.',
+                    'We review your current ManageEngine environment — or your planned deployment — against your stated requirements.',
                     'We answer specific questions about product fit, implementation scope, and effort. Working session, not a sales call.',
                     'We tell you honestly whether ManageEngine fits your requirements and what a proper implementation would involve.',
                   ].map((w, i) => (

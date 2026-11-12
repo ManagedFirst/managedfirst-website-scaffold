@@ -1,8 +1,8 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// ManagedFirst Technologies -- Navigation Data
+// ManagedFirst Technologies — Navigation Data
 // Source: Complete Website Content v1.0, August 2026
 // Navigation structure updated to reflect the v1.0 content document.
-// Update this file to change menu structure -- no component changes needed.
+// Update this file to change menu structure — no component changes needed.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export interface NavSubItem {
@@ -203,7 +203,7 @@ export const footerColumns = [
     ],
   },
   {
-    // Knowledge column -- new in v1.0
+    // Knowledge column — new in v1.0
     heading: 'Knowledge',
     items: [
       { label: 'Blog',                            href: '/blog' },
@@ -218,6 +218,6 @@ export const footerColumns = [
 // ── Footer bottom bar ──────────────────────────────────────────────────────────
 export const footerBottomBar = {
   copyright: '© 2026 ManagedFirst Technologies Private Limited. All rights reserved.',
-  cin: 'CIN: [CIN]',
+  cin: '',
   address: '204/A, 7th Street, Malleeswari Nagar, Madambakkam, Kancheepuram, Tamil Nadu 600126',
 }

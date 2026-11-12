@@ -66,7 +66,7 @@ export function Hero({
               </div>
             </div>
 
-            {/* Visual -- stacked below text on mobile/tablet, side-by-side on lg+ */}
+            {/* Visual — stacked below text on mobile/tablet, side-by-side on lg+ */}
             {hasVisual && (
               <div className="flex items-center justify-center relative mt-8 lg:mt-0">
                 {visual}
@@ -117,7 +117,7 @@ export function Hero({
     )
   }
 
-  // ── LIGHT variant -- internal product + company pages ──────────────────────
+  // ── LIGHT variant — internal product + company pages ──────────────────────
   return (
     <section className={`relative bg-white border-b border-border-default overflow-hidden ${py}`}>
       <div className="absolute top-0 right-0 w-2/3 h-full pointer-events-none"

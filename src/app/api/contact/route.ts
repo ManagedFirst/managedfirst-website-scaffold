@@ -43,7 +43,7 @@ Sent via managedfirst.in contact form
           from:    `"ManagedFirst Website" <${process.env.SMTP_USER}>`,
           to:      recipient,
           replyTo: email,
-          subject: `Website enquiry: ${subject} -- ${name}`,
+          subject: `Website enquiry: ${subject} — ${name}`,
           text:    emailBody,
         })
       } catch (emailErr) {
@@ -52,7 +52,7 @@ Sent via managedfirst.in contact form
         console.log('CONTACT FORM SUBMISSION (email failed):', { name, organisation, email, subject })
       }
     } else {
-      // SMTP not configured -- log submission
+      // SMTP not configured — log submission
       console.log('CONTACT FORM SUBMISSION:', { name, organisation, email, subject, message })
       console.log('Configure SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_FORM_RECIPIENT in .env.local to enable email delivery.')
     }

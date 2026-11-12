@@ -5,7 +5,7 @@ import { AnimateIn } from '@/components/AnimateIn'
 import { Hero } from '@/components/sections/Hero'
 import { CTABand, SolutionsMappingTable, ComplianceItem } from '@/components/sections/Sections'
 import { SectionHeader } from '@/components/ui/Elements'
-import { ComplianceIllustration } from '@/components/illustrations/ComplianceIllustration'
+import { RbiIllustration } from '@/components/illustrations/RbiIllustration'
 
 export const metadata: Metadata = buildMetadata({
   title: 'RBI IT Framework Compliance with ManageEngine | ManagedFirst Technologies',
@@ -33,20 +33,20 @@ export default function ComplianceRbiItFrameworkPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaToString(breadcrumbSchema(breadcrumbs)) }} />
       <Hero variant="light" eyebrow="Compliance | RBI IT Framework"
-        heading="RBI IT framework requirements for banks and NBFCs are specific. ManageEngine addresses several of them directly."
-        subheading="ManagedFirst implements ManageEngine for banks and NBFCs with configurations built around RBI IT framework requirements -- privileged access governance, change management documentation, security monitoring, and audit evidence."
+        heading="RBI IT Framework Compliance with ManageEngine"
+        subheading="ManagedFirst implements ManageEngine for banks and NBFCs with configurations built around RBI IT framework requirements — privileged access governance, change management documentation, security monitoring, and audit evidence. Technical implementation is one part of RBI compliance — regulatory interpretation is a matter for your compliance function and legal counsel."
         primaryCta={{ label: 'Book a Free RBI IT Review', href: '/free-consultation' }}
         secondaryCta={{ label: 'See BFSI implementation', href: '/industries/bfsi' }}
-        visual={<ComplianceIllustration className='w-full max-w-[480px]' />}
+        visual={<RbiIllustration className='w-full max-w-[480px]' />}
         />
 
       <section className="bg-white section-py">
         <div className="site-container max-w-3xl">
-          <AnimateIn><h2 className="font-display text-h2 font-bold text-navy mb-6">RBI IT framework and ManageEngine -- the implementation scope.</h2></AnimateIn>
+          <AnimateIn><h2 className="font-display text-h2 font-bold text-navy mb-6">RBI IT framework and ManageEngine — the implementation scope.</h2></AnimateIn>
           {[
-            'The RBI IT framework for banks and NBFCs imposes requirements across multiple IT governance domains -- information security, risk management, business continuity, and IT service management. ManageEngine addresses the technical control requirements in several of these domains.',
-            'ManagedFirst advises on the technical implementation only -- which ManageEngine products address which framework requirements and how they should be configured to produce the required controls and evidence. Regulatory interpretation of the framework and its applicability to your specific entity is a matter for your compliance function and legal counsel.',
-            'The controls most clearly addressed by ManageEngine tools are privileged access management, change management documentation, security monitoring, and access governance audit trails -- all of which are explicitly addressed in the RBI IT framework.',
+            'The RBI IT framework for banks and NBFCs imposes requirements across multiple IT governance domains — information security, risk management, business continuity, and IT service management. ManageEngine addresses the technical control requirements in several of these domains.',
+            'ManagedFirst advises on the technical implementation only — which ManageEngine products address which framework requirements and how they should be configured to produce the required controls and evidence. Regulatory interpretation of the framework and its applicability to your specific entity is a matter for your compliance function and legal counsel.',
+            'The controls most clearly addressed by ManageEngine tools are privileged access management, change management documentation, security monitoring, and access governance audit trails — all of which are explicitly addressed in the RBI IT framework.',
           ].map((p, i) => <AnimateIn key={i} delay={i*80}><p className="text-body text-charcoal leading-relaxed mb-4">{p}</p></AnimateIn>)}
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function ComplianceRbiItFrameworkPage() {
 
       <section className="bg-white section-py">
         <div className="site-container">
-          <AnimateIn className="mb-8"><SectionHeader eyebrow="Key Requirements" heading="Three RBI requirements with the deepest ManageEngine coverage." /></AnimateIn>
+          <AnimateIn className="mb-8"><SectionHeader eyebrow="Key Requirements" heading="Key RBI Requirements Supported by ManageEngine." /></AnimateIn>
           <div className="space-y-4">
             {requirements.map((r, i) => (
               <AnimateIn key={i} delay={i*80}><ComplianceItem title={r.title} description={r.description} /></AnimateIn>
