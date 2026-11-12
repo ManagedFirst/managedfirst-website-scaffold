@@ -5,11 +5,8 @@ import { breadcrumbSchema, schemaToString } from '@/lib/schema'
 import { AnimateIn } from '@/components/AnimateIn'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Elements'
-import {
+import {  IconAD360, IconServiceDesk, IconEndpointCentral, IconLog360, IconOpManager, IconAnalyticsPlus, IconArrowRight } from '@/components/icons'
 import { AnalyticsIllustration } from '@/components/illustrations/AnalyticsIllustration'
-  IconAD360, IconServiceDesk, IconEndpointCentral,
-  IconLog360, IconOpManager, IconAnalyticsPlus, IconArrowRight,
-} from '@/components/icons'
 
 export const metadata: Metadata = buildMetadata({
   title: 'ManageEngine Solutions India | ManagedFirst Technologies',
