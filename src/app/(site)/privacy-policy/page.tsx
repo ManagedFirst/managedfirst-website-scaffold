@@ -1,12 +1,12 @@
 import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
-import AnimateIn from '@/components/AnimateIn'
+import { AnimateIn } from '@/components/AnimateIn'
 
 export const metadata = buildMetadata({
   title: 'Privacy Policy',
   description:
     'How ManagedFirst Technologies collects, uses, and protects your personal data under the Digital Personal Data Protection Act, 2023.',
-  path: '/privacy-policy',
+  canonicalPath: '/privacy-policy',
 })
 
 const EFFECTIVE_DATE = '12 November 2026'
@@ -19,8 +19,8 @@ const WEBSITE = 'https://managedfirsttechnologies.com'
 
 export default function PrivacyPolicyPage() {
   const breadcrumb = breadcrumbSchema([
-    { name: 'Home', url: '/' },
-    { name: 'Privacy Policy', url: '/privacy-policy' },
+    { name: 'Home', href: '/' },
+    { name: 'Privacy Policy' , href: '/privacy-policy' },
   ])
 
   return (

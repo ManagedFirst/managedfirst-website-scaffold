@@ -1,12 +1,12 @@
 import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
-import AnimateIn from '@/components/AnimateIn'
+import { AnimateIn } from '@/components/AnimateIn'
 
 export const metadata = buildMetadata({
   title: 'Terms and Conditions',
   description:
     'The terms governing your use of the ManagedFirst Technologies website and the services described on it.',
-  path: '/terms-and-conditions',
+  canonicalPath: '/terms-and-conditions',
 })
 
 const EFFECTIVE_DATE = '12 November 2026'
@@ -19,8 +19,8 @@ const WEBSITE = 'https://managedfirsttechnologies.com'
 
 export default function TermsAndConditionsPage() {
   const breadcrumb = breadcrumbSchema([
-    { name: 'Home', url: '/' },
-    { name: 'Terms and Conditions', url: '/terms-and-conditions' },
+    { name: 'Home', href: '/' },
+    { name: 'Terms and Conditions' , href: '/terms-and-conditions' },
   ])
 
   return (

@@ -1,12 +1,12 @@
 import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
-import AnimateIn from '@/components/AnimateIn'
+import { AnimateIn } from '@/components/AnimateIn'
 
 export const metadata = buildMetadata({
   title: 'Cookie Policy',
   description:
     'How ManagedFirst Technologies uses cookies and similar technologies on its website, and how you can manage your preferences.',
-  path: '/cookie-policy',
+  canonicalPath: '/cookie-policy',
 })
 
 const EFFECTIVE_DATE = '12 November 2026'
@@ -15,8 +15,8 @@ const EMAIL = 'vipul@managedfirsttechnologies.com'
 
 export default function CookiePolicyPage() {
   const breadcrumb = breadcrumbSchema([
-    { name: 'Home', url: '/' },
-    { name: 'Cookie Policy', url: '/cookie-policy' },
+    { name: 'Home', href: '/' },
+    { name: 'Cookie Policy' , href: '/cookie-policy' },
   ])
 
   return (

@@ -1,12 +1,12 @@
 import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, schemaToString } from '@/lib/schema'
-import AnimateIn from '@/components/AnimateIn'
+import { AnimateIn } from '@/components/AnimateIn'
 
 export const metadata = buildMetadata({
   title: 'Disclaimer',
   description:
     'Important disclaimers regarding the information on the ManagedFirst Technologies website, including compliance illustrations and product references.',
-  path: '/disclaimer',
+  canonicalPath: '/disclaimer',
 })
 
 const EFFECTIVE_DATE = '12 November 2026'
@@ -15,8 +15,8 @@ const EMAIL = 'vipul@managedfirsttechnologies.com'
 
 export default function DisclaimerPage() {
   const breadcrumb = breadcrumbSchema([
-    { name: 'Home', url: '/' },
-    { name: 'Disclaimer', url: '/disclaimer' },
+    { name: 'Home', href: '/' },
+    { name: 'Disclaimer' , href: '/disclaimer' },
   ])
 
   return (
